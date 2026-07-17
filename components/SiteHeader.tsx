@@ -50,7 +50,7 @@ export default function SiteHeader() {
     display: "block",
     width: "22px",
     height: "2px",
-    background: "rgba(255,255,255,0.85)",
+    background: "var(--ink)",
     borderRadius: "2px",
     transition: "all .25s",
     transform,
