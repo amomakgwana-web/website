@@ -123,7 +123,7 @@ export default function Page() {
             <p className="slabel" style={{marginBottom:"4px"}}>Integration &amp; insights</p>
             <h2 style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"clamp(24px,3vw,32px)",fontWeight:"800",letterSpacing:"-.6px",color:"var(--ink)"}}>Robust software &mdash; use cases</h2>
           </div>
-          <Link href="/solutions" style={{fontSize:"14px",fontWeight:"600",color:"var(--p)",display:"flex",alignItems:"center",gap:"6px"}}>View all <span>&#8594;</span></Link>
+          <Link href="/resources" style={{fontSize:"14px",fontWeight:"600",color:"var(--p)",display:"flex",alignItems:"center",gap:"6px"}}>View all <span>&#8594;</span></Link>
         </div>
         <div className="g3">
           <div className="card lift-card">

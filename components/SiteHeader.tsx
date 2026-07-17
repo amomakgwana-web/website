@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 export default function SiteHeader() {
-  const [drop, setDrop] = useState<"products" | "signin" | null>(null);
+  const [drop, setDrop] = useState<"vas" | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
@@ -43,14 +43,13 @@ export default function SiteHeader() {
     };
   }, []);
 
-  const toggle = (which: "products" | "signin") => setDrop((d) => (d === which ? null : which));
-  const stop = (e: React.MouseEvent) => e.preventDefault();
+  const toggle = (which: "vas") => setDrop((d) => (d === which ? null : which));
 
   const line = (transform: string, opacity = "1"): React.CSSProperties => ({
     display: "block",
     width: "22px",
     height: "2px",
-    background: "var(--ink)",
+    background: "#fff",
     borderRadius: "2px",
     transition: "all .25s",
     transform,
@@ -62,17 +61,18 @@ export default function SiteHeader() {
       {mobileOpen && (
         <div id="mobile-menu" style={{display:"block",position:"fixed",top:"var(--nav)",left:"0",right:"0",bottom:"0",zIndex:"190",background:"rgba(255,255,255,0.72)",backdropFilter:"blur(30px) saturate(1.6)",WebkitBackdropFilter:"blur(30px) saturate(1.6)",padding:"32px 6%",overflowY:"auto"}}>
           <div style={{display:"flex",flexDirection:"column",gap:"4px",marginBottom:"32px"}}>
-            <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"8px"}}>Products</p>
+            <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"8px"}}>VAS</p>
             <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/biprapay" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--rl)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><div style={{width:"10px",height:"10px",borderRadius:"50%",background:"#E8152A"}}></div></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>BipraPay</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Payments, audit &amp; instant gateway</div></div></Link>
             <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/veribills" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--gl)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><div style={{width:"10px",height:"10px",borderRadius:"50%",background:"#0A7B3E"}}></div></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>VeriBills</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Billing &amp; audit engine</div></div></Link>
             <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/morr-erp" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><div style={{width:"10px",height:"10px",borderRadius:"50%",background:"#5533FF"}}></div></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>Morr ERP</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Enterprise workflow automation</div></div></Link>
           </div>
           <div style={{display:"flex",flexDirection:"column",gap:"4px",marginBottom:"32px"}}>
-            <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"8px"}}>Company</p>
+            <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"8px"}}>Explore</p>
             <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/solutions">Solutions</Link>
-            <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/pricing">Pricing</Link>
-            <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/about">About</Link>
             <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/developers">Developers</Link>
+            <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/resources">Resources</Link>
+            <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/about">Bipra</Link>
+            <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/pricing">Pricing</Link>
             <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/contact">Contact</Link>
           </div>
           <div style={{display:"flex",flexDirection:"column",gap:"10px"}}>
@@ -98,62 +98,33 @@ export default function SiteHeader() {
         </div>
       )}
       <nav id="nav" ref={navRef}>
-        <Link className="logo" href="/"><div className="logomark"><span>B</span></div><span className="logotext">bipra</span></Link>
-        <ul className="navlinks">
-          <li className={`drop-wrap${drop === "products" ? " open" : ""}${isProductRoute ? " active" : ""}`} id="nav-products-wrap">
-            <button aria-haspopup="true" aria-expanded={drop === "products"} onClick={(e) => { e.stopPropagation(); toggle("products"); }}>Products ▼</button>
-            <div className="dropdown">
-              <Link className="drop-item" href="/biprapay"><div className="drop-icon"><div className="drop-dot" style={{background:"#E8152A"}}></div></div><div><div className="drop-name">BipraPay</div><div className="drop-desc">Payments, audit &amp; instant gateway</div></div></Link>
-              <Link className="drop-item" href="/veribills"><div className="drop-icon"><div className="drop-dot" style={{background:"#0A7B3E"}}></div></div><div><div className="drop-name">VeriBills</div><div className="drop-desc">Bill presentment &amp; smart metering</div></div></Link>
-              <Link className="drop-item" href="/morr-erp"><div className="drop-icon"><div className="drop-dot" style={{background:"#5533FF"}}></div></div><div><div className="drop-name">Morr ERP</div><div className="drop-desc">Enterprise workflow automation</div></div></Link>
-            </div>
-          </li>
-          <li><Link href="/solutions" className={pathname === "/solutions" ? "active" : undefined}>Solutions</Link></li>
-          <li><Link href="/pricing" className={pathname === "/pricing" ? "active" : undefined}>Pricing</Link></li>
-          <li><Link href="/about" className={pathname === "/about" ? "active" : undefined}>About</Link></li>
-          <li><Link href="/developers" className={pathname === "/developers" ? "active" : undefined}>Developers</Link></li>
-          <li><Link href="/contact" className={pathname === "/contact" ? "active" : undefined}>Contact</Link></li>
-        </ul>
-        <div className="navcta">
-          <div className={`signin-wrap${drop === "signin" ? " open" : ""}`} id="nav-signin-wrap">
-            <button className="ghost" style={{display:"flex",alignItems:"center",gap:"5px"}} aria-haspopup="true" aria-expanded={drop === "signin"} onClick={(e) => { e.stopPropagation(); toggle("signin"); }}>Sign in <span style={{fontSize:"10px",opacity:".6"}}>▼</span></button>
-            <div className="signin-drop">
-              <div style={{padding:"10px 14px 8px",borderBottom:"1px solid var(--border)",marginBottom:"6px"}}>
-                <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px"}}>Merchant Portals</p>
-              </div>
-              <a className="signin-item" href="#" onClick={stop}>
-                <div className="signin-icon" style={{background:"#E8152A"}}>BP</div>
-                <div><div className="signin-name">BipraPay Portal</div><div className="signin-desc">Payments &amp; financial audit dashboard</div></div>
-                <span className="signin-arrow">↗</span>
-              </a>
-              <a className="signin-item" href="#" onClick={stop}>
-                <div className="signin-icon" style={{background:"#0A7B3E"}}>VB</div>
-                <div><div className="signin-name">VeriBills Portal</div><div className="signin-desc">Meter data &amp; bill presentment</div></div>
-                <span className="signin-arrow">↗</span>
-              </a>
-              <a className="signin-item" href="#" onClick={stop}>
-                <div className="signin-icon" style={{background:"linear-gradient(135deg,#5533FF,#3D22CC)"}}>ME</div>
-                <div><div className="signin-name">Morr ERP</div><div className="signin-desc">Budgeting, HR &amp; documents</div></div>
-                <span className="signin-arrow">↗</span>
-              </a>
-              <div style={{marginTop:"6px",padding:"10px 14px 4px",borderTop:"1px solid var(--border)"}}>
-                <a className="signin-item" href="#" style={{padding:"9px 14px"}} onClick={stop}>
-                  <div style={{width:"38px",height:"38px",borderRadius:"10px",background:"var(--off)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" strokeWidth="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8"></rect></svg>
-                  </div>
-                  <div><div className="signin-name">BIPRA Dashboard</div><div className="signin-desc">Manage all products in one place</div></div>
-                  <span className="signin-arrow">↗</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <Link className="btn btn-p btn-md" href="/contact">Get started</Link>
+        <div className="masthead">
+          <Link className="logo" href="/"><div className="logomark"><span>B</span></div><span className="logotext">bipra</span></Link>
         </div>
-        <button id="mob-btn" style={{display:"none",background:"none",border:"none",cursor:"pointer",padding:"6px",flexDirection:"column",gap:"5px",alignItems:"center",justifyContent:"center"}} aria-label="Menu" onClick={() => setMobileOpen((o) => !o)}>
-          <span id="mob-line1" style={line(mobileOpen ? "translateY(7px) rotate(45deg)" : "")}></span>
-          <span id="mob-line2" style={line("", mobileOpen ? "0" : "1")}></span>
-          <span id="mob-line3" style={line(mobileOpen ? "translateY(-7px) rotate(-45deg)" : "")}></span>
-        </button>
+        <div className="navbar-orange">
+          <ul className="navlinks">
+            <li><Link href="/solutions" className={pathname === "/solutions" ? "active" : undefined}>Solutions</Link></li>
+            <li className={`drop-wrap${drop === "vas" ? " open" : ""}${isProductRoute ? " active" : ""}`} id="nav-products-wrap">
+              <button aria-haspopup="true" aria-expanded={drop === "vas"} onClick={(e) => { e.stopPropagation(); toggle("vas"); }}>VAS ▼</button>
+              <div className="dropdown">
+                <Link className="drop-item" href="/biprapay"><div className="drop-icon"><div className="drop-dot" style={{background:"#E8152A"}}></div></div><div><div className="drop-name">BipraPay</div><div className="drop-desc">Payments, audit &amp; instant gateway</div></div></Link>
+                <Link className="drop-item" href="/veribills"><div className="drop-icon"><div className="drop-dot" style={{background:"#0A7B3E"}}></div></div><div><div className="drop-name">VeriBills</div><div className="drop-desc">Bill presentment &amp; smart metering</div></div></Link>
+                <Link className="drop-item" href="/morr-erp"><div className="drop-icon"><div className="drop-dot" style={{background:"#5533FF"}}></div></div><div><div className="drop-name">Morr ERP</div><div className="drop-desc">Enterprise workflow automation</div></div></Link>
+              </div>
+            </li>
+            <li><Link href="/developers" className={pathname === "/developers" ? "active" : undefined}>Developers</Link></li>
+            <li><Link href="/resources" className={pathname === "/resources" ? "active" : undefined}>Resources</Link></li>
+            <li><Link href="/about" className={pathname === "/about" ? "active" : undefined}>Bipra</Link></li>
+          </ul>
+          <div className="navcta">
+            <Link className="btn btn-w btn-md" href="/contact">Contact</Link>
+          </div>
+          <button id="mob-btn" style={{display:"none",background:"none",border:"none",cursor:"pointer",padding:"6px",flexDirection:"column",gap:"5px",alignItems:"center",justifyContent:"center"}} aria-label="Menu" onClick={() => setMobileOpen((o) => !o)}>
+            <span id="mob-line1" style={line(mobileOpen ? "translateY(7px) rotate(45deg)" : "")}></span>
+            <span id="mob-line2" style={line("", mobileOpen ? "0" : "1")}></span>
+            <span id="mob-line3" style={line(mobileOpen ? "translateY(-7px) rotate(-45deg)" : "")}></span>
+          </button>
+        </div>
       </nav>
     </>
   );

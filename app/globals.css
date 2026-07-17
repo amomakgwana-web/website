@@ -4,7 +4,7 @@
   --r:#E8152A;--rl:#FFE8EB;--g:#0A7B3E;--gl:#E6FFEF;
   --ink:#0D0B1E;--ink2:#2E2B4A;--muted:#7B7899;
   --off:#F7F6FF;--border:rgba(85,51,255,0.12);--border2:rgba(85,51,255,0.22);
-  --sh:0 8px 40px rgba(85,51,255,0.10);--fd:'Helvetica Neue','Helvetica',Arial,sans-serif;--fb:'Helvetica Neue','Helvetica',Arial,sans-serif;--nav:68px;
+  --sh:0 8px 40px rgba(85,51,255,0.10);--fd:'Helvetica Neue','Helvetica',Arial,sans-serif;--fb:'Helvetica Neue','Helvetica',Arial,sans-serif;--nav:104px;--masthead:56px;--navbar:48px;
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--fb);background:#fff;color:var(--ink);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
@@ -13,16 +13,18 @@ button{font-family:var(--fb);cursor:pointer}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .fu{animation:fadeUp 0.5s ease both}.d2{animation-delay:.2s}
-#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:var(--nav);background:rgba(255,255,255,0.55);backdrop-filter:blur(28px) saturate(1.6);-webkit-backdrop-filter:blur(28px) saturate(1.6);box-shadow:inset 0 1.5px 0 rgba(255,255,255,0.95),0 1px 0 rgba(255,255,255,0.5),0 10px 36px rgba(13,11,30,0.06);border-bottom:1px solid var(--border)}
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;flex-direction:column;height:var(--nav)}
+.masthead{height:var(--masthead);flex-shrink:0;display:flex;align-items:center;padding:0 5%;background:#fff;border-bottom:1px solid var(--border)}
+.navbar-orange{height:var(--navbar);flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:var(--r);box-shadow:0 6px 20px rgba(232,21,42,0.18)}
 .logo{display:flex;align-items:center;gap:10px;cursor:pointer}
 .logomark{width:36px;height:36px;background:var(--p);border-radius:10px;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0}
 .logomark::after{content:'';position:absolute;top:5px;right:5px;width:9px;height:9px;background:var(--r);border-radius:50%}
 .logomark span{font-family:var(--fd);font-weight:800;font-size:14px;color:#fff}
 .logotext{font-family:var(--fd);font-weight:700;font-size:22px;color:var(--p);letter-spacing:-.5px}
 .navlinks{display:flex;align-items:center;gap:28px;list-style:none}
-.navlinks a,.navlinks button{font-size:14px;font-weight:500;color:var(--ink2);background:none;border:none;cursor:pointer;transition:color .2s;padding:0}
-.navlinks a:hover,.navlinks button:hover{color:var(--p)}
-.navlinks a.active{color:var(--p)}
+.navlinks a,.navlinks button{font-size:14px;font-weight:500;color:rgba(255,255,255,0.85);background:none;border:none;cursor:pointer;transition:color .2s;padding:0}
+.navlinks a:hover,.navlinks button:hover{color:#fff}
+.navlinks a.active{color:#fff}
 .navcta{display:flex;align-items:center;gap:10px}
 .btn{display:inline-flex;align-items:center;gap:7px;font-family:var(--fb);font-weight:500;border:none;border-radius:8px;cursor:pointer;transition:all .2s;white-space:nowrap}
 .btn-md{font-size:14px;padding:9px 20px}.btn-lg{font-size:15px;padding:13px 28px;border-radius:10px}
@@ -337,8 +339,8 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.05)}
 .drop-wrap.open .dropdown{display:block}
 .signin-wrap.open .signin-drop{display:block}
 .dropdown::before,.signin-drop::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px}
-.drop-wrap>button{background:none;border:none;font-size:14px;font-weight:500;color:var(--ink2);cursor:pointer;padding:8px 12px;border-radius:9px;transition:all .2s}
-.drop-wrap>button:hover,.drop-wrap.open>button{background:rgba(255,255,255,0.5)}
+.drop-wrap>button{background:none;border:none;font-size:14px;font-weight:500;color:rgba(255,255,255,0.85);cursor:pointer;padding:8px 12px;border-radius:9px;transition:all .2s}
+.drop-wrap>button:hover,.drop-wrap.open>button{background:rgba(255,255,255,0.16);color:#fff}
 .signin-wrap.open .ghost{background:rgba(255,255,255,0.65)!important}
 
 @keyframes ddIn{from{opacity:0;transform:translateX(-50%) translateY(-8px) scale(.97)}to{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}}
@@ -369,7 +371,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.05)}
 .drop-icon{transition:transform .25s cubic-bezier(.2,.9,.3,1.4)}
 /* Nav link underline slide */
 .navlinks>li>a,.navlinks>li>button{position:relative}
-.navlinks>li>a::after,.navlinks>li>button::after{content:'';position:absolute;left:12px;right:12px;bottom:2px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--p),#7B5FFF);transform:scaleX(0);transform-origin:left;transition:transform .28s cubic-bezier(.2,.9,.3,1)}
+.navlinks>li>a::after,.navlinks>li>button::after{content:'';position:absolute;left:12px;right:12px;bottom:2px;height:2px;border-radius:2px;background:#fff;transform:scaleX(0);transform-origin:left;transition:transform .28s cubic-bezier(.2,.9,.3,1)}
 .navlinks>li>a:hover::after,.navlinks>li>a.active::after,.navlinks>li>button:hover::after,.navlinks>li.drop-wrap.active>button::after{transform:scaleX(1)}
 /* Hero gradient text shimmer */
 .grad-text{background-size:200% 200%;animation:gradShift 5s ease infinite}
