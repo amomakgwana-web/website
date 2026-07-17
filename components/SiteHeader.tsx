@@ -1,0 +1,170 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+
+export default function SiteHeader() {
+  const [drop, setDrop] = useState<"products" | "signin" | null>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
+  const pathname = usePathname();
+
+  // Close dropdowns and the mobile menu whenever the route changes. Adjusted
+  // during render (rather than in an effect) so it lands in the same commit
+  // as the navigation instead of causing an extra render pass.
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setDrop(null);
+    setMobileOpen(false);
+  }
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) setDrop(null);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setDrop(null);
+    };
+    document.addEventListener("click", onClick);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("click", onClick);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, []);
+
+  const toggle = (which: "products" | "signin") => setDrop((d) => (d === which ? null : which));
+  const stop = (e: React.MouseEvent) => e.preventDefault();
+
+  const line = (transform: string, opacity = "1"): React.CSSProperties => ({
+    display: "block",
+    width: "22px",
+    height: "2px",
+    background: "var(--ink)",
+    borderRadius: "2px",
+    transition: "all .25s",
+    transform,
+    opacity,
+  });
+
+  return (
+    <>
+      {mobileOpen && (
+        <div id="mobile-menu" style={{display:"block",position:"fixed",top:"var(--nav)",left:"0",right:"0",bottom:"0",zIndex:"190",background:"rgba(255,255,255,0.72)",backdropFilter:"blur(30px) saturate(1.6)",WebkitBackdropFilter:"blur(30px) saturate(1.6)",padding:"32px 6%",overflowY:"auto"}}>
+          <div style={{display:"flex",flexDirection:"column",gap:"4px",marginBottom:"32px"}}>
+            <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"8px"}}>Products</p>
+            <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/xpayments" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><div style={{width:"10px",height:"10px",borderRadius:"50%",background:"#5533FF"}}></div></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>xPayments</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Payments &amp; financial auditing engine</div></div></Link>
+            <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/swiftpay" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--rl)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><div style={{width:"10px",height:"10px",borderRadius:"50%",background:"#E8152A"}}></div></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>SwiftPay</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Instant payment gateway</div></div></Link>
+            <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/xbilling" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--gl)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><div style={{width:"10px",height:"10px",borderRadius:"50%",background:"#0A7B3E"}}></div></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>xBilling</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Billing &amp; audit engine</div></div></Link>
+            <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/nexcore" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><div style={{width:"10px",height:"10px",borderRadius:"50%",background:"#5533FF"}}></div></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>NexCore ERP</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Enterprise workflow automation</div></div></Link>
+          </div>
+          <div style={{display:"flex",flexDirection:"column",gap:"4px",marginBottom:"32px"}}>
+            <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"8px"}}>Company</p>
+            <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/solutions">Solutions</Link>
+            <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/pricing">Pricing</Link>
+            <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/about">About</Link>
+            <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/developers">Developers</Link>
+            <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/contact">Contact</Link>
+          </div>
+          <div style={{display:"flex",flexDirection:"column",gap:"10px"}}>
+            <div style={{background:"var(--off)",borderRadius:"14px",padding:"12px",marginBottom:"4px"}}>
+              <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"10px",padding:"0 4px"}}>Sign in to a portal</p>
+              <div style={{display:"flex",flexDirection:"column",gap:"4px"}}>
+                <a href="#" style={{display:"flex",alignItems:"center",gap:"12px",padding:"10px 12px",borderRadius:"9px",background:"#fff",cursor:"pointer"}} onClick={(e) => { e.preventDefault(); setMobileOpen(false); }}>
+                  <div style={{width:"32px",height:"32px",borderRadius:"8px",background:"#5533FF",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",fontWeight:"800",color:"#fff",flexShrink:"0"}}>xP</div>
+                  <div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>xPayments Portal</div>
+                </a>
+                <a href="#" style={{display:"flex",alignItems:"center",gap:"12px",padding:"10px 12px",borderRadius:"9px",background:"#fff",cursor:"pointer"}} onClick={(e) => { e.preventDefault(); setMobileOpen(false); }}>
+                  <div style={{width:"32px",height:"32px",borderRadius:"8px",background:"#E8152A",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",fontWeight:"800",color:"#fff",flexShrink:"0"}}>SP</div>
+                  <div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>SwiftPay Portal</div>
+                </a>
+                <a href="#" style={{display:"flex",alignItems:"center",gap:"12px",padding:"10px 12px",borderRadius:"9px",background:"#fff",cursor:"pointer"}} onClick={(e) => { e.preventDefault(); setMobileOpen(false); }}>
+                  <div style={{width:"32px",height:"32px",borderRadius:"8px",background:"#0A7B3E",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",fontWeight:"800",color:"#fff",flexShrink:"0"}}>xB</div>
+                  <div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>xBilling Portal</div>
+                </a>
+                <a href="#" style={{display:"flex",alignItems:"center",gap:"12px",padding:"10px 12px",borderRadius:"9px",background:"#fff",cursor:"pointer"}} onClick={(e) => { e.preventDefault(); setMobileOpen(false); }}>
+                  <div style={{width:"32px",height:"32px",borderRadius:"8px",background:"#3D22CC",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",fontWeight:"800",color:"#fff",flexShrink:"0"}}>NC</div>
+                  <div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>NexCore ERP</div>
+                </a>
+              </div>
+            </div>
+            <Link className="btn btn-p btn-lg" style={{width:"100%",justifyContent:"center"}} href="/contact">Get started</Link>
+          </div>
+        </div>
+      )}
+      <nav id="nav" ref={navRef}>
+        <Link className="logo" href="/"><div className="logomark"><span>B</span></div><span className="logotext">bipra</span></Link>
+        <ul className="navlinks">
+          <li className={`drop-wrap${drop === "products" ? " open" : ""}`} id="nav-products-wrap">
+            <button aria-haspopup="true" aria-expanded={drop === "products"} onClick={(e) => { e.stopPropagation(); toggle("products"); }}>Products ▼</button>
+            <div className="dropdown">
+              <Link className="drop-item" href="/xpayments"><div className="drop-icon"><div className="drop-dot" style={{background:"#5533FF"}}></div></div><div><div className="drop-name">xPayments</div><div className="drop-desc">Payments &amp; financial auditing engine</div></div></Link>
+              <Link className="drop-item" href="/swiftpay"><div className="drop-icon"><div className="drop-dot" style={{background:"#E8152A"}}></div></div><div><div className="drop-name">SwiftPay</div><div className="drop-desc">Instant payment gateway</div></div></Link>
+              <Link className="drop-item" href="/xbilling"><div className="drop-icon"><div className="drop-dot" style={{background:"#0A7B3E"}}></div></div><div><div className="drop-name">xBilling</div><div className="drop-desc">Bill presentment &amp; smart metering</div></div></Link>
+              <Link className="drop-item" href="/nexcore"><div className="drop-icon"><div className="drop-dot" style={{background:"#5533FF"}}></div></div><div><div className="drop-name">NexCore ERP</div><div className="drop-desc">Enterprise workflow automation</div></div></Link>
+            </div>
+          </li>
+          <li><Link href="/solutions">Solutions</Link></li>
+          <li><Link href="/pricing">Pricing</Link></li>
+          <li><Link href="/about">About</Link></li>
+          <li><Link href="/developers">Developers</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
+        </ul>
+        <div className="navcta">
+          <div className={`signin-wrap${drop === "signin" ? " open" : ""}`} id="nav-signin-wrap">
+            <button className="ghost" style={{display:"flex",alignItems:"center",gap:"5px"}} aria-haspopup="true" aria-expanded={drop === "signin"} onClick={(e) => { e.stopPropagation(); toggle("signin"); }}>Sign in <span style={{fontSize:"10px",opacity:".6"}}>▼</span></button>
+            <div className="signin-drop">
+              <div style={{padding:"10px 14px 8px",borderBottom:"1px solid var(--border)",marginBottom:"6px"}}>
+                <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px"}}>Merchant Portals</p>
+              </div>
+              <a className="signin-item" href="#" onClick={stop}>
+                <div className="signin-icon" style={{background:"#5533FF"}}>xP</div>
+                <div><div className="signin-name">xPayments Portal</div><div className="signin-desc">Payments &amp; financial audit dashboard</div></div>
+                <span className="signin-arrow">↗</span>
+              </a>
+              <a className="signin-item" href="#" onClick={stop}>
+                <div className="signin-icon" style={{background:"#E8152A"}}>SP</div>
+                <div><div className="signin-name">SwiftPay Portal</div><div className="signin-desc">Instant payment management</div></div>
+                <span className="signin-arrow">↗</span>
+              </a>
+              <a className="signin-item" href="#" onClick={stop}>
+                <div className="signin-icon" style={{background:"#0A7B3E"}}>xB</div>
+                <div><div className="signin-name">xBilling Portal</div><div className="signin-desc">Meter data &amp; bill presentment</div></div>
+                <span className="signin-arrow">↗</span>
+              </a>
+              <a className="signin-item" href="#" onClick={stop}>
+                <div className="signin-icon" style={{background:"linear-gradient(135deg,#5533FF,#3D22CC)"}}>NC</div>
+                <div><div className="signin-name">NexCore ERP</div><div className="signin-desc">Budgeting, HR &amp; documents</div></div>
+                <span className="signin-arrow">↗</span>
+              </a>
+              <div style={{marginTop:"6px",padding:"10px 14px 4px",borderTop:"1px solid var(--border)"}}>
+                <a className="signin-item" href="#" style={{padding:"9px 14px"}} onClick={stop}>
+                  <div style={{width:"38px",height:"38px",borderRadius:"10px",background:"var(--off)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" strokeWidth="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8"></rect></svg>
+                  </div>
+                  <div><div className="signin-name">BIPRA Dashboard</div><div className="signin-desc">Manage all products in one place</div></div>
+                  <span className="signin-arrow">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <Link className="btn btn-p btn-md" href="/contact">Get started</Link>
+        </div>
+        <button id="mob-btn" style={{display:"none",background:"none",border:"none",cursor:"pointer",padding:"6px",flexDirection:"column",gap:"5px",alignItems:"center",justifyContent:"center"}} aria-label="Menu" onClick={() => setMobileOpen((o) => !o)}>
+          <span id="mob-line1" style={line(mobileOpen ? "translateY(7px) rotate(45deg)" : "")}></span>
+          <span id="mob-line2" style={line("", mobileOpen ? "0" : "1")}></span>
+          <span id="mob-line3" style={line(mobileOpen ? "translateY(-7px) rotate(-45deg)" : "")}></span>
+        </button>
+      </nav>
+    </>
+  );
+}
