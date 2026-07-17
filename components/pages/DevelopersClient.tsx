@@ -217,7 +217,7 @@ export default function DevelopersClient() {
 
 
     <div id="dev-docs" className="dev-panel section" style={{display: panel === "docs" ? "block" : "none"}}>
-      <div className="inner" style={{display:"grid",gridTemplateColumns:"220px 1fr",gap:"48px",alignItems:"start"}}>
+      <div className="inner docs-layout" style={{display:"grid",gridTemplateColumns:"220px minmax(0,1fr)",gap:"48px",alignItems:"start"}}>
         
         <div style={{position:"sticky",top:"calc(var(--nav) + 56px)"}}>
           <div style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"10px"}}>Getting started</div>
