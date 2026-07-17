@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s — BIPRA",
   },
   description:
-    "BIPRA — Payments, billing, and enterprise workflow automation for modern African businesses. xPayments, SwiftPay, xBilling, NexCore ERP.",
+    "BIPRA — Payments, billing, and enterprise workflow automation for modern African businesses. BipraPay, VeriBills, Morr ERP.",
   icons: { icon: [{ url: FAVICON, type: "image/svg+xml" }] },
   openGraph: {
     title: "BIPRA — Unified Business Platform",

@@ -2,17 +2,17 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SwiftPay",
+  title: "BipraPay",
   description: "Instant payment gateway with sub-second processing for payroll, bulk disbursements, and supplier payments.",
 };
 
 export default function Page() {
   return (
-    <div id="page-swiftpay" className="page active pw">
+    <div id="page-biprapay" className="page active pw">
     <section className="section" style={{paddingTop:"100px",background:"linear-gradient(135deg,#FFF5F5 0%,#fff 60%)"}}>
     <div className="inner two-col" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"center"}}>
     <div>
-      <div style={{display:"flex",alignItems:"center",gap:"10px",marginBottom:"20px"}}><div style={{width:"48px",height:"48px",borderRadius:"13px",background:"var(--rl)",display:"flex",alignItems:"center",justifyContent:"center"}}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8152A" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div><span style={{fontFamily:"var(--fd)",fontWeight:"700",fontSize:"15px",color:"var(--r)"}}>SwiftPay</span></div>
+      <div style={{display:"flex",alignItems:"center",gap:"10px",marginBottom:"20px"}}><div style={{width:"48px",height:"48px",borderRadius:"13px",background:"var(--rl)",display:"flex",alignItems:"center",justifyContent:"center"}}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E8152A" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div><span style={{fontFamily:"var(--fd)",fontWeight:"700",fontSize:"15px",color:"var(--r)"}}>BipraPay</span></div>
       <h1 style={{fontFamily:"var(--fd)",fontSize:"clamp(36px,4.5vw,54px)",fontWeight:"800",lineHeight:"1.07",letterSpacing:"-1.5px",marginBottom:"20px"}}>Payments at the<br /><span className="grad-text-warm">speed of now</span></h1>
       <p style={{fontSize:"17px",color:"var(--muted)",lineHeight:"1.75",maxWidth:"460px",marginBottom:"36px",fontWeight:"300"}}>Instant payment processing for businesses where every millisecond counts — e-commerce, payroll, mass disbursements.</p>
       <div style={{display:"flex",gap:"16px",flexWrap:"wrap"}}><Link className="btn btn-r btn-lg" href="/contact">Get started</Link><Link className="btn btn-o btn-lg" href="/pricing">View pricing</Link></div>
@@ -37,7 +37,7 @@ export default function Page() {
         <div style={{textAlign:"center",marginBottom:"70px"}}>
           <span className="band-eyebrow cine-reveal" style={{color:"#FF6B6B"}}>Watch a payment move</span>
           <h2 className="cine-reveal s1" style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"clamp(30px,4vw,48px)",fontWeight:"800",letterSpacing:"-1.2px",color:"#fff",margin:"18px 0 14px",lineHeight:"1.08"}}>748 milliseconds.<br /><span className="grad-text-warm">Start to settled.</span></h2>
-          <p className="cine-reveal s2" style={{fontSize:"16px",color:"rgba(255,255,255,0.45)",maxWidth:"520px",margin:"0 auto",lineHeight:"1.75"}}>This is the actual journey of every SwiftPay transaction — replayed live, at real proportional speed.</p>
+          <p className="cine-reveal s2" style={{fontSize:"16px",color:"rgba(255,255,255,0.45)",maxWidth:"520px",margin:"0 auto",lineHeight:"1.75"}}>This is the actual journey of every BipraPay transaction — replayed live, at real proportional speed.</p>
         </div>
         
         <div style={{position:"relative",maxWidth:"980px",margin:"0 auto"}}>
@@ -57,7 +57,7 @@ export default function Page() {
           
           <div className="cine-reveal s5" style={{marginTop:"56px",background:"rgba(255,255,255,0.04)",border:"1px solid rgba(255,255,255,0.07)",borderRadius:"16px",padding:"22px 28px",display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"16px"}}>
             <div style={{display:"flex",gap:"36px",flexWrap:"wrap"}}>
-              <div><div style={{fontSize:"24px",fontWeight:"800",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"-1px"}} className="grad-text-warm">748ms</div><div style={{fontSize:"11px",color:"rgba(255,255,255,0.35)",marginTop:"2px"}}>SwiftPay average</div></div>
+              <div><div style={{fontSize:"24px",fontWeight:"800",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"-1px"}} className="grad-text-warm">748ms</div><div style={{fontSize:"11px",color:"rgba(255,255,255,0.35)",marginTop:"2px"}}>BipraPay average</div></div>
               <div><div style={{fontSize:"24px",fontWeight:"800",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"-1px",color:"rgba(255,255,255,0.35)"}}>2,200ms</div><div style={{fontSize:"11px",color:"rgba(255,255,255,0.25)",marginTop:"2px"}}>Industry average</div></div>
               <div><div style={{fontSize:"24px",fontWeight:"800",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"-1px",color:"#4ADE80"}}>3×</div><div style={{fontSize:"11px",color:"rgba(255,255,255,0.35)",marginTop:"2px"}}>Faster than the market</div></div>
             </div>
@@ -71,7 +71,7 @@ export default function Page() {
     </div></section>
 
     <section className="section"><div className="inner">
-      <p className="slabel">The SwiftPay difference</p>
+      <p className="slabel">The BipraPay difference</p>
       <h2 className="stitle">How we hit sub-800ms in South Africa</h2>
       <p className="ssub">Speed is an architecture decision. Here's ours.</p>
       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"56px",alignItems:"start"}} className="two-col">
@@ -92,7 +92,7 @@ export default function Page() {
               <div style={{borderTop:"1px solid rgba(255,255,255,0.08)",paddingTop:"10px",display:"flex",justifyContent:"space-between"}}><span style={{fontSize:"12px",fontWeight:"700",color:"rgba(255,255,255,0.8)"}}>Total</span><span style={{fontSize:"14px",fontWeight:"800",color:"var(--r)"}}>748ms avg</span></div>
             </div>
           </div>
-          <div style={{background:"var(--rl)",borderRadius:"12px",padding:"20px",textAlign:"center"}}><div style={{fontSize:"13px",fontWeight:"600",color:"var(--r)",marginBottom:"4px"}}>Industry benchmark</div><div style={{fontSize:"12px",color:"var(--r)",opacity:".75"}}>Average SA payment gateway: 2,200ms</div><div style={{fontSize:"22px",fontWeight:"800",color:"var(--r)",marginTop:"8px"}}>SwiftPay is 3× faster</div></div>
+          <div style={{background:"var(--rl)",borderRadius:"12px",padding:"20px",textAlign:"center"}}><div style={{fontSize:"13px",fontWeight:"600",color:"var(--r)",marginBottom:"4px"}}>Industry benchmark</div><div style={{fontSize:"12px",color:"var(--r)",opacity:".75"}}>Average SA payment gateway: 2,200ms</div><div style={{fontSize:"22px",fontWeight:"800",color:"var(--r)",marginTop:"8px"}}>BipraPay is 3× faster</div></div>
         </div>
       </div>
     </div></section>
@@ -111,13 +111,13 @@ export default function Page() {
     </div></section>
 
     <section className="section"><div className="inner-n"><div className="quote-block">
-      <p style={{fontSize:"20px",fontWeight:"600",color:"#fff",lineHeight:"1.5",marginBottom:"24px",position:"relative",zIndex:"1"}}>"SwiftPay processes our entire payroll — 800 staff across 6 provinces — in under 90 seconds. Every Friday. Without fail. The old system took 4 hours and still had errors."</p>
+      <p style={{fontSize:"20px",fontWeight:"600",color:"#fff",lineHeight:"1.5",marginBottom:"24px",position:"relative",zIndex:"1"}}>"BipraPay processes our entire payroll — 800 staff across 6 provinces — in under 90 seconds. Every Friday. Without fail. The old system took 4 hours and still had errors."</p>
       <div style={{display:"flex",alignItems:"center",gap:"14px",position:"relative",zIndex:"1"}}>
         <div style={{width:"44px",height:"44px",borderRadius:"50%",background:"var(--r)",display:"flex",alignItems:"center",justifyContent:"center",fontWeight:"700",color:"#fff",flexShrink:"0"}}>ZK</div>
         <div><div style={{fontSize:"14px",fontWeight:"600",color:"#fff"}}>Zola Khumalo</div><div style={{fontSize:"12px",color:"rgba(255,255,255,0.45)"}}>Head of Finance, Ubuntu Logistics</div></div>
       </div>
     </div></div></section>
-    <section style={{background:"var(--r)",padding:"80px 5%",textAlign:"center"}}><div className="inner-n"><h2 style={{fontFamily:"var(--fd)",fontSize:"clamp(26px,3vw,38px)",fontWeight:"800",color:"#fff",letterSpacing:"-.8px",marginBottom:"16px"}}>Ready to move at the speed of now?</h2><p style={{fontSize:"16px",color:"rgba(255,255,255,0.6)",marginBottom:"36px"}}>Set up SwiftPay in your environment today.</p><div style={{display:"flex",gap:"16px",justifyContent:"center",flexWrap:"wrap"}}><Link className="btn btn-w btn-lg" href="/contact">Book a demo</Link><Link className="btn btn-ow btn-lg" href="/pricing">See pricing</Link></div></div></section>
+    <section style={{background:"var(--r)",padding:"80px 5%",textAlign:"center"}}><div className="inner-n"><h2 style={{fontFamily:"var(--fd)",fontSize:"clamp(26px,3vw,38px)",fontWeight:"800",color:"#fff",letterSpacing:"-.8px",marginBottom:"16px"}}>Ready to move at the speed of now?</h2><p style={{fontSize:"16px",color:"rgba(255,255,255,0.6)",marginBottom:"36px"}}>Set up BipraPay in your environment today.</p><div style={{display:"flex",gap:"16px",justifyContent:"center",flexWrap:"wrap"}}><Link className="btn btn-w btn-lg" href="/contact">Book a demo</Link><Link className="btn btn-ow btn-lg" href="/pricing">See pricing</Link></div></div></section>
     </div>
   );
 }

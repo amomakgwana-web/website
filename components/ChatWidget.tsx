@@ -10,44 +10,38 @@ const KB: KBEntry[] = [
   {
     keys: ["hello", "hi", "hey", "good morning", "good afternoon", "howzit"],
     reply:
-      "Hello! Welcome to BIPRA support. I'm here to help with xPayments, SwiftPay, xBilling, NexCore ERP, pricing, or anything else. What can I help you with today?",
+      "Hello! Welcome to BIPRA support. I'm here to help with BipraPay, VeriBills, Morr ERP, pricing, or anything else. What can I help you with today?",
     qr: ["Pricing", "Book a demo", "API help", "Products overview"],
   },
   {
     keys: ["pricing", "price", "cost", "how much", "plans", "subscription", "tariff"],
     reply:
-      "BIPRA has three plans:\n\n• <strong>Starter</strong> — R1,999/mo (xPayments + SwiftPay, 2 seats)\n• <strong>Business</strong> — R6,399/mo (+ xBilling, 10 seats, priority support)\n• <strong>Enterprise</strong> — Custom (all 4 products, unlimited seats, dedicated SLA)\n\nAll plans include a 14-day free trial. Annual billing saves 20%.",
+      "BIPRA has three plans:\n\n• <strong>Starter</strong> — R1,999/mo (BipraPay, 2 seats)\n• <strong>Business</strong> — R6,399/mo (+ VeriBills, 10 seats, priority support)\n• <strong>Enterprise</strong> — Custom (all 3 products, unlimited seats, dedicated SLA)\n\nAll plans include a 14-day free trial. Annual billing saves 20%.",
     qr: ["Start free trial", "Book a demo", "Compare plans"],
   },
   {
     keys: ["demo", "trial", "test", "see it", "show me", "proof of concept"],
     reply:
-      "I'd love to arrange a demo! Our team can walk you through any of our four products in a 30-minute session tailored to your use case.\n\nShall I put you through to our sales team, or would you prefer to book online?",
+      "I'd love to arrange a demo! Our team can walk you through any of our three products in a 30-minute session tailored to your use case.\n\nShall I put you through to our sales team, or would you prefer to book online?",
     qr: ["Book a demo now", "WhatsApp sales", "Contact form"],
   },
   {
-    keys: ["xpayments", "payment", "payments", "reconciliation", "audit", "eft", "card", "swift", "rail"],
+    keys: ["biprapay", "bipra pay", "payment", "payments", "reconciliation", "audit", "eft", "card", "swift", "rail", "instant", "fast", "speed", "payroll", "disbursement", "salary"],
     reply:
-      "xPayments is our payments and financial auditing engine. It handles:\n\n• EFT, card, SWIFT, mobile money rails\n• Real-time reconciliation\n• Immutable financial audit trails (SARB-compliant)\n• AML screening on every transaction\n\nEvery payment auto-generates an audit record. No separate audit setup needed.",
-    qr: ["xPayments pricing", "API docs", "Book a demo"],
+      "BipraPay is our unified payments and instant gateway — one ecosystem covering processing and auditing. It handles:\n\n• EFT, card, SWIFT, mobile money rails\n• Sub-second processing via edge nodes, averaging <800ms\n• Real-time reconciliation with immutable, SARB-compliant audit trails\n• AML screening and payroll for up to 50,000 staff in one API call\n\nEvery payment auto-generates an audit record — no separate audit setup needed.",
+    qr: ["BipraPay pricing", "See use cases", "API docs", "Book a demo"],
   },
   {
-    keys: ["swiftpay", "swift pay", "instant", "fast", "speed", "payroll", "disbursement", "salary"],
+    keys: ["veribills", "billing", "meter", "smart meter", "bill", "electricity", "water", "municipality", "nersa", "tariff"],
     reply:
-      "SwiftPay is our instant payment gateway, averaging <800ms processing time.\n\nKey features:\n• Payroll for up to 50,000 staff in one API call\n• Sub-second processing via edge nodes\n• Bulk disbursements, supplier payments, commission payouts\n• 3× faster than the industry average",
-    qr: ["SwiftPay pricing", "See use cases", "Book a demo"],
+      "VeriBills is our bill presentment and smart metering solution. It:\n\n• Ingests AMI/AMR smart meter data (DLMS/COSEM, IEC 62056)\n• Applies IBT, TOU, or flat tariff structures\n• Generates itemised bills in under 5 minutes\n• Delivers via email, SMS, WhatsApp, portal, or print\n\nUsed by municipalities, utilities, and property management companies.",
+    qr: ["VeriBills pricing", "Tariff types", "Book a demo"],
   },
   {
-    keys: ["xbilling", "billing", "meter", "smart meter", "bill", "electricity", "water", "municipality", "nersa", "tariff"],
+    keys: ["morr", "morr erp", "erp", "hr", "budget", "budgeting", "leave", "employee", "document", "approval", "workflow"],
     reply:
-      "xBilling is our bill presentment and smart metering solution. It:\n\n• Ingests AMI/AMR smart meter data (DLMS/COSEM, IEC 62056)\n• Applies IBT, TOU, or flat tariff structures\n• Generates itemised bills in under 5 minutes\n• Delivers via email, SMS, WhatsApp, portal, or print\n\nUsed by municipalities, utilities, and property management companies.",
-    qr: ["xBilling pricing", "Tariff types", "Book a demo"],
-  },
-  {
-    keys: ["nexcore", "erp", "hr", "budget", "budgeting", "leave", "employee", "document", "approval", "workflow"],
-    reply:
-      "NexCore ERP unifies three modules on one data model:\n\n• <strong>Budgeting</strong> — multi-level approvals, real-time actuals, PFMA/MFMA compliance\n• <strong>HR</strong> — employee records, leave management, payroll integration\n• <strong>Documents</strong> — digital signatures, version control, retention policies\n\nBudget approval cycles typically drop from 14 days to 3 days.",
-    qr: ["NexCore pricing", "Book a demo", "Module details"],
+      "Morr ERP unifies three modules on one data model:\n\n• <strong>Budgeting</strong> — multi-level approvals, real-time actuals, PFMA/MFMA compliance\n• <strong>HR</strong> — employee records, leave management, payroll integration\n• <strong>Documents</strong> — digital signatures, version control, retention policies\n\nBudget approval cycles typically drop from 14 days to 3 days.",
+    qr: ["Morr pricing", "Book a demo", "Module details"],
   },
   {
     keys: ["api", "developer", "sdk", "integrate", "integration", "webhook", "postman", "openapi", "rest", "endpoint"],
@@ -82,13 +76,13 @@ const KB: KBEntry[] = [
   {
     keys: ["hotel", "hospitality", "steyn city", "palazzo", "four seasons", "saxon", "luxury"],
     reply:
-      "BIPRA powers payment and billing operations for several luxury hospitality groups.\n\nFor hotels and resorts we typically enable:\n• SwiftPay for rapid supplier disbursements\n• xPayments for secure card and EFT processing\n• NexCore ERP for budget management across multiple properties\n\nShall I connect you with a specialist?",
+      "BIPRA powers payment and billing operations for several luxury hospitality groups.\n\nFor hotels and resorts we typically enable:\n• BipraPay for rapid supplier disbursements and secure card/EFT processing\n• Morr ERP for budget management across multiple properties\n\nShall I connect you with a specialist?",
     qr: ["Book a hospitality demo", "WhatsApp sales"],
   },
   {
     keys: ["insurance", "discovery", "outsurance", "momentum", "santam", "claims", "payout"],
     reply:
-      "Several South African insurers use SwiftPay for near-instant claims payouts — triggered the moment a claim is approved via API.\n\nWe also support:\n• Commission disbursements to brokers\n• Premium collection via direct debit\n• Financial audit trails for regulatory reporting\n\nWant to learn more?",
+      "Several South African insurers use BipraPay for near-instant claims payouts — triggered the moment a claim is approved via API.\n\nWe also support:\n• Commission disbursements to brokers\n• Premium collection via direct debit\n• Financial audit trails for regulatory reporting\n\nWant to learn more?",
     qr: ["Insurance use cases", "Book a demo", "WhatsApp sales"],
   },
   {
@@ -108,8 +102,8 @@ const KB: KBEntry[] = [
 const PRODUCTS_OVERVIEW: KBEntry = {
   keys: [],
   reply:
-    "BIPRA has four products:\n\n• <strong>xPayments</strong> — Payments + financial audit engine\n• <strong>SwiftPay</strong> — Instant payment gateway\n• <strong>xBilling</strong> — Bill presentment + smart metering\n• <strong>NexCore ERP</strong> — Budgeting, HR & digital documents\n\nThey work independently or as one unified platform. Which would you like to know more about?",
-  qr: ["xPayments", "SwiftPay", "xBilling", "NexCore ERP"],
+    "BIPRA has three products:\n\n• <strong>BipraPay</strong> — Payments, financial audit &amp; instant gateway, one ecosystem\n• <strong>VeriBills</strong> — Bill presentment + smart metering\n• <strong>Morr ERP</strong> — Budgeting, HR & digital documents\n\nThey work independently or as one unified platform. Which would you like to know more about?",
+  qr: ["BipraPay", "VeriBills", "Morr ERP"],
 };
 
 const FALLBACK =
@@ -247,24 +241,22 @@ export default function ChatWidget() {
     "Book a demo now": () => goTo("/contact"),
     "API help": () => botReply(findReply(["api"])),
     "Products overview": () => botReply(PRODUCTS_OVERVIEW),
-    xPayments: () => botReply(findReply(["xpayments"])),
-    SwiftPay: () => botReply(findReply(["swiftpay"])),
-    xBilling: () => botReply(findReply(["xbilling"])),
-    "NexCore ERP": () => botReply(findReply(["nexcore"])),
+    BipraPay: () => botReply(findReply(["biprapay"])),
+    VeriBills: () => botReply(findReply(["veribills"])),
+    "Morr ERP": () => botReply(findReply(["morr"])),
     "Start free trial": () => goTo("/contact"),
     "Compare plans": () => goTo("/pricing"),
-    "xPayments pricing": () => goTo("/pricing"),
-    "SwiftPay pricing": () => goTo("/pricing"),
-    "xBilling pricing": () => goTo("/pricing"),
-    "NexCore pricing": () => goTo("/pricing"),
+    "BipraPay pricing": () => goTo("/pricing"),
+    "VeriBills pricing": () => goTo("/pricing"),
+    "Morr pricing": () => goTo("/pricing"),
     "API reference": () => goTo("/developers"),
     "API docs": () => goTo("/developers"),
     "Open sandbox": () => goTo("/developers"),
     "Node.js SDK": () => goTo("/developers"),
     "Python SDK": () => goTo("/developers"),
-    "See use cases": () => goTo("/swiftpay"),
-    "Tariff types": () => goTo("/xbilling"),
-    "Module details": () => goTo("/nexcore"),
+    "See use cases": () => goTo("/biprapay"),
+    "Tariff types": () => goTo("/veribills"),
+    "Module details": () => goTo("/morr-erp"),
     "WhatsApp us": () => setWaOpen(true),
     "WhatsApp sales": () => setWaOpen(true),
     "Open WhatsApp": () => setWaOpen(true),
@@ -274,7 +266,7 @@ export default function ChatWidget() {
     "Request security docs": () => goTo("/security"),
     "Book a public sector demo": () => goTo("/contact"),
     "Book a hospitality demo": () => goTo("/contact"),
-    "Insurance use cases": () => goTo("/swiftpay"),
+    "Insurance use cases": () => goTo("/biprapay"),
   };
 
   const onQuickReply = (label: string) => {

@@ -2,17 +2,17 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "NexCore ERP",
+  title: "Morr ERP",
   description: "Budgeting, HR, and document management unified on one data model.",
 };
 
 export default function Page() {
   return (
-    <div id="page-nexcore" className="page active pw">
+    <div id="page-morr-erp" className="page active pw">
     <section className="section" style={{paddingTop:"100px",background:"linear-gradient(135deg,var(--px) 0%,#fff 50%)"}}>
     <div className="inner two-col" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"center"}}>
     <div>
-      <div style={{display:"flex",alignItems:"center",gap:"10px",marginBottom:"20px"}}><div style={{width:"48px",height:"48px",borderRadius:"13px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center"}}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5533FF" strokeWidth="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8"></rect></svg></div><span style={{fontFamily:"var(--fd)",fontWeight:"700",fontSize:"15px",color:"var(--p)"}}>NexCore ERP</span></div>
+      <div style={{display:"flex",alignItems:"center",gap:"10px",marginBottom:"20px"}}><div style={{width:"48px",height:"48px",borderRadius:"13px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center"}}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#5533FF" strokeWidth="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8"></rect></svg></div><span style={{fontFamily:"var(--fd)",fontWeight:"700",fontSize:"15px",color:"var(--p)"}}>Morr ERP</span></div>
       <h1 style={{fontFamily:"var(--fd)",fontSize:"clamp(36px,4.5vw,54px)",fontWeight:"800",lineHeight:"1.07",letterSpacing:"-1.5px",marginBottom:"20px"}}>The enterprise OS<br />for <span className="grad-text">modern teams</span></h1>
       <p style={{fontSize:"17px",color:"var(--muted)",lineHeight:"1.75",maxWidth:"460px",marginBottom:"36px",fontWeight:"300"}}>Budgeting, HR, and digital document management — unified in a single intelligent platform that replaces spreadsheets.</p>
       <div style={{display:"flex",gap:"16px",flexWrap:"wrap"}}><Link className="btn btn-p btn-lg" href="/contact">Request a demo</Link><Link className="btn btn-o btn-lg" href="/pricing">View pricing</Link></div>
@@ -59,48 +59,48 @@ export default function Page() {
 
     <section className="section" style={{background:"var(--off)"}}><div className="inner">
     <p className="slabel">Typical time savings</p>
-    <h2 className="stitle">What NexCore replaces in your organisation</h2>
+    <h2 className="stitle">What Morr replaces in your organisation</h2>
     <div className="g3" style={{gap:"20px"}}>
     <div className="gcard shine grid-pop tilt" style={{borderRadius:"14px",padding:"24px"}}>
     <div style={{fontSize:"13px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"16px"}}>Budget approval cycle</div>
     <div style={{display:"flex",alignItems:"center",gap:"16px",marginBottom:"8px"}}>
-    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>Before NexCore</div><div style={{height:"10px",background:"var(--rl)",borderRadius:"5px",position:"relative"}}><div style={{position:"absolute",right:"0",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--r)"}}>14 days</div></div></div>
+    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>Before Morr</div><div style={{height:"10px",background:"var(--rl)",borderRadius:"5px",position:"relative"}}><div style={{position:"absolute",right:"0",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--r)"}}>14 days</div></div></div>
     </div>
     <div style={{display:"flex",alignItems:"center",gap:"16px"}}>
-    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>With NexCore</div><div style={{height:"10px",background:"var(--gl)",borderRadius:"5px",width:"20%",position:"relative"}}><div style={{position:"absolute",right:"-28px",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--g)"}}>3 days</div></div></div>
+    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>With Morr</div><div style={{height:"10px",background:"var(--gl)",borderRadius:"5px",width:"20%",position:"relative"}}><div style={{position:"absolute",right:"-28px",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--g)"}}>3 days</div></div></div>
     </div>
     <p style={{fontSize:"12px",color:"var(--muted)",marginTop:"20px",lineHeight:"1.5"}}>Digital approval routing eliminates email chains and manual follow-ups.</p>
     </div>
     <div className="gcard shine grid-pop tilt" style={{borderRadius:"14px",padding:"24px"}}>
     <div style={{fontSize:"13px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"16px"}}>HR document processing</div>
     <div style={{display:"flex",alignItems:"center",gap:"16px",marginBottom:"8px"}}>
-    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>Before NexCore</div><div style={{height:"10px",background:"var(--rl)",borderRadius:"5px",position:"relative"}}><div style={{position:"absolute",right:"0",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--r)"}}>2 days</div></div></div>
+    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>Before Morr</div><div style={{height:"10px",background:"var(--rl)",borderRadius:"5px",position:"relative"}}><div style={{position:"absolute",right:"0",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--r)"}}>2 days</div></div></div>
     </div>
     <div style={{display:"flex",alignItems:"center",gap:"16px"}}>
-    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>With NexCore</div><div style={{height:"10px",background:"var(--gl)",borderRadius:"5px",width:"12%",position:"relative"}}><div style={{position:"absolute",right:"-42px",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--g)"}}>20 min</div></div></div>
+    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>With Morr</div><div style={{height:"10px",background:"var(--gl)",borderRadius:"5px",width:"12%",position:"relative"}}><div style={{position:"absolute",right:"-42px",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--g)"}}>20 min</div></div></div>
     </div>
     <p style={{fontSize:"12px",color:"var(--muted)",marginTop:"20px",lineHeight:"1.5"}}>Digital signatures and automated workflow routing replace physical paper processes.</p>
     </div>
     <div className="gcard shine grid-pop tilt" style={{borderRadius:"14px",padding:"24px"}}>
     <div style={{fontSize:"13px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"16px"}}>Month-end financial close</div>
     <div style={{display:"flex",alignItems:"center",gap:"16px",marginBottom:"8px"}}>
-    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>Before NexCore</div><div style={{height:"10px",background:"var(--rl)",borderRadius:"5px",position:"relative"}}><div style={{position:"absolute",right:"0",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--r)"}}>5 days</div></div></div>
+    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>Before Morr</div><div style={{height:"10px",background:"var(--rl)",borderRadius:"5px",position:"relative"}}><div style={{position:"absolute",right:"0",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--r)"}}>5 days</div></div></div>
     </div>
     <div style={{display:"flex",alignItems:"center",gap:"16px"}}>
-    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>With NexCore</div><div style={{height:"10px",background:"var(--gl)",borderRadius:"5px",width:"16%",position:"relative"}}><div style={{position:"absolute",right:"-38px",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--g)"}}>&lt;1 day</div></div></div>
+    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>With Morr</div><div style={{height:"10px",background:"var(--gl)",borderRadius:"5px",width:"16%",position:"relative"}}><div style={{position:"absolute",right:"-38px",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--g)"}}>&lt;1 day</div></div></div>
     </div>
     <p style={{fontSize:"12px",color:"var(--muted)",marginTop:"20px",lineHeight:"1.5"}}>Automated budget reconciliation and actuals reporting from a single data source.</p>
     </div>
     </div></div></section>
 
     <section className="section"><div className="inner-n"><div className="quote-block">
-    <p style={{fontSize:"20px",fontWeight:"600",color:"#fff",lineHeight:"1.5",marginBottom:"24px",position:"relative",zIndex:"1"}}>"NexCore replaced our ERP, HR system, and document management tool. Budget approvals that used to take two weeks now happen in 3 days. Our AG audit was the cleanest in 6 years."</p>
+    <p style={{fontSize:"20px",fontWeight:"600",color:"#fff",lineHeight:"1.5",marginBottom:"24px",position:"relative",zIndex:"1"}}>"Morr replaced our ERP, HR system, and document management tool. Budget approvals that used to take two weeks now happen in 3 days. Our AG audit was the cleanest in 6 years."</p>
     <div style={{display:"flex",alignItems:"center",gap:"14px",position:"relative",zIndex:"1"}}>
     <div style={{width:"44px",height:"44px",borderRadius:"50%",background:"var(--p)",display:"flex",alignItems:"center",justifyContent:"center",fontWeight:"700",color:"#fff",flexShrink:"0"}}>AM</div>
     <div><div style={{fontSize:"14px",fontWeight:"600",color:"#fff"}}>Amara Mensah</div>
     <div style={{fontSize:"12px",color:"rgba(255,255,255,0.45)"}}>Group COO, Ndovu Capital</div></div>
     </div></div></div></section>
-    <section style={{background:"var(--ink)",padding:"80px 5%",textAlign:"center"}}><div className="inner-n"><h2 style={{fontFamily:"var(--fd)",fontSize:"clamp(26px,3vw,38px)",fontWeight:"800",color:"#fff",letterSpacing:"-.8px",marginBottom:"16px"}}>Retire the spreadsheets. Run on NexCore.</h2><p style={{fontSize:"16px",color:"rgba(255,255,255,0.4)",marginBottom:"36px"}}>Talk to us about a tailored enterprise deployment.</p><div style={{display:"flex",gap:"16px",justifyContent:"center",flexWrap:"wrap"}}><Link className="btn btn-w btn-lg" href="/contact">Request demo</Link><Link className="btn btn-ow btn-lg" href="/pricing">See pricing</Link></div></div></section>
+    <section style={{background:"var(--ink)",padding:"80px 5%",textAlign:"center"}}><div className="inner-n"><h2 style={{fontFamily:"var(--fd)",fontSize:"clamp(26px,3vw,38px)",fontWeight:"800",color:"#fff",letterSpacing:"-.8px",marginBottom:"16px"}}>Retire the spreadsheets. Run on Morr.</h2><p style={{fontSize:"16px",color:"rgba(255,255,255,0.4)",marginBottom:"36px"}}>Talk to us about a tailored enterprise deployment.</p><div style={{display:"flex",gap:"16px",justifyContent:"center",flexWrap:"wrap"}}><Link className="btn btn-w btn-lg" href="/contact">Request demo</Link><Link className="btn btn-ow btn-lg" href="/pricing">See pricing</Link></div></div></section>
     </div>
   );
 }

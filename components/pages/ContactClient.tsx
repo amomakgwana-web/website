@@ -4,10 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 
 const PRODUCT_CHIPS: { label: string; color: string; bg: string }[] = [
-  { label: "xPayments", color: "#5533FF", bg: "var(--pl)" },
-  { label: "SwiftPay", color: "#E8152A", bg: "var(--rl)" },
-  { label: "xBilling", color: "#0A7B3E", bg: "var(--gl)" },
-  { label: "NexCore ERP", color: "#5533FF", bg: "var(--pl)" },
+  { label: "BipraPay", color: "#E8152A", bg: "var(--rl)" },
+  { label: "VeriBills", color: "#0A7B3E", bg: "var(--gl)" },
+  { label: "Morr ERP", color: "#5533FF", bg: "var(--pl)" },
 ];
 
 const INTENT_CHIPS = ["Book a demo", "Get pricing", "Technical question", "Enterprise inquiry"];

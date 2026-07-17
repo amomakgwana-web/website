@@ -228,26 +228,22 @@ export default function DevelopersClient() {
             <li><a id="doc-nav-errors" style={doc === "errors" ? docNavActiveStyle : docNavInactiveStyle} onClick={() => showDoc("errors")} className={doc === "errors" ? undefined : "hv-off"}>Error handling</a></li>
             <li><a id="doc-nav-ratelimits" style={doc === "ratelimits" ? docNavActiveStyle : docNavInactiveStyle} onClick={() => showDoc("ratelimits")} className={doc === "ratelimits" ? undefined : "hv-off"}>Rate limits</a></li>
           </ul>
-          <div style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"10px"}}>xPayments</div>
+          <div style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"10px"}}>BipraPay</div>
           <ul style={{listStyle:"none",display:"flex",flexDirection:"column",gap:"2px",marginBottom:"24px"}}>
             <li><a style={{display:"block",padding:"7px 10px",borderRadius:"7px",fontSize:"13px",color:"var(--ink2)",cursor:"pointer"}} className="hv-off">Create a payment</a></li>
-            <li><a style={{display:"block",padding:"7px 10px",borderRadius:"7px",fontSize:"13px",color:"var(--ink2)",cursor:"pointer"}} className="hv-off">Bulk disbursements</a></li>
+            <li><a style={{display:"block",padding:"7px 10px",borderRadius:"7px",fontSize:"13px",color:"var(--ink2)",cursor:"pointer"}} className="hv-off">Instant payments</a></li>
+            <li><a style={{display:"block",padding:"7px 10px",borderRadius:"7px",fontSize:"13px",color:"var(--ink2)",cursor:"pointer"}} className="hv-off">Bulk disbursements &amp; payroll</a></li>
             <li><a style={{display:"block",padding:"7px 10px",borderRadius:"7px",fontSize:"13px",color:"var(--ink2)",cursor:"pointer"}} className="hv-off">Audit trail events</a></li>
             <li><a style={{display:"block",padding:"7px 10px",borderRadius:"7px",fontSize:"13px",color:"var(--ink2)",cursor:"pointer"}} className="hv-off">Reconciliation</a></li>
-          </ul>
-          <div style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"10px"}}>SwiftPay</div>
-          <ul style={{listStyle:"none",display:"flex",flexDirection:"column",gap:"2px",marginBottom:"24px"}}>
-            <li><a style={{display:"block",padding:"7px 10px",borderRadius:"7px",fontSize:"13px",color:"var(--ink2)",cursor:"pointer"}} className="hv-off">Instant payments</a></li>
-            <li><a style={{display:"block",padding:"7px 10px",borderRadius:"7px",fontSize:"13px",color:"var(--ink2)",cursor:"pointer"}} className="hv-off">Payroll disbursement</a></li>
             <li><a style={{display:"block",padding:"7px 10px",borderRadius:"7px",fontSize:"13px",color:"var(--ink2)",cursor:"pointer"}} className="hv-off">Payment status</a></li>
           </ul>
-          <div style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"10px"}}>xBilling</div>
+          <div style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"10px"}}>VeriBills</div>
           <ul style={{listStyle:"none",display:"flex",flexDirection:"column",gap:"2px",marginBottom:"24px"}}>
             <li><a style={{display:"block",padding:"7px 10px",borderRadius:"7px",fontSize:"13px",color:"var(--ink2)",cursor:"pointer"}} className="hv-off">Meter data ingestion</a></li>
             <li><a style={{display:"block",padding:"7px 10px",borderRadius:"7px",fontSize:"13px",color:"var(--ink2)",cursor:"pointer"}} className="hv-off">Bill generation</a></li>
             <li><a style={{display:"block",padding:"7px 10px",borderRadius:"7px",fontSize:"13px",color:"var(--ink2)",cursor:"pointer"}} className="hv-off">Bill delivery</a></li>
           </ul>
-          <div style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"10px"}}>NexCore ERP</div>
+          <div style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"10px"}}>Morr ERP</div>
           <ul style={{listStyle:"none",display:"flex",flexDirection:"column",gap:"2px"}}>
             <li><a style={{display:"block",padding:"7px 10px",borderRadius:"7px",fontSize:"13px",color:"var(--ink2)",cursor:"pointer"}} className="hv-off">Budget API</a></li>
             <li><a style={{display:"block",padding:"7px 10px",borderRadius:"7px",fontSize:"13px",color:"var(--ink2)",cursor:"pointer"}} className="hv-off">HR endpoints</a></li>
@@ -280,7 +276,7 @@ export default function DevelopersClient() {
     <div id="dev-sdks" className="dev-panel section" style={{display: panel === "sdks" ? "block" : "none"}}>
       <div className="inner">
         <h2 className="stitle">Official SDKs</h2>
-        <p className="ssub">Maintained by the BIPRA engineering team. All SDKs cover all four products.</p>
+        <p className="ssub">Maintained by the BIPRA engineering team. All SDKs cover all three products.</p>
         <div className="g3" style={{gap:"24px",marginBottom:"48px"}}>
           <div className="card">
             <div style={{display:"flex",alignItems:"center",gap:"12px",marginBottom:"16px"}}>
@@ -351,8 +347,8 @@ export default function DevelopersClient() {
           
           <div style={{borderRadius:"12px",border:"1px solid var(--border)",overflow:"hidden"}}>
             <div style={{background:"var(--off)",padding:"14px 20px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-              <div style={{display:"flex",alignItems:"center",gap:"12px"}}><span className="badge b-p">xPayments</span><span style={{fontWeight:"600",color:"var(--ink)"}}>Payments &amp; Audit</span></div>
-              <span style={{fontSize:"12px",color:"var(--muted)"}}>8 endpoints</span>
+              <div style={{display:"flex",alignItems:"center",gap:"12px"}}><span className="badge b-r">BipraPay</span><span style={{fontWeight:"600",color:"var(--ink)"}}>Payments, Audit &amp; Instant Gateway</span></div>
+              <span style={{fontSize:"12px",color:"var(--muted)"}}>13 endpoints</span>
             </div>
             <div style={{display:"flex",flexDirection:"column"}}>
               <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 20px",borderBottom:"1px solid var(--border)"}}><span style={{fontSize:"11px",fontWeight:"700",padding:"3px 8px",borderRadius:"5px",background:"#E6FFEF",color:"#0A7B3E",fontFamily:"monospace",minWidth:"42px",textAlign:"center"}}>POST</span><code style={{fontFamily:"monospace",fontSize:"13px",color:"var(--ink)"}}>/payments</code><span style={{fontSize:"13px",color:"var(--muted)",marginLeft:"auto"}}>Create a payment</span></div>
@@ -360,27 +356,17 @@ export default function DevelopersClient() {
               <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 20px",borderBottom:"1px solid var(--border)"}}><span style={{fontSize:"11px",fontWeight:"700",padding:"3px 8px",borderRadius:"5px",background:"var(--pl)",color:"var(--p)",fontFamily:"monospace",minWidth:"42px",textAlign:"center"}}>GET</span><code style={{fontFamily:"monospace",fontSize:"13px",color:"var(--ink)"}}>/payments</code><span style={{fontSize:"13px",color:"var(--muted)",marginLeft:"auto"}}>List payments</span></div>
               <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 20px",borderBottom:"1px solid var(--border)"}}><span style={{fontSize:"11px",fontWeight:"700",padding:"3px 8px",borderRadius:"5px",background:"#E6FFEF",color:"#0A7B3E",fontFamily:"monospace",minWidth:"42px",textAlign:"center"}}>POST</span><code style={{fontFamily:"monospace",fontSize:"13px",color:"var(--ink)"}}>/payments/bulk</code><span style={{fontSize:"13px",color:"var(--muted)",marginLeft:"auto"}}>Bulk disbursement</span></div>
               <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 20px",borderBottom:"1px solid var(--border)"}}><span style={{fontSize:"11px",fontWeight:"700",padding:"3px 8px",borderRadius:"5px",background:"var(--pl)",color:"var(--p)",fontFamily:"monospace",minWidth:"42px",textAlign:"center"}}>GET</span><code style={{fontFamily:"monospace",fontSize:"13px",color:"var(--ink)"}}>/audit/events</code><span style={{fontSize:"13px",color:"var(--muted)",marginLeft:"auto"}}>List audit events</span></div>
-              <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 20px"}}><span style={{fontSize:"11px",fontWeight:"700",padding:"3px 8px",borderRadius:"5px",background:"var(--pl)",color:"var(--p)",fontFamily:"monospace",minWidth:"42px",textAlign:"center"}}>GET</span><code style={{fontFamily:"monospace",fontSize:"13px",color:"var(--ink)"}}>/audit/reports/:type</code><span style={{fontSize:"13px",color:"var(--muted)",marginLeft:"auto"}}>Generate audit report</span></div>
+              <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 20px",borderBottom:"1px solid var(--border)"}}><span style={{fontSize:"11px",fontWeight:"700",padding:"3px 8px",borderRadius:"5px",background:"var(--pl)",color:"var(--p)",fontFamily:"monospace",minWidth:"42px",textAlign:"center"}}>GET</span><code style={{fontFamily:"monospace",fontSize:"13px",color:"var(--ink)"}}>/audit/reports/:type</code><span style={{fontSize:"13px",color:"var(--muted)",marginLeft:"auto"}}>Generate audit report</span></div>
+              <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 20px",borderBottom:"1px solid var(--border)"}}><span style={{fontSize:"11px",fontWeight:"700",padding:"3px 8px",borderRadius:"5px",background:"#E6FFEF",color:"#0A7B3E",fontFamily:"monospace",minWidth:"42px",textAlign:"center"}}>POST</span><code style={{fontFamily:"monospace",fontSize:"13px",color:"var(--ink)"}}>/biprapay/send</code><span style={{fontSize:"13px",color:"var(--muted)",marginLeft:"auto"}}>Send instant payment</span></div>
+              <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 20px",borderBottom:"1px solid var(--border)"}}><span style={{fontSize:"11px",fontWeight:"700",padding:"3px 8px",borderRadius:"5px",background:"#E6FFEF",color:"#0A7B3E",fontFamily:"monospace",minWidth:"42px",textAlign:"center"}}>POST</span><code style={{fontFamily:"monospace",fontSize:"13px",color:"var(--ink)"}}>/biprapay/payroll</code><span style={{fontSize:"13px",color:"var(--muted)",marginLeft:"auto"}}>Payroll disbursement</span></div>
+              <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 20px"}}><span style={{fontSize:"11px",fontWeight:"700",padding:"3px 8px",borderRadius:"5px",background:"var(--pl)",color:"var(--p)",fontFamily:"monospace",minWidth:"42px",textAlign:"center"}}>GET</span><code style={{fontFamily:"monospace",fontSize:"13px",color:"var(--ink)"}}>/biprapay/:id/status</code><span style={{fontSize:"13px",color:"var(--muted)",marginLeft:"auto"}}>Payment status</span></div>
             </div>
           </div>
 
-          
-          <div style={{borderRadius:"12px",border:"1px solid var(--border)",overflow:"hidden"}}>
-            <div style={{background:"var(--off)",padding:"14px 20px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-              <div style={{display:"flex",alignItems:"center",gap:"12px"}}><span className="badge b-r">SwiftPay</span><span style={{fontWeight:"600",color:"var(--ink)"}}>Instant Payments</span></div>
-              <span style={{fontSize:"12px",color:"var(--muted)"}}>5 endpoints</span>
-            </div>
-            <div style={{display:"flex",flexDirection:"column"}}>
-              <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 20px",borderBottom:"1px solid var(--border)"}}><span style={{fontSize:"11px",fontWeight:"700",padding:"3px 8px",borderRadius:"5px",background:"#E6FFEF",color:"#0A7B3E",fontFamily:"monospace",minWidth:"42px",textAlign:"center"}}>POST</span><code style={{fontFamily:"monospace",fontSize:"13px",color:"var(--ink)"}}>/swift/send</code><span style={{fontSize:"13px",color:"var(--muted)",marginLeft:"auto"}}>Send instant payment</span></div>
-              <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 20px",borderBottom:"1px solid var(--border)"}}><span style={{fontSize:"11px",fontWeight:"700",padding:"3px 8px",borderRadius:"5px",background:"#E6FFEF",color:"#0A7B3E",fontFamily:"monospace",minWidth:"42px",textAlign:"center"}}>POST</span><code style={{fontFamily:"monospace",fontSize:"13px",color:"var(--ink)"}}>/swift/payroll</code><span style={{fontSize:"13px",color:"var(--muted)",marginLeft:"auto"}}>Payroll disbursement</span></div>
-              <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 20px"}}><span style={{fontSize:"11px",fontWeight:"700",padding:"3px 8px",borderRadius:"5px",background:"var(--pl)",color:"var(--p)",fontFamily:"monospace",minWidth:"42px",textAlign:"center"}}>GET</span><code style={{fontFamily:"monospace",fontSize:"13px",color:"var(--ink)"}}>/swift/:id/status</code><span style={{fontSize:"13px",color:"var(--muted)",marginLeft:"auto"}}>Payment status</span></div>
-            </div>
-          </div>
 
-          
           <div style={{borderRadius:"12px",border:"1px solid var(--border)",overflow:"hidden"}}>
             <div style={{background:"var(--off)",padding:"14px 20px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-              <div style={{display:"flex",alignItems:"center",gap:"12px"}}><span className="badge b-g">xBilling</span><span style={{fontWeight:"600",color:"var(--ink)"}}>Metering &amp; Bill Presentment</span></div>
+              <div style={{display:"flex",alignItems:"center",gap:"12px"}}><span className="badge b-g">VeriBills</span><span style={{fontWeight:"600",color:"var(--ink)"}}>Metering &amp; Bill Presentment</span></div>
               <span style={{fontSize:"12px",color:"var(--muted)"}}>7 endpoints</span>
             </div>
             <div style={{display:"flex",flexDirection:"column"}}>
@@ -426,17 +412,17 @@ export default function DevelopersClient() {
 
           <div style={{display:"grid",gridTemplateColumns:"120px 1fr",gap:"24px",padding:"28px 0",borderBottom:"1px solid var(--border)"}}>
             <div style={{textAlign:"right"}}><span style={{fontSize:"12px",fontWeight:"600",color:"var(--muted)"}}>May 2025</span><br /><span className="badge b-p" style={{marginTop:"6px",fontSize:"10px"}}>v2.4</span></div>
-            <div><div style={{fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>xPayments audit streaming</div><p style={{fontSize:"14px",color:"var(--muted)",lineHeight:"1.7",marginBottom:"10px"}}>Real-time audit event streaming via WebSocket. Subscribe to <code style={{background:"var(--off)",padding:"1px 5px",borderRadius:"4px",fontFamily:"monospace",fontSize:"12px"}}>wss://api.bipra.io/v1/audit/stream</code>. All financial system events now carry an <code style={{background:"var(--off)",padding:"1px 5px",borderRadius:"4px",fontFamily:"monospace",fontSize:"12px"}}>auditId</code>.</p><div style={{display:"flex",gap:"6px"}}><span className="badge b-g" style={{fontSize:"10px"}}>New</span><span style={{fontSize:"12px",color:"var(--muted)"}}>xPayments</span></div></div>
+            <div><div style={{fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>BipraPay audit streaming</div><p style={{fontSize:"14px",color:"var(--muted)",lineHeight:"1.7",marginBottom:"10px"}}>Real-time audit event streaming via WebSocket. Subscribe to <code style={{background:"var(--off)",padding:"1px 5px",borderRadius:"4px",fontFamily:"monospace",fontSize:"12px"}}>wss://api.bipra.io/v1/audit/stream</code>. All financial system events now carry an <code style={{background:"var(--off)",padding:"1px 5px",borderRadius:"4px",fontFamily:"monospace",fontSize:"12px"}}>auditId</code>.</p><div style={{display:"flex",gap:"6px"}}><span className="badge b-g" style={{fontSize:"10px"}}>New</span><span style={{fontSize:"12px",color:"var(--muted)"}}>BipraPay</span></div></div>
           </div>
 
           <div style={{display:"grid",gridTemplateColumns:"120px 1fr",gap:"24px",padding:"28px 0",borderBottom:"1px solid var(--border)"}}>
             <div style={{textAlign:"right"}}><span style={{fontSize:"12px",fontWeight:"600",color:"var(--muted)"}}>Apr 2025</span><br /><span className="badge b-p" style={{marginTop:"6px",fontSize:"10px"}}>v2.3</span></div>
-            <div><div style={{fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>xBilling smart meter API</div><p style={{fontSize:"14px",color:"var(--muted)",lineHeight:"1.7",marginBottom:"10px"}}>New <code style={{background:"var(--off)",padding:"1px 5px",borderRadius:"4px",fontFamily:"monospace",fontSize:"12px"}}>/meters/readings</code> endpoint accepts bulk AMI/AMR meter data. Supports DLMS/COSEM and IEC 62056 protocols. Bill generation from readings in under 5 minutes.</p><div style={{display:"flex",gap:"6px"}}><span className="badge b-g" style={{fontSize:"10px"}}>New</span><span style={{fontSize:"12px",color:"var(--muted)"}}>xBilling</span></div></div>
+            <div><div style={{fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>VeriBills smart meter API</div><p style={{fontSize:"14px",color:"var(--muted)",lineHeight:"1.7",marginBottom:"10px"}}>New <code style={{background:"var(--off)",padding:"1px 5px",borderRadius:"4px",fontFamily:"monospace",fontSize:"12px"}}>/meters/readings</code> endpoint accepts bulk AMI/AMR meter data. Supports DLMS/COSEM and IEC 62056 protocols. Bill generation from readings in under 5 minutes.</p><div style={{display:"flex",gap:"6px"}}><span className="badge b-g" style={{fontSize:"10px"}}>New</span><span style={{fontSize:"12px",color:"var(--muted)"}}>VeriBills</span></div></div>
           </div>
 
           <div style={{display:"grid",gridTemplateColumns:"120px 1fr",gap:"24px",padding:"28px 0",borderBottom:"1px solid var(--border)"}}>
             <div style={{textAlign:"right"}}><span style={{fontSize:"12px",fontWeight:"600",color:"var(--muted)"}}>Mar 2025</span><br /><span className="badge b-p" style={{marginTop:"6px",fontSize:"10px"}}>v2.2</span></div>
-            <div><div style={{fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>SwiftPay payroll endpoint</div><p style={{fontSize:"14px",color:"var(--muted)",lineHeight:"1.7",marginBottom:"10px"}}>Dedicated <code style={{background:"var(--off)",padding:"1px 5px",borderRadius:"4px",fontFamily:"monospace",fontSize:"12px"}}>/swift/payroll</code> endpoint optimised for bulk salary runs. Accepts up to 50,000 recipients per call. Results in under 90 seconds.</p><div style={{display:"flex",gap:"6px"}}><span className="badge b-g" style={{fontSize:"10px"}}>New</span><span style={{fontSize:"12px",color:"var(--muted)"}}>SwiftPay</span></div></div>
+            <div><div style={{fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>BipraPay payroll endpoint</div><p style={{fontSize:"14px",color:"var(--muted)",lineHeight:"1.7",marginBottom:"10px"}}>Dedicated <code style={{background:"var(--off)",padding:"1px 5px",borderRadius:"4px",fontFamily:"monospace",fontSize:"12px"}}>/biprapay/payroll</code> endpoint optimised for bulk salary runs. Accepts up to 50,000 recipients per call. Results in under 90 seconds.</p><div style={{display:"flex",gap:"6px"}}><span className="badge b-g" style={{fontSize:"10px"}}>New</span><span style={{fontSize:"12px",color:"var(--muted)"}}>BipraPay</span></div></div>
           </div>
 
           <div style={{display:"grid",gridTemplateColumns:"120px 1fr",gap:"24px",padding:"28px 0",borderBottom:"1px solid var(--border)"}}>
@@ -446,7 +432,7 @@ export default function DevelopersClient() {
 
           <div style={{display:"grid",gridTemplateColumns:"120px 1fr",gap:"24px",padding:"28px 0"}}>
             <div style={{textAlign:"right"}}><span style={{fontSize:"12px",fontWeight:"600",color:"var(--muted)"}}>Jan 2025</span><br /><span className="badge b-p" style={{marginTop:"6px",fontSize:"10px"}}>v2.0</span></div>
-            <div><div style={{fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>API v2 general availability</div><p style={{fontSize:"14px",color:"var(--muted)",lineHeight:"1.7",marginBottom:"10px"}}>BIPRA API v2 is now GA. Unified authentication across all four products, consistent error formats, and 40% faster response times. v1 sunset date: 31 December 2025.</p><div style={{display:"flex",gap:"6px"}}><span className="badge b-g" style={{fontSize:"10px"}}>Major</span><span style={{fontSize:"12px",color:"var(--muted)"}}>All APIs</span></div></div>
+            <div><div style={{fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>API v2 general availability</div><p style={{fontSize:"14px",color:"var(--muted)",lineHeight:"1.7",marginBottom:"10px"}}>BIPRA API v2 is now GA. Unified authentication across all three products, consistent error formats, and 40% faster response times. v1 sunset date: 31 December 2025.</p><div style={{display:"flex",gap:"6px"}}><span className="badge b-g" style={{fontSize:"10px"}}>Major</span><span style={{fontSize:"12px",color:"var(--muted)"}}>All APIs</span></div></div>
           </div>
 
         </div>

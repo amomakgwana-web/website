@@ -9,6 +9,7 @@ export default function SiteHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
+  const isProductRoute = ["/biprapay", "/veribills", "/morr-erp"].includes(pathname);
 
   // Close dropdowns and the mobile menu whenever the route changes. Adjusted
   // during render (rather than in an effect) so it lands in the same commit
@@ -49,7 +50,7 @@ export default function SiteHeader() {
     display: "block",
     width: "22px",
     height: "2px",
-    background: "var(--ink)",
+    background: "rgba(255,255,255,0.85)",
     borderRadius: "2px",
     transition: "all .25s",
     transform,
@@ -62,10 +63,9 @@ export default function SiteHeader() {
         <div id="mobile-menu" style={{display:"block",position:"fixed",top:"var(--nav)",left:"0",right:"0",bottom:"0",zIndex:"190",background:"rgba(255,255,255,0.72)",backdropFilter:"blur(30px) saturate(1.6)",WebkitBackdropFilter:"blur(30px) saturate(1.6)",padding:"32px 6%",overflowY:"auto"}}>
           <div style={{display:"flex",flexDirection:"column",gap:"4px",marginBottom:"32px"}}>
             <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"8px"}}>Products</p>
-            <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/xpayments" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><div style={{width:"10px",height:"10px",borderRadius:"50%",background:"#5533FF"}}></div></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>xPayments</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Payments &amp; financial auditing engine</div></div></Link>
-            <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/swiftpay" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--rl)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><div style={{width:"10px",height:"10px",borderRadius:"50%",background:"#E8152A"}}></div></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>SwiftPay</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Instant payment gateway</div></div></Link>
-            <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/xbilling" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--gl)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><div style={{width:"10px",height:"10px",borderRadius:"50%",background:"#0A7B3E"}}></div></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>xBilling</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Billing &amp; audit engine</div></div></Link>
-            <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/nexcore" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><div style={{width:"10px",height:"10px",borderRadius:"50%",background:"#5533FF"}}></div></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>NexCore ERP</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Enterprise workflow automation</div></div></Link>
+            <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/biprapay" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--rl)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><div style={{width:"10px",height:"10px",borderRadius:"50%",background:"#E8152A"}}></div></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>BipraPay</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Payments, audit &amp; instant gateway</div></div></Link>
+            <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/veribills" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--gl)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><div style={{width:"10px",height:"10px",borderRadius:"50%",background:"#0A7B3E"}}></div></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>VeriBills</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Billing &amp; audit engine</div></div></Link>
+            <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/morr-erp" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><div style={{width:"10px",height:"10px",borderRadius:"50%",background:"#5533FF"}}></div></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>Morr ERP</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Enterprise workflow automation</div></div></Link>
           </div>
           <div style={{display:"flex",flexDirection:"column",gap:"4px",marginBottom:"32px"}}>
             <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"8px"}}>Company</p>
@@ -80,20 +80,16 @@ export default function SiteHeader() {
               <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"10px",padding:"0 4px"}}>Sign in to a portal</p>
               <div style={{display:"flex",flexDirection:"column",gap:"4px"}}>
                 <a href="#" style={{display:"flex",alignItems:"center",gap:"12px",padding:"10px 12px",borderRadius:"9px",background:"#fff",cursor:"pointer"}} onClick={(e) => { e.preventDefault(); setMobileOpen(false); }}>
-                  <div style={{width:"32px",height:"32px",borderRadius:"8px",background:"#5533FF",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",fontWeight:"800",color:"#fff",flexShrink:"0"}}>xP</div>
-                  <div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>xPayments Portal</div>
+                  <div style={{width:"32px",height:"32px",borderRadius:"8px",background:"#E8152A",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",fontWeight:"800",color:"#fff",flexShrink:"0"}}>BP</div>
+                  <div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>BipraPay Portal</div>
                 </a>
                 <a href="#" style={{display:"flex",alignItems:"center",gap:"12px",padding:"10px 12px",borderRadius:"9px",background:"#fff",cursor:"pointer"}} onClick={(e) => { e.preventDefault(); setMobileOpen(false); }}>
-                  <div style={{width:"32px",height:"32px",borderRadius:"8px",background:"#E8152A",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",fontWeight:"800",color:"#fff",flexShrink:"0"}}>SP</div>
-                  <div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>SwiftPay Portal</div>
+                  <div style={{width:"32px",height:"32px",borderRadius:"8px",background:"#0A7B3E",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",fontWeight:"800",color:"#fff",flexShrink:"0"}}>VB</div>
+                  <div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>VeriBills Portal</div>
                 </a>
                 <a href="#" style={{display:"flex",alignItems:"center",gap:"12px",padding:"10px 12px",borderRadius:"9px",background:"#fff",cursor:"pointer"}} onClick={(e) => { e.preventDefault(); setMobileOpen(false); }}>
-                  <div style={{width:"32px",height:"32px",borderRadius:"8px",background:"#0A7B3E",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",fontWeight:"800",color:"#fff",flexShrink:"0"}}>xB</div>
-                  <div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>xBilling Portal</div>
-                </a>
-                <a href="#" style={{display:"flex",alignItems:"center",gap:"12px",padding:"10px 12px",borderRadius:"9px",background:"#fff",cursor:"pointer"}} onClick={(e) => { e.preventDefault(); setMobileOpen(false); }}>
-                  <div style={{width:"32px",height:"32px",borderRadius:"8px",background:"#3D22CC",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",fontWeight:"800",color:"#fff",flexShrink:"0"}}>NC</div>
-                  <div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>NexCore ERP</div>
+                  <div style={{width:"32px",height:"32px",borderRadius:"8px",background:"#3D22CC",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"11px",fontWeight:"800",color:"#fff",flexShrink:"0"}}>ME</div>
+                  <div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>Morr ERP</div>
                 </a>
               </div>
             </div>
@@ -104,20 +100,19 @@ export default function SiteHeader() {
       <nav id="nav" ref={navRef}>
         <Link className="logo" href="/"><div className="logomark"><span>B</span></div><span className="logotext">bipra</span></Link>
         <ul className="navlinks">
-          <li className={`drop-wrap${drop === "products" ? " open" : ""}`} id="nav-products-wrap">
+          <li className={`drop-wrap${drop === "products" ? " open" : ""}${isProductRoute ? " active" : ""}`} id="nav-products-wrap">
             <button aria-haspopup="true" aria-expanded={drop === "products"} onClick={(e) => { e.stopPropagation(); toggle("products"); }}>Products ▼</button>
             <div className="dropdown">
-              <Link className="drop-item" href="/xpayments"><div className="drop-icon"><div className="drop-dot" style={{background:"#5533FF"}}></div></div><div><div className="drop-name">xPayments</div><div className="drop-desc">Payments &amp; financial auditing engine</div></div></Link>
-              <Link className="drop-item" href="/swiftpay"><div className="drop-icon"><div className="drop-dot" style={{background:"#E8152A"}}></div></div><div><div className="drop-name">SwiftPay</div><div className="drop-desc">Instant payment gateway</div></div></Link>
-              <Link className="drop-item" href="/xbilling"><div className="drop-icon"><div className="drop-dot" style={{background:"#0A7B3E"}}></div></div><div><div className="drop-name">xBilling</div><div className="drop-desc">Bill presentment &amp; smart metering</div></div></Link>
-              <Link className="drop-item" href="/nexcore"><div className="drop-icon"><div className="drop-dot" style={{background:"#5533FF"}}></div></div><div><div className="drop-name">NexCore ERP</div><div className="drop-desc">Enterprise workflow automation</div></div></Link>
+              <Link className="drop-item" href="/biprapay"><div className="drop-icon"><div className="drop-dot" style={{background:"#E8152A"}}></div></div><div><div className="drop-name">BipraPay</div><div className="drop-desc">Payments, audit &amp; instant gateway</div></div></Link>
+              <Link className="drop-item" href="/veribills"><div className="drop-icon"><div className="drop-dot" style={{background:"#0A7B3E"}}></div></div><div><div className="drop-name">VeriBills</div><div className="drop-desc">Bill presentment &amp; smart metering</div></div></Link>
+              <Link className="drop-item" href="/morr-erp"><div className="drop-icon"><div className="drop-dot" style={{background:"#5533FF"}}></div></div><div><div className="drop-name">Morr ERP</div><div className="drop-desc">Enterprise workflow automation</div></div></Link>
             </div>
           </li>
-          <li><Link href="/solutions">Solutions</Link></li>
-          <li><Link href="/pricing">Pricing</Link></li>
-          <li><Link href="/about">About</Link></li>
-          <li><Link href="/developers">Developers</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
+          <li><Link href="/solutions" className={pathname === "/solutions" ? "active" : undefined}>Solutions</Link></li>
+          <li><Link href="/pricing" className={pathname === "/pricing" ? "active" : undefined}>Pricing</Link></li>
+          <li><Link href="/about" className={pathname === "/about" ? "active" : undefined}>About</Link></li>
+          <li><Link href="/developers" className={pathname === "/developers" ? "active" : undefined}>Developers</Link></li>
+          <li><Link href="/contact" className={pathname === "/contact" ? "active" : undefined}>Contact</Link></li>
         </ul>
         <div className="navcta">
           <div className={`signin-wrap${drop === "signin" ? " open" : ""}`} id="nav-signin-wrap">
@@ -127,23 +122,18 @@ export default function SiteHeader() {
                 <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px"}}>Merchant Portals</p>
               </div>
               <a className="signin-item" href="#" onClick={stop}>
-                <div className="signin-icon" style={{background:"#5533FF"}}>xP</div>
-                <div><div className="signin-name">xPayments Portal</div><div className="signin-desc">Payments &amp; financial audit dashboard</div></div>
+                <div className="signin-icon" style={{background:"#E8152A"}}>BP</div>
+                <div><div className="signin-name">BipraPay Portal</div><div className="signin-desc">Payments &amp; financial audit dashboard</div></div>
                 <span className="signin-arrow">↗</span>
               </a>
               <a className="signin-item" href="#" onClick={stop}>
-                <div className="signin-icon" style={{background:"#E8152A"}}>SP</div>
-                <div><div className="signin-name">SwiftPay Portal</div><div className="signin-desc">Instant payment management</div></div>
+                <div className="signin-icon" style={{background:"#0A7B3E"}}>VB</div>
+                <div><div className="signin-name">VeriBills Portal</div><div className="signin-desc">Meter data &amp; bill presentment</div></div>
                 <span className="signin-arrow">↗</span>
               </a>
               <a className="signin-item" href="#" onClick={stop}>
-                <div className="signin-icon" style={{background:"#0A7B3E"}}>xB</div>
-                <div><div className="signin-name">xBilling Portal</div><div className="signin-desc">Meter data &amp; bill presentment</div></div>
-                <span className="signin-arrow">↗</span>
-              </a>
-              <a className="signin-item" href="#" onClick={stop}>
-                <div className="signin-icon" style={{background:"linear-gradient(135deg,#5533FF,#3D22CC)"}}>NC</div>
-                <div><div className="signin-name">NexCore ERP</div><div className="signin-desc">Budgeting, HR &amp; documents</div></div>
+                <div className="signin-icon" style={{background:"linear-gradient(135deg,#5533FF,#3D22CC)"}}>ME</div>
+                <div><div className="signin-name">Morr ERP</div><div className="signin-desc">Budgeting, HR &amp; documents</div></div>
                 <span className="signin-arrow">↗</span>
               </a>
               <div style={{marginTop:"6px",padding:"10px 14px 4px",borderTop:"1px solid var(--border)"}}>
