@@ -18,7 +18,7 @@ export default function Page() {
         <span style={{fontSize:"13px",color:"var(--muted)",marginLeft:"12px"}}>Trusted by 500+ businesses across Africa</span>
       </div>
     </div>
-    <div className="fu d2" style={{position:"relative",height:"460px",display:"flex",justifyContent:"center"}}>
+    <div className="fu d2 hero-visual" style={{position:"relative",height:"460px",display:"flex",justifyContent:"center"}}>
       <div style={{position:"absolute",top:"6%",left:"50%",transform:"translateX(-50%) rotate(-6deg)",width:"78%",maxWidth:"320px",height:"88%",background:"linear-gradient(160deg,var(--p),#7B5FFF)",borderRadius:"48px",zIndex:"0"}}></div>
       <img src="/hero-woman.webp" alt="" style={{position:"relative",zIndex:"1",height:"100%",width:"auto",maxWidth:"100%",objectFit:"contain",objectPosition:"bottom"}} />
       <div style={{position:"absolute",bottom:"32px",right:"0",width:"196px",background:"#fff",borderRadius:"12px",border:"1px solid var(--border)",padding:"16px",boxShadow:"0 24px 56px rgba(85,51,255,0.28),0 4px 12px rgba(13,11,30,0.08)",zIndex:"2",transform:"scale(1.06)"}}>
