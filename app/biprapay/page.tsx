@@ -155,7 +155,7 @@ export default function Page() {
             <line x1="300" y1="200" x2="510" y2="90"></line>
             <line x1="300" y1="200" x2="510" y2="310"></line>
           </svg>
-          <div className="hub-node hub-node-center"><span className="logotext" style={{fontSize:"18px"}}>b</span></div>
+          <div className="hub-node hub-node-center"><span className="logotext" style={{fontSize:"24px"}}>bipra</span></div>
           <div className="hub-node hub-node-tl"><span className="hub-node-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><rect x="2" y="5" width="20" height="14" rx="3"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg></span><span className="hub-node-label">Bank channels</span></div>
           <div className="hub-node hub-node-bl"><span className="hub-node-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></span><span className="hub-node-label">Orchestration engine</span></div>
           <div className="hub-node hub-node-tr"><span className="hub-node-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span><span className="hub-node-label">Cross-border (SWIFT)</span></div>
