@@ -99,7 +99,7 @@ export default function SiteHeader() {
       )}
       <nav id="nav" ref={navRef}>
         <div className="masthead">
-          <Link className="logo" href="/"><img src="/bipra-icon.png" alt="" width={34} height={13} style={{height:"13px",width:"auto"}} /><span className="logotext">bipra</span></Link>
+          <Link className="logo" href="/"><span className="logotext"><span style={{color:"#5533FF"}}>b</span><span style={{color:"#E8152A"}}>i</span><span style={{color:"#FF6B35"}}>p</span><span style={{color:"#0AC77E"}}>r</span><span style={{color:"#7B5FFF"}}>a</span></span></Link>
         </div>
         <div className="navbar-orange">
           <ul className="navlinks">
