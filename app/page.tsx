@@ -6,7 +6,7 @@ export default function Page() {
     <div className="inner two-col" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"center"}}>
     <div className="fu">
       <h1 style={{fontFamily:"var(--fd)",fontSize:"clamp(38px,4.6vw,58px)",fontWeight:"800",lineHeight:"1.12",letterSpacing:"-1.5px",marginBottom:"20px"}}><span style={{color:"var(--r)"}}>Payments &amp; workflow automation engineering</span> for <strong>scalable, secure and robust growth</strong></h1>
-      <p style={{fontSize:"17px",color:"var(--muted)",lineHeight:"1.75",maxWidth:"460px",marginBottom:"36px",fontWeight:"300"}}>Payments processing, financial auditing, smart meter billing, and enterprise workflow automation — unified in one platform <strong style={{color:"var(--ink)",fontWeight:"600"}}>built for Africa.</strong></p><div className="pill-row" style={{marginBottom:"32px"}}><span className="pill pill-r"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="#E8152A" strokeWidth="2"></polyline></svg> BipraPay</span><span className="pill pill-g"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="#0A7B3E" strokeWidth="2"></polyline></svg> VeriBills</span><span className="pill pill-p"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="#5533FF" strokeWidth="2"></polyline></svg> Morr ERP</span></div>
+      <p style={{fontSize:"17px",color:"var(--muted)",lineHeight:"1.75",maxWidth:"460px",marginBottom:"36px",fontWeight:"300"}}>Payments processing, financial auditing, smart meter billing, and enterprise workflow automation — unified in one platform <strong style={{color:"var(--ink)",fontWeight:"600"}}>built for Africa.</strong></p>
       <div style={{display:"flex",gap:"16px",flexWrap:"wrap"}}><Link className="btn btn-p btn-lg" href="/biprapay">Our platforms <span>→</span></Link><Link className="btn btn-o btn-lg" href="/contact">Contact us</Link></div>
       <div style={{display:"flex",alignItems:"center",gap:"12px",marginTop:"36px"}}>
         <div style={{display:"flex"}}>
@@ -182,18 +182,18 @@ export default function Page() {
       <div style={{position:"absolute",top:"-80px",left:"-60px",width:"400px",height:"400px",borderRadius:"50%",background:"radial-gradient(circle,rgba(85,51,255,0.25) 0%,transparent 70%)",pointerEvents:"none"}}></div>
       <div style={{position:"absolute",bottom:"-80px",right:"-40px",width:"360px",height:"360px",borderRadius:"50%",background:"radial-gradient(circle,rgba(232,21,42,0.18) 0%,transparent 70%)",pointerEvents:"none"}}></div>
       <div className="inner" style={{position:"relative",zIndex:"1"}}>
-        <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"2px",borderRadius:"20px",overflow:"hidden",border:"1px solid rgba(255,255,255,0.06)"}}>
-          <div className="gcard-dark" style={{padding:"44px 32px",textAlign:"center",borderRight:"1px solid rgba(255,255,255,0.06)"}}>
+        <div className="stat-bar" style={{border:"1px solid rgba(255,255,255,0.06)"}}>
+          <div className="gcard-dark" style={{padding:"44px 32px",textAlign:"center"}}>
             <div style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"52px",fontWeight:"800",lineHeight:"1",letterSpacing:"-2px",marginBottom:"8px"}} className="grad-text count-up" data-target="7" data-suffix="+">0+</div>
             <div style={{fontSize:"14px",color:"rgba(255,255,255,0.5)"}}>Businesses powered</div>
             <div style={{fontSize:"11px",color:"rgba(255,255,255,0.25)",marginTop:"4px"}}>across 8 African countries</div>
           </div>
-          <div className="gcard-dark" style={{padding:"44px 32px",textAlign:"center",borderRight:"1px solid rgba(255,255,255,0.06)"}}>
+          <div className="gcard-dark" style={{padding:"44px 32px",textAlign:"center"}}>
             <div style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"52px",fontWeight:"800",lineHeight:"1",letterSpacing:"-2px",marginBottom:"8px"}} className="grad-text-warm count-up" data-target="2" data-prefix="R" data-suffix="B+">R0B+</div>
             <div style={{fontSize:"14px",color:"rgba(255,255,255,0.5)"}}>Processed annually</div>
             <div style={{fontSize:"11px",color:"rgba(255,255,255,0.25)",marginTop:"4px"}}>growing 40% year on year</div>
           </div>
-          <div className="gcard-dark" style={{padding:"44px 32px",textAlign:"center",borderRight:"1px solid rgba(255,255,255,0.06)"}}>
+          <div className="gcard-dark" style={{padding:"44px 32px",textAlign:"center"}}>
             <div style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"52px",fontWeight:"800",lineHeight:"1",letterSpacing:"-2px",marginBottom:"8px"}} className="grad-text-cool count-up" data-target="99.99" data-decimals="2" data-suffix="%">0%</div>
             <div style={{fontSize:"14px",color:"rgba(255,255,255,0.5)"}}>Platform uptime</div>
             <div style={{fontSize:"11px",color:"rgba(255,255,255,0.25)",marginTop:"4px"}}>SLA-backed guarantee</div>
@@ -316,7 +316,7 @@ export default function Page() {
 
     <section style={{background:"#0D0B1E",position:"relative",overflow:"hidden",padding:"0"}}>
       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr"}} className="two-col">
-        <div className="gcard-dark" style={{padding:"88px 7% 88px 5%",position:"relative",border:"none",borderRight:"1px solid rgba(255,255,255,0.06)"}}>
+        <div className="gcard-dark standard-left" style={{padding:"88px 7% 88px 5%",position:"relative",border:"none",borderRight:"1px solid rgba(255,255,255,0.06)"}}>
           <div className="blob-drift" style={{position:"absolute",top:"-60px",right:"-40px",width:"300px",height:"300px",borderRadius:"50%",background:"radial-gradient(circle,rgba(85,51,255,0.22) 0%,transparent 70%)",pointerEvents:"none"}}></div>
           <span className="band-eyebrow cine-reveal" style={{color:"rgba(255,255,255,0.45)"}}>The BIPRA standard</span>
           <h2 className="cine-reveal s1" style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"clamp(26px,3vw,40px)",fontWeight:"800",letterSpacing:"-1px",color:"#fff",margin:"18px 0 16px",lineHeight:"1.12"}}>Financial infrastructure<br />should feel <span className="grad-text">inevitable.</span></h2>
@@ -326,14 +326,10 @@ export default function Page() {
             <Link className="btn btn-ow btn-lg" href="/solutions">Explore solutions</Link>
           </div>
         </div>
-        <div style={{background:"linear-gradient(135deg,#16112e 0%,#1a0a14 100%)",padding:"88px 5% 88px 7%",borderLeft:"1px solid rgba(255,255,255,0.06)",display:"flex",flexDirection:"column",justifyContent:"center",gap:"14px"}}>
+        <div className="standard-right" style={{background:"linear-gradient(135deg,#16112e 0%,#1a0a14 100%)",padding:"88px 5% 88px 7%",borderLeft:"1px solid rgba(255,255,255,0.06)",display:"flex",flexDirection:"column",justifyContent:"center",gap:"14px"}}>
           <div className="cine-reveal s1" style={{display:"flex",alignItems:"center",gap:"16px",padding:"18px 22px",border:"1px solid rgba(85,51,255,0.3)",borderRadius:"14px"}}>
             <div style={{width:"42px",height:"42px",borderRadius:"11px",background:"linear-gradient(135deg,var(--p),#7B5FFF)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><rect x="2" y="5" width="20" height="14" rx="3"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg></div>
             <div><div style={{fontSize:"14px",fontWeight:"700",color:"#fff"}}>BipraPay</div><div style={{fontSize:"12px",color:"rgba(255,255,255,0.4)"}}>Every rand processed, reconciled &amp; audit-trailed</div></div>
-          </div>
-          <div className="cine-reveal s2" style={{display:"flex",alignItems:"center",gap:"16px",padding:"18px 22px",border:"1px solid rgba(232,21,42,0.3)",borderRadius:"14px"}}>
-            <div style={{width:"42px",height:"42px",borderRadius:"11px",background:"linear-gradient(135deg,#FF6B35,#E8152A)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div>
-            <div><div style={{fontSize:"14px",fontWeight:"700",color:"#fff"}}>BipraPay</div><div style={{fontSize:"12px",color:"rgba(255,255,255,0.4)"}}>Sub-second disbursements at any scale</div></div>
           </div>
           <div className="cine-reveal s3" style={{display:"flex",alignItems:"center",gap:"16px",padding:"18px 22px",border:"1px solid rgba(10,123,62,0.35)",borderRadius:"14px"}}>
             <div style={{width:"42px",height:"42px",borderRadius:"11px",background:"linear-gradient(135deg,#0A7B3E,#00C87A)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M9 12h6M9 16h6M9 8h6M5 3h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path></svg></div>
