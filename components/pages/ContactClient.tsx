@@ -102,31 +102,8 @@ export default function ContactClient() {
       )}
     </div>
     <div style={{paddingTop:"64px"}}>
-      
-      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"12px",marginBottom:"32px"}}>
-        <Link style={{padding:"18px",background:"var(--pl)",borderRadius:"12px",cursor:"pointer",transition:"transform .2s"}} href="/pricing" className="hv-raise">
-          <div style={{display:"flex",alignItems:"center",justifyContent:"center",height:"28px",marginBottom:"6px",color:"var(--p)"}}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg></div>
-          <div style={{fontSize:"13px",fontWeight:"700",color:"var(--p)"}}>View pricing</div>
-          <div style={{fontSize:"11px",color:"var(--p)",opacity:".7"}}>Plans from R1,999/mo</div>
-        </Link>
-        <Link style={{padding:"18px",background:"var(--gl)",borderRadius:"12px",cursor:"pointer",transition:"transform .2s"}} href="/developers" className="hv-raise">
-          <div style={{display:"flex",alignItems:"center",justifyContent:"center",height:"28px",marginBottom:"6px",color:"var(--p)"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
-          <div style={{fontSize:"13px",fontWeight:"700",color:"var(--g)"}}>Developer hub</div>
-          <div style={{fontSize:"11px",color:"var(--g)",opacity:".7"}}>API keys &amp; sandbox</div>
-        </Link>
-        <Link style={{padding:"18px",background:"var(--rl)",borderRadius:"12px",cursor:"pointer",transition:"transform .2s"}} href="/status" className="hv-raise">
-          <div style={{display:"flex",alignItems:"center",justifyContent:"center",height:"28px",marginBottom:"6px",color:"var(--p)"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4" fill="#22C55E" stroke="none"></circle></svg></div>
-          <div style={{fontSize:"13px",fontWeight:"700",color:"var(--r)"}}>System status</div>
-          <div style={{fontSize:"11px",color:"var(--r)",opacity:".7"}}>All systems operational</div>
-        </Link>
-        <Link style={{padding:"18px",background:"var(--off)",borderRadius:"12px",cursor:"pointer",transition:"transform .2s"}} href="/security" className="hv-raise">
-          <div style={{display:"flex",alignItems:"center",justifyContent:"center",height:"28px",marginBottom:"6px",color:"var(--p)"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
-          <div style={{fontSize:"13px",fontWeight:"700",color:"var(--ink)"}}>Security</div>
-          <div style={{fontSize:"11px",color:"var(--muted)"}}>PCI-DSS Level 1</div>
-        </Link>
-      </div>
       <div style={{display:"flex",flexDirection:"column",gap:"24px",marginBottom:"40px"}}>
-        <div style={{display:"flex",gap:"16px",alignItems:"flex-start"}}><div style={{width:"40px",height:"40px",borderRadius:"10px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"16px",flexShrink:"0"}}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--p)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div><div><div style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"2px"}}>Email</div><div style={{fontSize:"14px",fontWeight:"500"}}>hello@bipra.io</div></div></div>
+        <div style={{display:"flex",gap:"16px",alignItems:"flex-start"}}><div style={{width:"40px",height:"40px",borderRadius:"10px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"16px",flexShrink:"0"}}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--p)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div><div><div style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"2px"}}>Email</div><div style={{fontSize:"14px",fontWeight:"500"}}>enquiry@biprasoftware.com</div></div></div>
         <div style={{display:"flex",gap:"16px",alignItems:"flex-start"}}><div style={{width:"40px",height:"40px",borderRadius:"10px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"16px",flexShrink:"0"}}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div><div><div style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"2px"}}>Phone</div><div style={{fontSize:"14px",fontWeight:"500"}}>+27 11 000 0000</div></div></div>
         <div style={{display:"flex",gap:"16px",alignItems:"flex-start"}}><div style={{width:"40px",height:"40px",borderRadius:"10px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"16px",flexShrink:"0"}}>◎</div><div><div style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"2px"}}>Location</div><div style={{fontSize:"14px",fontWeight:"500"}}>Sandton, Johannesburg, South Africa</div></div></div>
       </div>

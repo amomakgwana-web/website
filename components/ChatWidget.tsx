@@ -64,7 +64,7 @@ const KB: KBEntry[] = [
   {
     keys: ["support", "help", "contact", "phone", "email", "call", "escalate", "issue", "problem"],
     reply:
-      "Our support options:\n\n• <strong>Email:</strong> hello@bipra.io\n• <strong>Phone:</strong> +27 11 000 0000\n• <strong>WhatsApp:</strong> Available below\n• <strong>Slack:</strong> Developer community\n\nResponse SLAs: Starter 48h · Business 8h · Enterprise 1h",
+      "Our support options:\n\n• <strong>Email:</strong> enquiry@biprasoftware.com\n• <strong>Phone:</strong> +27 11 000 0000\n• <strong>WhatsApp:</strong> Available below\n• <strong>Slack:</strong> Developer community\n\nResponse SLAs: Starter 48h · Business 8h · Enterprise 1h",
     qr: ["WhatsApp us", "Send email", "Book a call"],
   },
   {
@@ -107,7 +107,7 @@ const PRODUCTS_OVERVIEW: KBEntry = {
 };
 
 const FALLBACK =
-  "I'm not sure I have the answer to that, but our team definitely does! You can reach us at hello@bipra.io or via WhatsApp.";
+  "I'm not sure I have the answer to that, but our team definitely does! You can reach us at enquiry@biprasoftware.com or via WhatsApp.";
 
 function findReply(keys: string[]): KBEntry | null {
   for (const entry of KB) {
@@ -143,7 +143,7 @@ function randomTypingDelay() {
 }
 
 function openMailto() {
-  window.location.href = "mailto:hello@bipra.io";
+  window.location.href = "mailto:enquiry@biprasoftware.com";
 }
 
 const WA_ICON = (
