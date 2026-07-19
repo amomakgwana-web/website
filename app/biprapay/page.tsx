@@ -177,6 +177,71 @@ export default function Page() {
         <div><div style={{fontSize:"14px",fontWeight:"600",color:"#fff"}}>Zola Khumalo</div><div style={{fontSize:"12px",color:"rgba(255,255,255,0.45)"}}>Head of Finance, Ubuntu Logistics</div></div>
       </div>
     </div></div></div></section>
+
+    <section className="section" style={{background:"var(--off)"}}><div className="inner">
+      <p className="slabel" style={{textAlign:"center"}}>Pricing</p>
+      <h2 className="stitle" style={{textAlign:"center",maxWidth:"560px",margin:"0 auto 16px"}}>Simple, transaction-based pricing</h2>
+      <p className="ssub" style={{textAlign:"center",margin:"0 auto 40px"}}>No bundled software fee — you pay for what moves through the rail, on every payment method.</p>
+      <div style={{background:"#fff",borderRadius:"18px",border:"1px solid var(--border)",overflow:"hidden",marginBottom:"24px"}}>
+        <div style={{overflowX:"auto"}}><table style={{width:"100%",borderCollapse:"collapse",fontSize:"14px"}}>
+          <thead><tr style={{borderBottom:"2px solid var(--border)"}}>
+            <th style={{textAlign:"left",padding:"16px 20px",color:"var(--muted)",fontWeight:"500"}}>Payment method</th>
+            <th style={{textAlign:"center",padding:"16px 20px",color:"var(--ink)",fontWeight:"700"}}>Standard</th>
+            <th style={{textAlign:"center",padding:"16px 20px",color:"var(--r)",fontWeight:"700"}}>Enterprise</th>
+          </tr></thead>
+          <tbody>
+            <tr style={{borderBottom:"1px solid var(--border)"}}><td style={{padding:"14px 20px",color:"var(--ink2)"}}>Local Mastercard, Visa &amp; Amex</td><td style={{textAlign:"center",padding:"14px 20px"}}>2.75% + R1.50/txn</td><td style={{textAlign:"center",padding:"14px 20px",color:"var(--r)",fontWeight:"600"}}>Volume-based</td></tr>
+            <tr style={{borderBottom:"1px solid var(--border)"}}><td style={{padding:"14px 20px",color:"var(--ink2)"}}>International cards</td><td style={{textAlign:"center",padding:"14px 20px"}}>3.25% + R1.50/txn</td><td style={{textAlign:"center",padding:"14px 20px",color:"var(--r)",fontWeight:"600"}}>Volume-based</td></tr>
+            <tr style={{borderBottom:"1px solid var(--border)"}}><td style={{padding:"14px 20px",color:"var(--ink2)"}}>Bank EFT</td><td style={{textAlign:"center",padding:"14px 20px"}}>1.25% + R1.50/txn</td><td style={{textAlign:"center",padding:"14px 20px",color:"var(--r)",fontWeight:"600"}}>Volume-based</td></tr>
+            <tr style={{borderBottom:"1px solid var(--border)"}}><td style={{padding:"14px 20px",color:"var(--ink2)"}}>Real-time clearing (RTC)</td><td style={{textAlign:"center",padding:"14px 20px"}}>1.50% + R1.50/txn</td><td style={{textAlign:"center",padding:"14px 20px",color:"var(--r)",fontWeight:"600"}}>Volume-based</td></tr>
+            <tr style={{borderBottom:"1px solid var(--border)"}}><td style={{padding:"14px 20px",color:"var(--ink2)"}}>Mobile wallets</td><td style={{textAlign:"center",padding:"14px 20px"}}>2.25% + R1.50/txn</td><td style={{textAlign:"center",padding:"14px 20px",color:"var(--r)",fontWeight:"600"}}>Volume-based</td></tr>
+            <tr style={{borderBottom:"1px solid var(--border)"}}><td style={{padding:"14px 20px",color:"var(--ink2)"}}>Cross-border (SWIFT)</td><td style={{textAlign:"center",padding:"14px 20px"}}>3.50% + R1.50/txn</td><td style={{textAlign:"center",padding:"14px 20px",color:"var(--r)",fontWeight:"600"}}>Volume-based</td></tr>
+            <tr><td style={{padding:"14px 20px",color:"var(--ink2)"}}>Payroll batch disbursement</td><td style={{textAlign:"center",padding:"14px 20px"}}>R1.50/recipient</td><td style={{textAlign:"center",padding:"14px 20px",color:"var(--r)",fontWeight:"600"}}>Volume-based</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div style={{maxWidth:"860px",margin:"0 auto"}}>
+        <details style={{background:"#fff",borderRadius:"12px",border:"1px solid var(--border)",padding:"18px 20px",marginBottom:"10px"}}>
+          <summary style={{fontFamily:"var(--fd)",fontSize:"15px",fontWeight:"700",cursor:"pointer",listStyle:"none",display:"flex",justifyContent:"space-between",alignItems:"center"}}>Setup &amp; monthly fee<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--muted)" strokeWidth="1.5"><path d="M4 6l4 4 4-4"></path></svg></summary>
+          <div style={{marginTop:"14px",display:"flex",flexDirection:"column",gap:"10px"}}>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:"13.5px",padding:"9px 0",borderBottom:"1px solid var(--border)"}}><span style={{color:"var(--ink2)"}}>Setup fee</span><span style={{fontWeight:"600"}}>No setup fee on either plan</span></div>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:"13.5px",padding:"9px 0",borderBottom:"1px solid var(--border)"}}><span style={{color:"var(--ink2)"}}>Account fee</span><span style={{fontWeight:"600"}}>N/A · Enterprise R300/month</span></div>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:"13.5px",padding:"9px 0"}}><span style={{color:"var(--ink2)"}}>Reconciliation fee</span><span style={{fontWeight:"600"}}>R150/month · Included on Enterprise</span></div>
+          </div>
+        </details>
+        <details style={{background:"#fff",borderRadius:"12px",border:"1px solid var(--border)",padding:"18px 20px",marginBottom:"10px"}}>
+          <summary style={{fontFamily:"var(--fd)",fontSize:"15px",fontWeight:"700",cursor:"pointer",listStyle:"none",display:"flex",justifyContent:"space-between",alignItems:"center"}}>Settlements<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--muted)" strokeWidth="1.5"><path d="M4 6l4 4 4-4"></path></svg></summary>
+          <div style={{marginTop:"14px",display:"flex",flexDirection:"column",gap:"10px"}}>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:"13.5px",padding:"9px 0",borderBottom:"1px solid var(--border)"}}><span style={{color:"var(--ink2)"}}>Own bank account</span><span style={{color:"var(--g)",fontWeight:"700"}}>✓ Both plans</span></div>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:"13.5px",padding:"9px 0",borderBottom:"1px solid var(--border)"}}><span style={{color:"var(--ink2)"}}>Settlement frequency</span><span style={{fontWeight:"600"}}>Daily (after 2 weeks) · Daily on Enterprise</span></div>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:"13.5px",padding:"9px 0"}}><span style={{color:"var(--ink2)"}}>Bring your own merchant account</span><span style={{fontWeight:"600"}}>Enterprise only</span></div>
+          </div>
+        </details>
+        <details style={{background:"#fff",borderRadius:"12px",border:"1px solid var(--border)",padding:"18px 20px",marginBottom:"10px"}}>
+          <summary style={{fontFamily:"var(--fd)",fontSize:"15px",fontWeight:"700",cursor:"pointer",listStyle:"none",display:"flex",justifyContent:"space-between",alignItems:"center"}}>Platform features<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--muted)" strokeWidth="1.5"><path d="M4 6l4 4 4-4"></path></svg></summary>
+          <div style={{marginTop:"14px",display:"flex",flexDirection:"column",gap:"10px"}}>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:"13.5px",padding:"9px 0",borderBottom:"1px solid var(--border)"}}><span style={{color:"var(--ink2)"}}>Payment links, one-click checkout &amp; recurring billing</span><span style={{color:"var(--g)",fontWeight:"700"}}>✓ Both plans</span></div>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:"13.5px",padding:"9px 0"}}><span style={{color:"var(--ink2)"}}>Webhook &amp; event streaming</span><span style={{fontWeight:"600"}}>Enterprise only</span></div>
+          </div>
+        </details>
+        <details style={{background:"#fff",borderRadius:"12px",border:"1px solid var(--border)",padding:"18px 20px",marginBottom:"10px"}}>
+          <summary style={{fontFamily:"var(--fd)",fontSize:"15px",fontWeight:"700",cursor:"pointer",listStyle:"none",display:"flex",justifyContent:"space-between",alignItems:"center"}}>Recon &amp; analytics<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--muted)" strokeWidth="1.5"><path d="M4 6l4 4 4-4"></path></svg></summary>
+          <div style={{marginTop:"14px",display:"flex",flexDirection:"column",gap:"10px"}}>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:"13.5px",padding:"9px 0",borderBottom:"1px solid var(--border)"}}><span style={{color:"var(--ink2)"}}>Reconciliation data &amp; transaction export</span><span style={{color:"var(--g)",fontWeight:"700"}}>✓ Both plans</span></div>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:"13.5px",padding:"9px 0"}}><span style={{color:"var(--ink2)"}}>Support for customer recon systems</span><span style={{fontWeight:"600"}}>Enterprise only</span></div>
+          </div>
+        </details>
+        <details style={{background:"#fff",borderRadius:"12px",border:"1px solid var(--border)",padding:"18px 20px"}}>
+          <summary style={{fontFamily:"var(--fd)",fontSize:"15px",fontWeight:"700",cursor:"pointer",listStyle:"none",display:"flex",justifyContent:"space-between",alignItems:"center"}}>Customer support<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="var(--muted)" strokeWidth="1.5"><path d="M4 6l4 4 4-4"></path></svg></summary>
+          <div style={{marginTop:"14px",display:"flex",flexDirection:"column",gap:"10px"}}>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:"13.5px",padding:"9px 0",borderBottom:"1px solid var(--border)"}}><span style={{color:"var(--ink2)"}}>Support channel</span><span style={{fontWeight:"600"}}>Email &amp; call centre · Dedicated manager on Enterprise</span></div>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:"13.5px",padding:"9px 0"}}><span style={{color:"var(--ink2)"}}>Response SLA</span><span style={{fontWeight:"600"}}>48 hours · 1 hour on Enterprise</span></div>
+          </div>
+        </details>
+      </div>
+      <div style={{textAlign:"center",marginTop:"32px"}}><Link className="btn btn-r btn-lg" href="/contact">Talk to sales</Link></div>
+    </div></section>
+
     <section style={{background:"var(--r)",padding:"80px 5%",textAlign:"center"}}><div className="inner-n"><h2 style={{fontFamily:"var(--fd)",fontSize:"clamp(26px,3vw,38px)",fontWeight:"800",color:"#fff",letterSpacing:"-.8px",marginBottom:"16px"}}>Ready to move at the speed of now?</h2><p style={{fontSize:"16px",color:"rgba(255,255,255,0.6)",marginBottom:"36px"}}>Set up BipraPay in your environment today.</p><div style={{display:"flex",gap:"16px",justifyContent:"center",flexWrap:"wrap"}}><Link className="btn btn-w btn-lg" href="/contact">Book a demo</Link><Link className="btn btn-ow btn-lg" href="/pricing">See pricing</Link></div></div></section>
     </div>
   );
