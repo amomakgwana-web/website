@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { Baloo_2 } from "next/font/google";
 import "./globals.css";
+
+const logoFont = Baloo_2({ subsets: ["latin"], weight: ["700", "800"], variable: "--font-logo" });
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import CookieBanner from "@/components/CookieBanner";
@@ -36,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={logoFont.variable}>
       <body>
         <ScrollChrome />
         <CookieBanner />

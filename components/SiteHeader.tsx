@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 export default function SiteHeader() {
-  const [drop, setDrop] = useState<"vas" | null>(null);
+  const [drop, setDrop] = useState<"products" | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
@@ -43,7 +43,7 @@ export default function SiteHeader() {
     };
   }, []);
 
-  const toggle = (which: "vas") => setDrop((d) => (d === which ? null : which));
+  const toggle = (which: "products") => setDrop((d) => (d === which ? null : which));
 
   const line = (transform: string, opacity = "1"): React.CSSProperties => ({
     display: "block",
@@ -61,7 +61,7 @@ export default function SiteHeader() {
       {mobileOpen && (
         <div id="mobile-menu" style={{display:"block",position:"fixed",top:"var(--nav)",left:"0",right:"0",bottom:"0",zIndex:"190",background:"rgba(255,255,255,0.72)",backdropFilter:"blur(30px) saturate(1.6)",WebkitBackdropFilter:"blur(30px) saturate(1.6)",padding:"32px 6%",overflowY:"auto"}}>
           <div style={{display:"flex",flexDirection:"column",gap:"4px",marginBottom:"32px"}}>
-            <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"8px"}}>VAS</p>
+            <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"8px"}}>Products</p>
             <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/biprapay" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",overflow:"hidden",flexShrink:"0"}}><img src="/biprapay-logo.png" alt="" style={{width:"32px",height:"32px",objectFit:"cover"}} /></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>BipraPay</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Payments, audit &amp; instant gateway</div></div></Link>
             <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/veribills" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",overflow:"hidden",flexShrink:"0"}}><img src="/veribills-logo.png" alt="" style={{width:"32px",height:"32px",objectFit:"cover"}} /></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>VeriBills</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Billing &amp; audit engine</div></div></Link>
             <Link style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px",borderRadius:"10px",cursor:"pointer",transition:"background .15s"}} href="/morr-erp" className="hv-px"><div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><img src="/morr-icon.png" alt="" style={{width:"20px",height:"20px",objectFit:"contain"}} /></div><div><div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>Morr ERP</div><div style={{fontSize:"12px",color:"var(--muted)"}}>Enterprise workflow automation</div></div></Link>
@@ -69,6 +69,7 @@ export default function SiteHeader() {
           <div style={{display:"flex",flexDirection:"column",gap:"4px",marginBottom:"32px"}}>
             <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"8px"}}>Explore</p>
             <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/solutions">Solutions</Link>
+            <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/vas">VAS</Link>
             <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/developers">Developers</Link>
             <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/resources">Resources</Link>
             <Link style={{padding:"12px",borderRadius:"10px",fontSize:"15px",fontWeight:"500",color:"var(--ink)",cursor:"pointer"}} href="/about">Bipra</Link>
@@ -104,14 +105,15 @@ export default function SiteHeader() {
         <div className="navbar-orange">
           <ul className="navlinks">
             <li><Link href="/solutions" className={pathname === "/solutions" ? "active" : undefined}>Solutions</Link></li>
-            <li className={`drop-wrap${drop === "vas" ? " open" : ""}${isProductRoute ? " active" : ""}`} id="nav-products-wrap">
-              <button aria-haspopup="true" aria-expanded={drop === "vas"} onClick={(e) => { e.stopPropagation(); toggle("vas"); }}>VAS ▼</button>
+            <li className={`drop-wrap${drop === "products" ? " open" : ""}${isProductRoute ? " active" : ""}`} id="nav-products-wrap">
+              <button aria-haspopup="true" aria-expanded={drop === "products"} onClick={(e) => { e.stopPropagation(); toggle("products"); }}>Products ▼</button>
               <div className="dropdown">
                 <Link className="drop-item" href="/biprapay"><div className="drop-icon" style={{background:"none",padding:"0",overflow:"hidden"}}><img src="/biprapay-logo.png" alt="" style={{width:"32px",height:"32px",borderRadius:"8px",objectFit:"cover"}} /></div><div><div className="drop-name">BipraPay</div><div className="drop-desc">Payments, audit &amp; instant gateway</div></div></Link>
                 <Link className="drop-item" href="/veribills"><div className="drop-icon" style={{background:"none",padding:"0",overflow:"hidden"}}><img src="/veribills-logo.png" alt="" style={{width:"32px",height:"32px",borderRadius:"8px",objectFit:"cover"}} /></div><div><div className="drop-name">VeriBills</div><div className="drop-desc">Bill presentment &amp; smart metering</div></div></Link>
                 <Link className="drop-item" href="/morr-erp"><div className="drop-icon"><img src="/morr-icon.png" alt="" style={{width:"20px",height:"20px",objectFit:"contain"}} /></div><div><div className="drop-name">Morr ERP</div><div className="drop-desc">Enterprise workflow automation</div></div></Link>
               </div>
             </li>
+            <li><Link href="/vas" className={pathname === "/vas" ? "active" : undefined}>VAS</Link></li>
             <li><Link href="/developers" className={pathname === "/developers" ? "active" : undefined}>Developers</Link></li>
             <li><Link href="/resources" className={pathname === "/resources" ? "active" : undefined}>Resources</Link></li>
             <li><Link href="/about" className={pathname === "/about" ? "active" : undefined}>Bipra</Link></li>

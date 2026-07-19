@@ -110,6 +110,37 @@ export default function Page() {
       </div>
     </div></section>
 
+    <section style={{background:"linear-gradient(135deg,#0a1230 0%,#0D0B1E 55%,#150a2e 100%)",padding:"110px 5%",position:"relative",overflow:"hidden"}}>
+      <div className="inner">
+        <div style={{textAlign:"center",marginBottom:"64px"}}>
+          <span className="band-eyebrow cine-reveal" style={{color:"#FF6B6B"}}>Under the hood</span>
+          <h2 className="cine-reveal s1" style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"clamp(28px,3.5vw,44px)",fontWeight:"800",letterSpacing:"-1px",color:"#fff",margin:"18px 0 14px"}}>One engine, every rail</h2>
+          <p className="cine-reveal s2" style={{fontSize:"15px",color:"rgba(255,255,255,0.5)",maxWidth:"540px",margin:"0 auto",lineHeight:"1.75"}}>Funds enter through whichever channel your customer used, get orchestrated and reconciled in real time, and settle out through whichever rail is fastest right now.</p>
+        </div>
+        <div className="pay-diagram cine-reveal s3">
+          <div className="pay-diagram-col">
+            <div className="pay-node pay-node-in">
+              <span className="pay-node-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><rect x="2" y="5" width="20" height="14" rx="3"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg></span>
+              Funding sources
+            </div>
+          </div>
+          <div className="pay-diagram-arrow">→</div>
+          <div className="pay-diagram-col">
+            <div className="pay-engine">
+              <div className="pay-node pay-node-core"><span className="pay-node-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></span>Payment orchestration</div>
+              <div className="pay-node pay-node-core"><span className="pay-node-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><polyline points="9,12 11,14 15,10"></polyline></svg></span>Reconciliation &amp; audit</div>
+            </div>
+          </div>
+          <div className="pay-diagram-arrow">→</div>
+          <div className="pay-diagram-col pay-diagram-fan">
+            <div className="pay-node pay-node-out">Bank EFT</div>
+            <div className="pay-node pay-node-out">Real-time clearing (RTC)</div>
+            <div className="pay-node pay-node-out">Mobile wallets</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section className="section"><div className="inner-n"><div className="quote-block-wrap"><div className="quote-block">
       <p style={{fontSize:"20px",fontWeight:"600",color:"#fff",lineHeight:"1.5",marginBottom:"24px",position:"relative",zIndex:"1"}}>"BipraPay processes our entire payroll — 800 staff across 6 provinces — in under 90 seconds. Every Friday. Without fail. The old system took 4 hours and still had errors."</p>
       <div style={{display:"flex",alignItems:"center",gap:"14px",position:"relative",zIndex:"1"}}>
