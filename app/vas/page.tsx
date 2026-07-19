@@ -52,6 +52,33 @@ export default function Page() {
       </div>
     </div></section>
 
+    <section className="section"><div className="inner">
+      <p className="slabel">Backed by real people</p>
+      <h2 className="stitle">Support that comes standard, not as an add-on</h2>
+      <p className="ssub">Every VAS deployment ships with a live call centre, online support, and a named account manager — not a ticket queue.</p>
+      <div className="g3" style={{gap:"20px"}}>
+        <div className="gcard shine grid-pop pop1 tilt" style={{borderRadius:"14px",padding:"24px"}}>
+          <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"linear-gradient(135deg,#E8152A,#FF6B35)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"14px",boxShadow:"0 8px 16px rgba(232,21,42,0.25)"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+          <div style={{fontSize:"15px",fontWeight:"700",color:"var(--ink)",marginBottom:"6px"}}>Call centre</div>
+          <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.65"}}>A live, South African-based call centre for your customers and your team — not an offshore script.</p>
+        </div>
+        <div className="gcard shine grid-pop pop2 tilt" style={{borderRadius:"14px",padding:"24px"}}>
+          <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"linear-gradient(135deg,#5533FF,#7B5FFF)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"14px",boxShadow:"0 8px 16px rgba(85,51,255,0.25)"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></div>
+          <div style={{fontSize:"15px",fontWeight:"700",color:"var(--ink)",marginBottom:"6px"}}>Online support</div>
+          <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.65"}}>Live chat and ticketing built into every portal, so issues get logged, tracked, and resolved without a phone call.</p>
+        </div>
+        <div className="gcard shine grid-pop pop3 tilt" style={{borderRadius:"14px",padding:"24px"}}>
+          <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"linear-gradient(135deg,#0A7B3E,#00C87A)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"14px",boxShadow:"0 8px 16px rgba(10,123,62,0.25)"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+          <div style={{fontSize:"15px",fontWeight:"700",color:"var(--ink)",marginBottom:"6px"}}>Dedicated account manager</div>
+          <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.65"}}>One named contact who knows your setup, your volumes, and your history — not a rotating support queue.</p>
+        </div>
+      </div>
+      <div style={{marginTop:"24px",padding:"20px 24px",background:"var(--gl)",borderRadius:"14px",display:"flex",alignItems:"center",gap:"14px",flexWrap:"wrap"}}>
+        <span style={{width:"36px",height:"36px",borderRadius:"10px",background:"var(--g)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12,6 12,12 16,14"></polyline></svg></span>
+        <span style={{fontSize:"14px",color:"var(--g)",fontWeight:"600"}}>VeriBills customers get a 24-hour call centre and support line, so meter and billing queries never wait for business hours.</span>
+      </div>
+    </div></section>
+
     <section className="section" style={{background:"var(--off)"}}>
       <div className="inner">
         <p className="slabel" style={{textAlign:"center"}}>Why BIPRA VAS</p>

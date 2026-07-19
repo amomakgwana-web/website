@@ -431,26 +431,30 @@ export default function Page() {
     <p className="swipe-hint">← swipe through the 4 steps →</p>
     <div className="slides-wrap">
     <div className="step-grid">
-    <div className="gcard shine grid-pop tilt" style={{padding:"28px",borderRadius:"16px"}}>
-    <div style={{width:"48px",height:"48px",borderRadius:"50%",background:"var(--p)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></div>
+    <div className="gcard shine grid-pop pop1 tilt step-card" style={{padding:"28px",borderRadius:"16px"}}>
+    <div className="step-num">01</div>
+    <div style={{width:"48px",height:"48px",borderRadius:"14px",background:"linear-gradient(135deg,var(--p),#7B5FFF)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px",boxShadow:"0 8px 18px rgba(85,51,255,0.3)"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg></div>
     <div style={{fontSize:"11px",fontWeight:"700",color:"var(--p)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"8px"}}>Day 1</div>
     <div style={{fontSize:"16px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Sign &amp; onboard</div>
     <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.7"}}>Contract signed, API keys issued, sandbox access granted. Your tech team is ready to build.</p>
     </div>
-    <div className="gcard shine grid-pop tilt" style={{padding:"28px",borderRadius:"16px"}}>
-    <div style={{width:"48px",height:"48px",borderRadius:"50%",background:"var(--p)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
+    <div className="gcard shine grid-pop pop2 tilt step-card" style={{padding:"28px",borderRadius:"16px"}}>
+    <div className="step-num">02</div>
+    <div style={{width:"48px",height:"48px",borderRadius:"14px",background:"linear-gradient(135deg,var(--p),#7B5FFF)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px",boxShadow:"0 8px 18px rgba(85,51,255,0.3)"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
     <div style={{fontSize:"11px",fontWeight:"700",color:"var(--p)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"8px"}}>Days 1–3</div>
     <div style={{fontSize:"16px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Integrate</div>
     <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.7"}}>Connect via REST API or SDK. Pre-built connectors for Xero, Sage, SAP. Our engineers are on standby.</p>
     </div>
-    <div className="gcard shine grid-pop tilt" style={{padding:"28px",borderRadius:"16px"}}>
-    <div style={{width:"48px",height:"48px",borderRadius:"50%",background:"var(--p)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path></svg></div>
+    <div className="gcard shine grid-pop pop3 tilt step-card" style={{padding:"28px",borderRadius:"16px"}}>
+    <div className="step-num">03</div>
+    <div style={{width:"48px",height:"48px",borderRadius:"14px",background:"linear-gradient(135deg,var(--p),#7B5FFF)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px",boxShadow:"0 8px 18px rgba(85,51,255,0.3)"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path></svg></div>
     <div style={{fontSize:"11px",fontWeight:"700",color:"var(--p)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"8px"}}>Days 3–5</div>
     <div style={{fontSize:"16px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Configure &amp; test</div>
     <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.7"}}>Set payment rails, billing rules, approval workflows, and tariff structures. Full sandbox testing included.</p>
     </div>
-    <div style={{padding:"28px",background:"var(--gl)",borderRadius:"16px",border:"1px solid rgba(10,123,62,0.2)"}}>
-    <div style={{width:"48px",height:"48px",borderRadius:"50%",background:"var(--g)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+    <div className="gcard shine grid-pop pop4 tilt step-card step-card-done" style={{padding:"28px",borderRadius:"16px",background:"var(--gl)",border:"1px solid rgba(10,123,62,0.2)"}}>
+    <div className="step-num" style={{color:"var(--g)"}}>04</div>
+    <div style={{width:"48px",height:"48px",borderRadius:"14px",background:"linear-gradient(135deg,var(--g),#00C87A)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px",boxShadow:"0 8px 18px rgba(10,123,62,0.3)"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
     <div style={{fontSize:"11px",fontWeight:"700",color:"var(--g)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"8px"}}>Day 5+</div>
     <div style={{fontSize:"16px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Go live</div>
     <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.7"}}>Production switch flipped. Dedicated success manager assigned. 24/7 monitoring from day one.</p>
@@ -458,10 +462,10 @@ export default function Page() {
     </div>
     </div>
     <div style={{display:"flex",justifyContent:"center",gap:"40px",marginTop:"40px",padding:"28px",background:"#fff",borderRadius:"14px",border:"1px solid var(--border)",flexWrap:"wrap"}}>
-    <div style={{textAlign:"center"}}><div style={{fontSize:"28px",fontWeight:"800",color:"var(--p)",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"-1px"}}>48h</div><div style={{fontSize:"12px",color:"var(--muted)",marginTop:"2px"}}>Fastest go-live</div></div>
-    <div style={{textAlign:"center"}}><div style={{fontSize:"28px",fontWeight:"800",color:"var(--p)",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"-1px"}}>5 days</div><div style={{fontSize:"12px",color:"var(--muted)",marginTop:"2px"}}>Avg enterprise deployment</div></div>
-    <div style={{textAlign:"center"}}><div style={{fontSize:"28px",fontWeight:"800",color:"var(--p)",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"-1px"}}>24/7</div><div style={{fontSize:"12px",color:"var(--muted)",marginTop:"2px"}}>Onboarding support</div></div>
-    <div style={{textAlign:"center"}}><div style={{fontSize:"28px",fontWeight:"800",color:"var(--p)",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"-1px"}}>100%</div><div style={{fontSize:"12px",color:"var(--muted)",marginTop:"2px"}}>Successful go-lives</div></div>
+    <div style={{textAlign:"center"}}><div className="grad-text" style={{fontSize:"28px",fontWeight:"800",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"-1px"}}>48h</div><div style={{fontSize:"12px",color:"var(--muted)",marginTop:"2px"}}>Fastest go-live</div></div>
+    <div style={{textAlign:"center"}}><div className="grad-text-cool" style={{fontSize:"28px",fontWeight:"800",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"-1px"}}>5 days</div><div style={{fontSize:"12px",color:"var(--muted)",marginTop:"2px"}}>Avg enterprise deployment</div></div>
+    <div style={{textAlign:"center"}}><div className="grad-text-warm" style={{fontSize:"28px",fontWeight:"800",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"-1px"}}>24/7</div><div style={{fontSize:"12px",color:"var(--muted)",marginTop:"2px"}}>Onboarding support</div></div>
+    <div style={{textAlign:"center"}}><div className="grad-text-green" style={{fontSize:"28px",fontWeight:"800",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"-1px"}}>100%</div><div style={{fontSize:"12px",color:"var(--muted)",marginTop:"2px"}}>Successful go-lives</div></div>
     </div>
     </div></section>
 
