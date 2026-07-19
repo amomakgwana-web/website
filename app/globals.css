@@ -57,14 +57,16 @@ button{font-family:var(--fb);cursor:pointer}
 .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .case-grid>.lift-card{min-width:0}
 /* ── Solutions page: product capability mega-panel ── */
-.solutions-mega{display:grid;grid-template-columns:240px 1fr;gap:24px;background:var(--off);border-radius:24px;padding:24px}
+.solutions-mega{display:grid;grid-template-columns:240px 1fr;gap:24px;background:linear-gradient(135deg,var(--p) 0%,#3D22CC 100%);border-radius:24px;padding:24px}
 .solutions-tabs{display:flex;flex-direction:column;gap:8px}
 .solutions-tab{display:flex;align-items:center;gap:12px;text-align:left;background:transparent;border:1.5px solid transparent;border-radius:14px;padding:16px;cursor:pointer;transition:background .2s,border-color .2s}
-.solutions-tab:hover{background:rgba(255,255,255,0.6)}
-.solutions-tab.active{background:#fff;box-shadow:0 8px 24px rgba(13,11,30,0.08)}
+.solutions-tab:hover{background:rgba(255,255,255,0.14)}
+.solutions-tab.active{background:#fff;box-shadow:0 8px 24px rgba(13,11,30,0.2)}
 .solutions-tab-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.solutions-tab-name{display:block;font-size:15px;font-weight:700;color:var(--ink)}
-.solutions-tab-tag{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+.solutions-tab-name{display:block;font-size:15px;font-weight:700;color:#fff}
+.solutions-tab-tag{display:block;font-size:12px;color:rgba(255,255,255,0.65);margin-top:2px}
+.solutions-tab.active .solutions-tab-name{color:var(--ink)}
+.solutions-tab.active .solutions-tab-tag{color:var(--muted)}
 .solutions-grid{background:#fff;border-radius:18px;padding:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
 .solutions-feature{display:flex;align-items:flex-start;gap:14px}
 .solutions-feature-icon{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
