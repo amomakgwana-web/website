@@ -21,7 +21,7 @@ button{font-family:var(--fb);cursor:pointer}
 .logomark{width:36px;height:36px;background:var(--p);border-radius:10px;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0}
 .logomark::after{content:'';position:absolute;top:5px;right:5px;width:9px;height:9px;background:var(--r);border-radius:50%}
 .logomark span{font-family:var(--fd);font-weight:800;font-size:14px;color:#fff}
-.logotext{font-family:var(--font-logo,var(--fd));font-weight:700;font-size:24px;color:var(--p);letter-spacing:-.3px}
+.logotext{font-family:var(--font-logo,var(--fd));font-weight:800;font-size:32px;letter-spacing:-.5px;display:inline-block;background:linear-gradient(90deg,#5533FF,#E8152A,#FF6B35,#0AC77E,#7B5FFF,#5533FF);background-size:300% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradShift 6s ease infinite}
 .navlinks{display:flex;align-items:center;gap:28px;list-style:none}
 .navlinks a,.navlinks button{font-size:14px;font-weight:500;color:rgba(255,255,255,0.85);background:none;border:none;cursor:pointer;transition:color .2s;padding:0}
 .navlinks a:hover,.navlinks button:hover{color:#fff}
@@ -392,7 +392,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.05)}
 /* Hero gradient text shimmer */
 .grad-text{background-size:200% 200%;animation:gradShift 5s ease infinite}
 .grad-text-warm{background-size:200% 200%;animation:gradShift 6s ease infinite}
-@media(prefers-reduced-motion:reduce){.btn:hover{transform:none}.grad-text,.grad-text-warm{animation:none}.dropdown,.signin-drop{animation:none}}
+@media(prefers-reduced-motion:reduce){.btn:hover{transform:none}.grad-text,.grad-text-warm,.logotext{animation:none}.dropdown,.signin-drop{animation:none}}
 
 .chat-send-btn:active{transform:scale(.92)}
 .wa-btn{background:linear-gradient(135deg,#2BE36F,#1FA855);box-shadow:0 4px 14px rgba(37,211,102,0.35)}
@@ -472,6 +472,21 @@ footer ul li a:hover::before{opacity:1;left:-14px}
 .morr-c2{--morr-accent:linear-gradient(90deg,#FF6B35,var(--r));--morr-accent-l:var(--rl)}
 .morr-c3{--morr-accent:linear-gradient(90deg,var(--g),#00C87A);--morr-accent-l:var(--gl)}
 @media(prefers-reduced-motion:reduce){.morr-bar-fill{transition:none}.morr-stat-card{transition:none}}
+
+/* ── BipraPay multi-rail hub diagram ── */
+.hub-diagram{position:relative;max-width:640px;margin:0 auto;aspect-ratio:3/2}
+.hub-lines{position:absolute;inset:0;width:100%;height:100%}
+.hub-lines line{stroke:rgba(123,95,255,0.45);stroke-width:1.5;stroke-dasharray:5 6}
+.hub-node{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;width:120px;text-align:center}
+.hub-node-center{width:84px;height:84px;border-radius:50%;background:#fff;box-shadow:0 12px 32px rgba(85,51,255,0.28);display:flex;align-items:center;justify-content:center}
+.hub-node-tl{top:22.5%;left:15%}
+.hub-node-bl{top:77.5%;left:15%}
+.hub-node-tr{top:22.5%;left:85%}
+.hub-node-br{top:77.5%;left:85%}
+.hub-node-icon{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#5533FF,#7B5FFF);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(85,51,255,0.3)}
+.hub-node-label{font-size:12.5px;font-weight:700;color:#fff}
+.hub-diagram-mobile{display:none}
+@media(max-width:760px){.hub-diagram{display:none}.hub-diagram-mobile{display:flex;flex-direction:column;gap:10px;max-width:420px;margin:0 auto}.hub-diagram-mobile .hub-node{position:static;transform:none;flex-direction:row;width:100%;text-align:left;background:rgba(255,255,255,0.04);border-radius:12px;padding:12px 16px}.hub-diagram-mobile .hub-node-icon{width:40px;height:40px;flex-shrink:0}}
 
 /* ── BipraPay infrastructure diagram ── */
 .pay-diagram{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;max-width:960px;margin:0 auto}
