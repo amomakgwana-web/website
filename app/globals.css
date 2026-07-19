@@ -68,11 +68,30 @@ button{font-family:var(--fb);cursor:pointer}
 .solutions-tab.active .solutions-tab-tag{color:var(--muted)}
 .solutions-grid{background:#fff;border-radius:18px;padding:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
 .solutions-feature{display:flex;align-items:flex-start;gap:14px}
-.solutions-feature-icon{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.solutions-feature-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff;transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.solutions-feature:hover .solutions-feature-icon{transform:scale(1.08) rotate(-4deg)}
 .solutions-feature-title{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px}
 .solutions-feature-desc{font-size:12.5px;color:var(--muted);line-height:1.5}
 @media(max-width:900px){.solutions-mega{grid-template-columns:1fr;padding:16px}.solutions-tabs{flex-direction:row;overflow-x:auto;gap:8px}.solutions-tab{flex:0 0 auto}.solutions-grid{grid-template-columns:1fr 1fr;padding:20px}}
 @media(max-width:560px){.solutions-grid{grid-template-columns:1fr}}
+/* ── Solutions hero: floating three-engines constellation ── */
+.solutions-orbit{display:flex;justify-content:center;align-items:flex-start;gap:48px;margin-top:56px;position:relative;flex-wrap:wrap}
+.solutions-orbit::before{content:'';position:absolute;top:34px;left:14%;right:14%;height:1px;background:linear-gradient(90deg,transparent,rgba(232,21,42,0.3),rgba(85,51,255,0.3),rgba(10,123,62,0.3),transparent);z-index:0}
+.solutions-orbit-item{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;width:120px}
+.solutions-orbit-icon{width:68px;height:68px;border-radius:20px;display:flex;align-items:center;justify-content:center;color:#fff}
+.solutions-orbit-name{font-size:13.5px;font-weight:700;color:var(--ink)}
+.solutions-orbit-tag{font-size:11.5px;color:var(--muted)}
+@media(max-width:560px){.solutions-orbit::before{display:none}.solutions-orbit{gap:28px}.solutions-orbit-item{width:96px}.solutions-orbit-icon{width:56px;height:56px;border-radius:16px}}
+/* ── Solutions page: industry cards ── */
+.solutions-ind-card{position:relative;overflow:hidden}
+.solutions-ind-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;margin-bottom:16px}
+.solutions-ind-watermark{position:absolute!important;top:-24px;right:-24px;opacity:0.05;pointer-events:none;z-index:0}
+/* ── Solutions page: integration monogram badges ── */
+.solutions-int-badge{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;font-weight:800;margin:0 auto 12px}
+/* ── Solutions page: dark CTA glow ── */
+.solutions-cta{position:relative;overflow:hidden}
+.solutions-cta-glow{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:0}
+.solutions-cta>*{position:relative;z-index:1}
 .step-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .step-grid>*{min-width:0}
 .step-card{position:relative}
