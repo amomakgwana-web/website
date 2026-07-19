@@ -64,7 +64,7 @@ const KB: KBEntry[] = [
   {
     keys: ["support", "help", "contact", "phone", "email", "call", "escalate", "issue", "problem"],
     reply:
-      "Our support options:\n\n• <strong>Email:</strong> enquiry@biprasoftware.com\n• <strong>Phone:</strong> +27 11 000 0000\n• <strong>WhatsApp:</strong> Available below\n• <strong>Slack:</strong> Developer community\n\nResponse SLAs: Starter 48h · Business 8h · Enterprise 1h",
+      "Our support options:\n\n• <strong>Email:</strong> enquiry@biprasoftware.com\n• <strong>Phone:</strong> +27 67 716 4066\n• <strong>WhatsApp:</strong> Available below\n• <strong>Slack:</strong> Developer community\n\nResponse SLAs: Starter 48h · Business 8h · Enterprise 1h",
     qr: ["WhatsApp us", "Send email", "Book a call"],
   },
   {
@@ -88,7 +88,7 @@ const KB: KBEntry[] = [
   {
     keys: ["whatsapp", "wa", "chat", "message", "text"],
     reply:
-      "You can reach us on WhatsApp any time during business hours (Mon–Fri 08:00–18:00 SAST):\n\n• General support: +27 11 000 0000\n• Sales & demos: +27 11 000 0001\n• Developer support: +27 11 000 0002\n\nClick the WhatsApp button to connect directly.",
+      "You can reach us on WhatsApp any time during business hours (Mon–Fri 08:00–18:00 SAST):\n\n• General support: +27 67 716 4066\n• Sales & demos: +27 67 716 4066\n• Developer support: +27 67 716 4066\n\nClick the WhatsApp button to connect directly.",
     qr: ["Open WhatsApp", "Book a demo", "Contact form"],
   },
   {
@@ -371,33 +371,33 @@ export default function ChatWidget() {
           <h3 style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"20px",fontWeight:"800",color:"var(--ink)",marginBottom:"8px"}}>Chat on WhatsApp</h3>
           <p style={{fontSize:"14px",color:"var(--muted)",lineHeight:"1.7",marginBottom:"24px"}}>Connect with our support team directly on WhatsApp. Available Mon–Fri 08:00–18:00 SAST.</p>
           <div style={{display:"flex",flexDirection:"column",gap:"10px",marginBottom:"20px"}}>
-            <a href="https://wa.me/27110000000?text=Hi%20BIPRA%2C%20I%20need%20help%20with%20your%20products" target="_blank" rel="noreferrer" style={{display:"flex",alignItems:"center",gap:"12px",padding:"14px 18px",background:"#f0fdf4",borderRadius:"12px",border:"1.5px solid #bbf7d0",textDecoration:"none"}}>
+            <a href="https://wa.me/27677164066?text=Hi%20BIPRA%2C%20I%20need%20help%20with%20your%20products" target="_blank" rel="noreferrer" style={{display:"flex",alignItems:"center",gap:"12px",padding:"14px 18px",background:"#f0fdf4",borderRadius:"12px",border:"1.5px solid #bbf7d0",textDecoration:"none"}}>
               <div style={{width:"36px",height:"36px",borderRadius:"50%",background:"#25D366",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">{WA_ICON}</svg>
               </div>
               <div style={{textAlign:"left"}}>
                 <div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>General support</div>
-                <div style={{fontSize:"12px",color:"var(--muted)"}}>+27 11 000 0000</div>
+                <div style={{fontSize:"12px",color:"var(--muted)"}}>+27 67 716 4066</div>
               </div>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--g)" strokeWidth="2" style={{marginLeft:"auto"}}><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
             </a>
-            <a href="https://wa.me/27110000001?text=Hi%20BIPRA%20Sales%2C%20I%27d%20like%20a%20demo" target="_blank" rel="noreferrer" style={{display:"flex",alignItems:"center",gap:"12px",padding:"14px 18px",background:"var(--pl)",borderRadius:"12px",border:"1.5px solid rgba(85,51,255,0.2)",textDecoration:"none"}}>
+            <a href="https://wa.me/27677164066?text=Hi%20BIPRA%20Sales%2C%20I%27d%20like%20a%20demo" target="_blank" rel="noreferrer" style={{display:"flex",alignItems:"center",gap:"12px",padding:"14px 18px",background:"var(--pl)",borderRadius:"12px",border:"1.5px solid rgba(85,51,255,0.2)",textDecoration:"none"}}>
               <div style={{width:"36px",height:"36px",borderRadius:"50%",background:"var(--p)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
               </div>
               <div style={{textAlign:"left"}}>
                 <div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>Sales &amp; demos</div>
-                <div style={{fontSize:"12px",color:"var(--muted)"}}>+27 11 000 0001</div>
+                <div style={{fontSize:"12px",color:"var(--muted)"}}>+27 67 716 4066</div>
               </div>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--p)" strokeWidth="2" style={{marginLeft:"auto"}}><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
             </a>
-            <a href="https://wa.me/27110000002?text=Hi%20BIPRA%20Developer%20Support%2C%20I%20need%20help%20with%20the%20API" target="_blank" rel="noreferrer" style={{display:"flex",alignItems:"center",gap:"12px",padding:"14px 18px",background:"#fff7ed",borderRadius:"12px",border:"1.5px solid #fed7aa",textDecoration:"none"}}>
+            <a href="https://wa.me/27677164066?text=Hi%20BIPRA%20Developer%20Support%2C%20I%20need%20help%20with%20the%20API" target="_blank" rel="noreferrer" style={{display:"flex",alignItems:"center",gap:"12px",padding:"14px 18px",background:"#fff7ed",borderRadius:"12px",border:"1.5px solid #fed7aa",textDecoration:"none"}}>
               <div style={{width:"36px",height:"36px",borderRadius:"50%",background:"#FF6B35",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
               </div>
               <div style={{textAlign:"left"}}>
                 <div style={{fontSize:"14px",fontWeight:"600",color:"var(--ink)"}}>Developer support</div>
-                <div style={{fontSize:"12px",color:"var(--muted)"}}>+27 11 000 0002</div>
+                <div style={{fontSize:"12px",color:"var(--muted)"}}>+27 67 716 4066</div>
               </div>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" strokeWidth="2" style={{marginLeft:"auto"}}><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
             </a>
