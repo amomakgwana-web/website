@@ -8,14 +8,9 @@ export default function Page() {
       <h1 style={{fontFamily:"var(--fd)",fontSize:"clamp(38px,4.6vw,58px)",fontWeight:"800",lineHeight:"1.12",letterSpacing:"-1.5px",marginBottom:"20px"}}><span style={{color:"var(--r)"}}>Payments &amp; workflow automation engineering</span> for <strong>scalable, secure and robust growth</strong></h1>
       <p style={{fontSize:"17px",color:"var(--muted)",lineHeight:"1.75",maxWidth:"460px",marginBottom:"36px",fontWeight:"300"}}>Payments processing, financial auditing, smart meter billing, and enterprise workflow automation — unified in one platform <strong style={{color:"var(--ink)",fontWeight:"600"}}>built for Africa.</strong></p>
       <div style={{display:"flex",gap:"16px",flexWrap:"wrap"}}><Link className="btn btn-p btn-lg" href="/biprapay">Our platforms <span>→</span></Link><Link className="btn btn-o btn-lg" href="/contact">Contact us</Link></div>
-      <div style={{display:"flex",alignItems:"center",gap:"12px",marginTop:"36px"}}>
-        <div style={{display:"flex"}}>
-          <div style={{width:"28px",height:"28px",borderRadius:"50%",background:"#5533FF",border:"2px solid #fff",marginRight:"-8px",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"10px",fontWeight:"700",color:"#fff"}}>AK</div>
-          <div style={{width:"28px",height:"28px",borderRadius:"50%",background:"#E8152A",border:"2px solid #fff",marginRight:"-8px",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"10px",fontWeight:"700",color:"#fff"}}>BM</div>
-          <div style={{width:"28px",height:"28px",borderRadius:"50%",background:"#3D22CC",border:"2px solid #fff",marginRight:"-8px",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"10px",fontWeight:"700",color:"#fff"}}>SN</div>
-          <div style={{width:"28px",height:"28px",borderRadius:"50%",background:"#7B5FFF",border:"2px solid #fff",display:"flex",alignItems:"center",justifyContent:"center",fontSize:"10px",fontWeight:"700",color:"#fff"}}>TL</div>
-        </div>
-        <span style={{fontSize:"13px",color:"var(--muted)",marginLeft:"12px"}}>Trusted by 500+ businesses across Africa</span>
+      <div style={{display:"flex",alignItems:"center",gap:"10px",marginTop:"36px",flexWrap:"wrap"}}>
+        <div style={{width:"28px",height:"28px",borderRadius:"50%",background:"linear-gradient(135deg,#0A7B3E,#00C87A)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+        <span style={{fontSize:"13px",color:"var(--muted)"}}>PCI-DSS Level 1 &middot; POPIA Compliant &middot; SARB Licensed</span>
       </div>
     </div>
     <div className="fu d2 hero-visual" style={{position:"relative",height:"460px",display:"flex",justifyContent:"center"}}>
