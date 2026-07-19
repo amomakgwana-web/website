@@ -1,0 +1,30 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Security",
+  description: "BIPRA security certifications, practices, and compliance posture.",
+};
+
+export default function Page() {
+  return (
+    <div id="page-security" className="page active pw">
+    <section className="section" style={{paddingTop:"100px"}}><div className="inner">
+      <p className="slabel">Security</p>
+      <h1 style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"clamp(32px,4vw,48px)",fontWeight:"800",letterSpacing:"-1px",marginBottom:"16px",lineHeight:"1.1"}}>Security at BIPRA</h1>
+      <p style={{fontSize:"17px",color:"var(--muted)",lineHeight:"1.75",maxWidth:"600px",marginBottom:"56px",fontWeight:"300"}}>We handle sensitive financial data for hundreds of organisations. Security is not a feature — it's the foundation.</p>
+      <div className="g3" style={{gap:"24px",marginBottom:"48px"}}>
+        <div style={{padding:"32px",background:"var(--off)",borderRadius:"16px"}}><div style={{width:"44px",height:"44px",borderRadius:"12px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5533FF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><div style={{fontSize:"17px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Certifications</div><p style={{fontSize:"14px",color:"var(--muted)",lineHeight:"1.7"}}>PCI-DSS Level 1, ISO 27001, SOC 2 Type II. We undergo annual third-party audits and penetration testing.</p></div>
+        <div style={{padding:"32px",background:"var(--off)",borderRadius:"16px"}}><div style={{width:"44px",height:"44px",borderRadius:"12px",background:"var(--gl)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A7B3E" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div><div style={{fontSize:"17px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Encryption</div><p style={{fontSize:"14px",color:"var(--muted)",lineHeight:"1.7"}}>AES-256 encryption at rest. TLS 1.3 in transit. Key management via HSMs. Card data never touches your servers.</p></div>
+        <div style={{padding:"32px",background:"var(--off)",borderRadius:"16px"}}><div style={{width:"44px",height:"44px",borderRadius:"12px",background:"var(--rl)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8152A" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><line x1="4.22" y1="4.22" x2="19.78" y2="19.78"></line></svg></div><div style={{fontSize:"17px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Fraud detection</div><p style={{fontSize:"14px",color:"var(--muted)",lineHeight:"1.7"}}>Real-time fraud scoring on every transaction. ML-based anomaly detection with human review escalation.</p></div>
+        <div style={{padding:"32px",background:"var(--off)",borderRadius:"16px"}}><div style={{width:"44px",height:"44px",borderRadius:"12px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5533FF" strokeWidth="2"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></div><div style={{fontSize:"17px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Disaster recovery</div><p style={{fontSize:"14px",color:"var(--muted)",lineHeight:"1.7"}}>Multi-region active-active infrastructure. RTO &lt; 15 minutes. RPO &lt; 1 minute. 99.99% availability SLA.</p></div>
+        <div style={{padding:"32px",background:"var(--off)",borderRadius:"16px"}}><div style={{width:"44px",height:"44px",borderRadius:"12px",background:"var(--gl)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A7B3E" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div><div style={{fontSize:"17px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Access control</div><p style={{fontSize:"14px",color:"var(--muted)",lineHeight:"1.7"}}>Role-based access control (RBAC) with MFA enforced for all admin actions. Full audit trail of user activity.</p></div>
+        <div style={{padding:"32px",background:"var(--off)",borderRadius:"16px"}}><div style={{width:"44px",height:"44px",borderRadius:"12px",background:"var(--rl)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E8152A" strokeWidth="2"><path d="M9 12h6M9 16h6M9 8h6M5 3h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path></svg></div><div style={{fontSize:"17px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Responsible disclosure</div><p style={{fontSize:"14px",color:"var(--muted)",lineHeight:"1.7"}}>We run a bug bounty programme. Found a vulnerability? Contact security@bipra.io. We respond within 24 hours.</p></div>
+      </div>
+      <div style={{background:"var(--ink)",borderRadius:"20px",padding:"40px",display:"flex",alignItems:"center",justifyContent:"space-between",flexWrap:"wrap",gap:"24px"}}>
+        <div><div style={{fontSize:"20px",fontWeight:"700",color:"#fff",marginBottom:"6px"}}>Request our security documentation</div><div style={{fontSize:"14px",color:"rgba(255,255,255,0.5)"}}>Full pen-test reports, certifications, and DPA available to enterprise clients under NDA.</div></div>
+        <Link className="btn btn-w btn-lg" href="/contact">Request docs</Link>
+      </div>
+    </div></section></div>
+  );
+}
