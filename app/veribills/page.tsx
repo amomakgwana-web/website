@@ -29,6 +29,44 @@ export default function Page() {
     <section style={{padding:"60px 5%",background:"#0A7B3E"}}><div className="inner"><div className="stat-bar"><div className="stat-cell" style={{background:"#0A7B3E"}}><div className="grad-text-mint" style={{fontFamily:"var(--fd)",fontSize:"32px",fontWeight:"800",lineHeight:"1",marginBottom:"6px"}}>14K+</div><div style={{fontSize:"13px",color:"rgba(255,255,255,0.55)"}}>Bills generated/month</div></div><div className="stat-cell" style={{background:"#0A7B3E"}}><div className="grad-text-mint" style={{fontFamily:"var(--fd)",fontSize:"32px",fontWeight:"800",lineHeight:"1",marginBottom:"6px"}}>3,847</div><div style={{fontSize:"13px",color:"rgba(255,255,255,0.55)"}}>Smart meters connected</div></div><div className="stat-cell" style={{background:"#0A7B3E"}}><div className="grad-text-mint" style={{fontFamily:"var(--fd)",fontSize:"32px",fontWeight:"800",lineHeight:"1",marginBottom:"6px"}}>99.6%</div><div style={{fontSize:"13px",color:"rgba(255,255,255,0.55)"}}>Bill delivery rate</div></div><div className="stat-cell" style={{background:"#0A7B3E"}}><div className="grad-text-mint" style={{fontFamily:"var(--fd)",fontSize:"32px",fontWeight:"800",lineHeight:"1",marginBottom:"6px"}}>5 min</div><div style={{fontSize:"13px",color:"rgba(255,255,255,0.55)"}}>Meter-to-bill cycle</div></div></div></div></section>
 
 
+    <section className="section"><div className="inner">
+      <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"start"}} className="two-col">
+        <div>
+          <p className="slabel">Payment settlement &amp; markets</p>
+          <h2 className="stitle">One billing engine, every market</h2>
+          <p style={{fontSize:"16px",color:"var(--muted)",lineHeight:"1.8",marginBottom:"24px"}}>VeriBills presents and rates bills the same way whether the payer is a tenant, a resident, a business, or a debtor — then settles the payment straight back through BipraPay.</p>
+          <ul className="flist">
+            <li className="fitem"><span className="fcheck" style={{background:"var(--gl)"}}><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="#0A7B3E" strokeWidth="1.8"></polyline></svg></span>Bill presentment &amp; rating engine for every tariff structure, from prepaid electricity to flat-rate levies</li>
+            <li className="fitem"><span className="fcheck" style={{background:"var(--gl)"}}><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="#0A7B3E" strokeWidth="1.8"></polyline></svg></span>Rental payment capabilities built in — tenants pay rent, levies, and prepaid electricity from one bill</li>
+            <li className="fitem"><span className="fcheck" style={{background:"var(--gl)"}}><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="#0A7B3E" strokeWidth="1.8"></polyline></svg></span>DebiCheck-authenticated debit order collection for recurring and debt-recovery billing</li>
+            <li className="fitem"><span className="fcheck" style={{background:"var(--gl)"}}><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="#0A7B3E" strokeWidth="1.8"></polyline></svg></span>Bulk billing delivery by email and SMS across every account, every cycle</li>
+          </ul>
+        </div>
+        <div style={{display:"flex",flexDirection:"column",gap:"12px"}}>
+          <div className="gcard shine grid-pop pop1 tilt" style={{borderRadius:"14px",padding:"20px 22px",display:"flex",alignItems:"center",gap:"16px"}}>
+            <span style={{width:"42px",height:"42px",borderRadius:"11px",background:"linear-gradient(135deg,#0A7B3E,#00C87A)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
+            <div><div style={{fontSize:"14px",fontWeight:"700",color:"var(--ink)"}}>Rental properties</div><div style={{fontSize:"12.5px",color:"var(--muted)"}}>Rent, levies &amp; prepaid electricity billed and paid together</div></div>
+          </div>
+          <div className="gcard shine grid-pop pop2 tilt" style={{borderRadius:"14px",padding:"20px 22px",display:"flex",alignItems:"center",gap:"16px"}}>
+            <span style={{width:"42px",height:"42px",borderRadius:"11px",background:"linear-gradient(135deg,#5533FF,#7B5FFF)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M9 13h1M9 17h1M14 9h1M14 13h1M14 17h1"></path></svg></span>
+            <div><div style={{fontSize:"14px",fontWeight:"700",color:"var(--ink)"}}>Municipalities</div><div style={{fontSize:"12.5px",color:"var(--muted)"}}>Prepaid &amp; conventional electricity, rates, and bulk billing at scale</div></div>
+          </div>
+          <div className="gcard shine grid-pop pop3 tilt" style={{borderRadius:"14px",padding:"20px 22px",display:"flex",alignItems:"center",gap:"16px"}}>
+            <span style={{width:"42px",height:"42px",borderRadius:"11px",background:"linear-gradient(135deg,#3D22CC,#5533FF)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+            <div><div style={{fontSize:"14px",fontWeight:"700",color:"var(--ink)"}}>Communal schemes</div><div style={{fontSize:"12.5px",color:"var(--muted)"}}>Levies and shared-service billing across sectional-title and HOA communities</div></div>
+          </div>
+          <div className="gcard shine grid-pop pop4 tilt" style={{borderRadius:"14px",padding:"20px 22px",display:"flex",alignItems:"center",gap:"16px"}}>
+            <span style={{width:"42px",height:"42px",borderRadius:"11px",background:"linear-gradient(135deg,#E8152A,#FF6B35)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M3 21h18M5 21V10l4-3 4 3v11M13 21V6l4-3 4 3v15"></path></svg></span>
+            <div><div style={{fontSize:"14px",fontWeight:"700",color:"var(--ink)"}}>Office parks</div><div style={{fontSize:"12.5px",color:"var(--muted)"}}>Utility recoveries and tenant billing across multi-building commercial sites</div></div>
+          </div>
+          <div className="gcard shine grid-pop pop5 tilt" style={{borderRadius:"14px",padding:"20px 22px",display:"flex",alignItems:"center",gap:"16px"}}>
+            <span style={{width:"42px",height:"42px",borderRadius:"11px",background:"linear-gradient(135deg,#0A7B3E,#00C87A)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></span>
+            <div><div style={{fontSize:"14px",fontWeight:"700",color:"var(--ink)"}}>Debt collectors</div><div style={{fontSize:"12.5px",color:"var(--muted)"}}>DebiCheck-authenticated debit orders for compliant, recurring debt recovery</div></div>
+          </div>
+        </div>
+      </div>
+    </div></section>
+
     <section style={{background:"linear-gradient(150deg,#06140d 0%,#0D0B1E 55%,#0a1f14 100%)",padding:"110px 5%",position:"relative",overflow:"hidden"}}>
       <div className="blob-drift" style={{position:"absolute",top:"-100px",left:"-90px",width:"460px",height:"460px",borderRadius:"50%",background:"radial-gradient(circle,rgba(0,200,122,0.14) 0%,transparent 70%)",pointerEvents:"none"}}></div>
       <div className="blob-drift" style={{position:"absolute",bottom:"-120px",right:"-80px",width:"500px",height:"500px",borderRadius:"50%",background:"radial-gradient(circle,rgba(10,123,62,0.16) 0%,transparent 70%)",pointerEvents:"none",animationDelay:"5s"}}></div>
