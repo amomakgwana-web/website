@@ -23,8 +23,8 @@ button{font-family:var(--fb);cursor:pointer}
 .logomark span{font-family:var(--fd);font-weight:800;font-size:14px;color:#fff}
 .logotext{font-family:var(--font-logo,var(--fd));font-weight:800;font-size:32px;letter-spacing:-.5px;display:inline-block;background:linear-gradient(90deg,#5533FF,#E8152A,#FF6B35,#0AC77E,#7B5FFF,#5533FF);background-size:300% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradShift 6s ease infinite}
 .navlinks{display:flex;align-items:center;gap:10px;list-style:none}
-.navlinks a,.navlinks button{font-size:14px;font-weight:500;color:rgba(255,255,255,0.85);background:none;border:none;cursor:pointer;transition:background .2s,color .2s;padding:8px 16px;border-radius:100px}
-.navlinks a:hover,.navlinks button:hover{color:#fff;background:rgba(255,255,255,0.14)}
+.navlinks a,.navlinks button{font-size:14px;font-weight:500;color:rgba(255,255,255,0.85);background:none;border:none;cursor:pointer;transition:background .2s,color .2s;padding:8px 16px;border-radius:100px;text-decoration:none}
+.navlinks a:hover,.navlinks button:hover,.navlinks a:focus,.navlinks a:active{color:#fff;background:rgba(255,255,255,0.14);text-decoration:none}
 .navlinks a.active,.navlinks>li.drop-wrap.active>button{background:#fff;color:var(--ink)!important}
 .navcta{display:flex;align-items:center;gap:10px}
 .btn{display:inline-flex;align-items:center;gap:7px;font-family:var(--fb);font-weight:500;border:none;border-radius:8px;cursor:pointer;transition:all .2s;white-space:nowrap}
@@ -55,6 +55,22 @@ button{font-family:var(--fb);cursor:pointer}
 /* ── Grids that become a swipeable slideshow on phone/tablet ── */
 .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .case-grid>.lift-card{min-width:0}
+/* ── Solutions page: product capability mega-panel ── */
+.solutions-mega{display:grid;grid-template-columns:240px 1fr;gap:24px;background:var(--off);border-radius:24px;padding:24px}
+.solutions-tabs{display:flex;flex-direction:column;gap:8px}
+.solutions-tab{display:flex;align-items:center;gap:12px;text-align:left;background:transparent;border:1.5px solid transparent;border-radius:14px;padding:16px;cursor:pointer;transition:background .2s,border-color .2s}
+.solutions-tab:hover{background:rgba(255,255,255,0.6)}
+.solutions-tab.active{background:#fff;box-shadow:0 8px 24px rgba(13,11,30,0.08)}
+.solutions-tab-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.solutions-tab-name{display:block;font-size:15px;font-weight:700;color:var(--ink)}
+.solutions-tab-tag{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+.solutions-grid{background:#fff;border-radius:18px;padding:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px 24px}
+.solutions-feature{display:flex;align-items:flex-start;gap:14px}
+.solutions-feature-icon{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.solutions-feature-title{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px}
+.solutions-feature-desc{font-size:12.5px;color:var(--muted);line-height:1.5}
+@media(max-width:900px){.solutions-mega{grid-template-columns:1fr;padding:16px}.solutions-tabs{flex-direction:row;overflow-x:auto;gap:8px}.solutions-tab{flex:0 0 auto}.solutions-grid{grid-template-columns:1fr 1fr;padding:20px}}
+@media(max-width:560px){.solutions-grid{grid-template-columns:1fr}}
 .step-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .step-grid>*{min-width:0}
 .step-card{position:relative}
