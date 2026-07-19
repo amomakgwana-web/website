@@ -99,7 +99,7 @@ export default function SiteHeader() {
       )}
       <nav id="nav" ref={navRef}>
         <div className="masthead">
-          <Link className="logo" href="/"><div className="logomark"><span>B</span></div><span className="logotext">bipra</span></Link>
+          <Link className="logo" href="/"><span className="logotext">bipra</span></Link>
         </div>
         <div className="navbar-orange">
           <ul className="navlinks">
