@@ -110,6 +110,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.05)}
 }
 @media(max-width:480px){.case-grid>.lift-card{flex-basis:88%}.step-grid>*{flex-basis:82%}}
 @media(max-width:600px){.section{padding:56px 5%}.ft-grid{grid-template-columns:1fr}.stat-bar{grid-template-columns:1fr}}
+@media(max-width:767px){.hero-visual{display:none!important}}
 /* Process flow steps */
 .process-step{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
 .process-step::after{content:'';position:absolute;top:28px;left:calc(50% + 28px);right:calc(-50% + 28px);height:2px;background:var(--border);z-index:0}

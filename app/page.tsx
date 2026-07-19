@@ -18,28 +18,16 @@ export default function Page() {
         <span style={{fontSize:"13px",color:"var(--muted)",marginLeft:"12px"}}>Trusted by 500+ businesses across Africa</span>
       </div>
     </div>
-    <div className="fu d2" style={{position:"relative",height:"400px"}}>
-      <div className="conic-border" style={{borderRadius:"16px",padding:"24px",boxShadow:"var(--sh)",position:"absolute",top:"0",left:"0",right:"0"}}><div style={{position:"relative",zIndex:"1"}}>
-        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"20px"}}>
-          <span style={{fontSize:"12px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px"}}>Transaction Overview</span>
-          <span style={{fontSize:"11px",fontWeight:"500",padding:"3px 10px",borderRadius:"100px",background:"#E6FFEF",color:"#0A7B3E",display:"flex",alignItems:"center",gap:"4px"}}><span style={{width:"7px",height:"7px",background:"#22C55E",borderRadius:"50%",animation:"pulse 2s infinite",display:"inline-block"}}></span>Live</span>
-        </div>
-        <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:"12px",marginBottom:"20px"}}>
-          <div style={{padding:"14px",background:"var(--off)",borderRadius:"10px"}}><div style={{fontFamily:"var(--fd)",fontSize:"22px",fontWeight:"700",lineHeight:"1",marginBottom:"4px"}}>R2.4M</div><div style={{fontSize:"11px",color:"var(--muted)"}}>Processed today</div></div>
-          <div style={{padding:"14px",background:"var(--off)",borderRadius:"10px"}}><div style={{fontFamily:"var(--fd)",fontSize:"22px",fontWeight:"700",lineHeight:"1",marginBottom:"4px"}}>1,847</div><div style={{fontSize:"11px",color:"var(--muted)"}}>Transactions</div></div>
-          <div style={{padding:"14px",background:"var(--off)",borderRadius:"10px"}}><div style={{fontFamily:"var(--fd)",fontSize:"22px",fontWeight:"700",lineHeight:"1",marginBottom:"4px"}}>99.8%</div><div style={{fontSize:"11px",color:"var(--muted)"}}>Success rate</div></div>
-        </div>
-        <div style={{display:"flex",alignItems:"flex-end",gap:"5px",height:"56px"}}>
-          <div style={{flex:"1",height:"30%",background:"var(--pl)",borderRadius:"3px 3px 0 0"}}></div><div style={{flex:"1",height:"55%",background:"var(--pl)",borderRadius:"3px 3px 0 0"}}></div><div style={{flex:"1",height:"40%",background:"var(--pl)",borderRadius:"3px 3px 0 0"}}></div><div style={{flex:"1",height:"75%",background:"var(--p)",borderRadius:"3px 3px 0 0"}}></div><div style={{flex:"1",height:"60%",background:"var(--pl)",borderRadius:"3px 3px 0 0"}}></div><div style={{flex:"1",height:"90%",background:"var(--p)",borderRadius:"3px 3px 0 0"}}></div><div style={{flex:"1",height:"70%",background:"var(--pl)",borderRadius:"3px 3px 0 0"}}></div><div style={{flex:"1",height:"85%",background:"var(--p)",borderRadius:"3px 3px 0 0"}}></div><div style={{flex:"1",height:"50%",background:"var(--pl)",borderRadius:"3px 3px 0 0"}}></div><div style={{flex:"1",height:"100%",background:"var(--p)",borderRadius:"3px 3px 0 0"}}></div><div style={{flex:"1",height:"80%",background:"var(--pl)",borderRadius:"3px 3px 0 0"}}></div>
-        </div>
-      </div></div>
-      <div style={{position:"absolute",bottom:"56px",right:"-24px",width:"196px",background:"#fff",borderRadius:"12px",border:"1px solid var(--border)",padding:"16px",boxShadow:"0 24px 56px rgba(85,51,255,0.28),0 4px 12px rgba(13,11,30,0.08)",zIndex:"2",transform:"scale(1.06)"}}>
+    <div className="fu d2 hero-visual" style={{position:"relative",height:"460px",display:"flex",justifyContent:"center"}}>
+      <div style={{position:"absolute",top:"6%",left:"50%",transform:"translateX(-50%) rotate(-6deg)",width:"78%",maxWidth:"320px",height:"88%",background:"linear-gradient(160deg,var(--p),#7B5FFF)",borderRadius:"48px",zIndex:"0"}}></div>
+      <img src="/hero-woman.webp" alt="" style={{position:"relative",zIndex:"1",height:"100%",width:"auto",maxWidth:"100%",objectFit:"contain",objectPosition:"bottom"}} />
+      <div style={{position:"absolute",bottom:"32px",right:"0",width:"196px",background:"#fff",borderRadius:"12px",border:"1px solid var(--border)",padding:"16px",boxShadow:"0 24px 56px rgba(85,51,255,0.28),0 4px 12px rgba(13,11,30,0.08)",zIndex:"2",transform:"scale(1.06)"}}>
         <div style={{width:"32px",height:"32px",borderRadius:"9px",background:"#E6FFEF",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"10px"}}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A7B3E" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
         <div style={{fontFamily:"var(--fd)",fontSize:"13px",fontWeight:"600",marginBottom:"3px"}}>BipraPay processed</div>
         <div style={{fontFamily:"var(--fd)",fontSize:"18px",fontWeight:"700",color:"var(--p)",marginBottom:"2px"}}>R48,200</div>
         <div style={{fontSize:"11px",color:"var(--muted)"}}>in the last 5 min</div>
       </div>
-      <div style={{position:"absolute",bottom:"0",left:"-10px",width:"172px",background:"#fff",borderRadius:"12px",border:"1px solid var(--border)",padding:"16px",boxShadow:"var(--sh)",zIndex:"1"}}>
+      <div style={{position:"absolute",top:"8%",left:"0",width:"172px",background:"#fff",borderRadius:"12px",border:"1px solid var(--border)",padding:"16px",boxShadow:"var(--sh)",zIndex:"2"}}>
         <div style={{width:"32px",height:"32px",borderRadius:"9px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"10px"}}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5533FF" strokeWidth="2"><path d="M9 12h6M9 16h6M9 8h6M5 3h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path></svg></div>
         <div style={{fontFamily:"var(--fd)",fontSize:"13px",fontWeight:"600",marginBottom:"3px"}}>Audit Report</div>
         <div style={{fontSize:"11px",color:"var(--muted)"}}>VeriBills generated 14,280 bills</div>
