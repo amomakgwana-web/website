@@ -141,6 +141,35 @@ export default function Page() {
       </div>
     </section>
 
+    <section style={{background:"linear-gradient(135deg,#0D0B1E 0%,#150a2e 100%)",padding:"110px 5%",position:"relative",overflow:"hidden"}}>
+      <div className="inner">
+        <div style={{textAlign:"center",marginBottom:"56px"}}>
+          <span className="band-eyebrow cine-reveal" style={{color:"#7B5FFF"}}>Multi-rail routing</span>
+          <h2 className="cine-reveal s1" style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"clamp(28px,3.5vw,44px)",fontWeight:"800",letterSpacing:"-1px",color:"#fff",margin:"18px 0 14px"}}>One hub, every direction</h2>
+          <p className="cine-reveal s2" style={{fontSize:"15px",color:"rgba(255,255,255,0.5)",maxWidth:"540px",margin:"0 auto",lineHeight:"1.75"}}>BipraPay sits at the centre of every rail your business needs — domestic and cross-border — so adding a new payment method never means a new integration.</p>
+        </div>
+        <div className="hub-diagram cine-reveal s3">
+          <svg className="hub-lines" viewBox="0 0 600 400" preserveAspectRatio="none">
+            <line x1="300" y1="200" x2="90" y2="90"></line>
+            <line x1="300" y1="200" x2="90" y2="310"></line>
+            <line x1="300" y1="200" x2="510" y2="90"></line>
+            <line x1="300" y1="200" x2="510" y2="310"></line>
+          </svg>
+          <div className="hub-node hub-node-center"><span className="logotext" style={{fontSize:"18px"}}>b</span></div>
+          <div className="hub-node hub-node-tl"><span className="hub-node-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><rect x="2" y="5" width="20" height="14" rx="3"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg></span><span className="hub-node-label">Bank channels</span></div>
+          <div className="hub-node hub-node-bl"><span className="hub-node-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></span><span className="hub-node-label">Orchestration engine</span></div>
+          <div className="hub-node hub-node-tr"><span className="hub-node-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span><span className="hub-node-label">Cross-border (SWIFT)</span></div>
+          <div className="hub-node hub-node-br"><span className="hub-node-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline></svg></span><span className="hub-node-label">Real-time clearing (RTC)</span></div>
+        </div>
+        <div className="hub-diagram-mobile">
+          <div className="hub-node"><span className="hub-node-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><rect x="2" y="5" width="20" height="14" rx="3"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg></span><span className="hub-node-label">Bank channels</span></div>
+          <div className="hub-node"><span className="hub-node-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg></span><span className="hub-node-label">Orchestration engine</span></div>
+          <div className="hub-node"><span className="hub-node-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span><span className="hub-node-label">Cross-border (SWIFT)</span></div>
+          <div className="hub-node"><span className="hub-node-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline></svg></span><span className="hub-node-label">Real-time clearing (RTC)</span></div>
+        </div>
+      </div>
+    </section>
+
     <section className="section"><div className="inner-n"><div className="quote-block-wrap"><div className="quote-block">
       <p style={{fontSize:"20px",fontWeight:"600",color:"#fff",lineHeight:"1.5",marginBottom:"24px",position:"relative",zIndex:"1"}}>"BipraPay processes our entire payroll — 800 staff across 6 provinces — in under 90 seconds. Every Friday. Without fail. The old system took 4 hours and still had errors."</p>
       <div style={{display:"flex",alignItems:"center",gap:"14px",position:"relative",zIndex:"1"}}>
