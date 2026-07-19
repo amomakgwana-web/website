@@ -59,47 +59,51 @@ export default function Page() {
 
     <section className="section" style={{background:"var(--off)"}}><div className="inner">
     <p className="slabel">Typical time savings</p>
-    <h2 className="stitle">What Morr replaces in your organisation</h2>
+    <h2 className="stitle">What <span className="grad-text">Morr replaces</span> in your organisation</h2>
     <div className="g3" style={{gap:"20px"}}>
-    <div className="gcard shine grid-pop tilt" style={{borderRadius:"14px",padding:"24px"}}>
-    <div style={{fontSize:"13px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"16px"}}>Budget approval cycle</div>
-    <div style={{display:"flex",alignItems:"center",gap:"16px",marginBottom:"8px"}}>
-    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>Before Morr</div><div style={{height:"10px",background:"var(--rl)",borderRadius:"5px",position:"relative"}}><div style={{position:"absolute",right:"0",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--r)"}}>14 days</div></div></div>
+
+    <div className="gcard shine grid-pop tilt morr-stat-card morr-c1" style={{borderRadius:"14px",padding:"26px"}}>
+    <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",marginBottom:"4px"}}>
+    <div className="morr-stat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--p)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14"></polyline></svg></div>
+    <div style={{textAlign:"right"}}><div className="grad-text" style={{fontFamily:"var(--fd)",fontSize:"30px",fontWeight:"800",letterSpacing:"-1px",lineHeight:"1"}}>−79%</div><div style={{fontSize:"11px",color:"var(--muted)",fontWeight:"600"}}>faster</div></div>
     </div>
-    <div style={{display:"flex",alignItems:"center",gap:"16px"}}>
-    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>With Morr</div><div style={{height:"10px",background:"var(--gl)",borderRadius:"5px",width:"20%",position:"relative"}}><div style={{position:"absolute",right:"-28px",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--g)"}}>3 days</div></div></div>
+    <div style={{fontSize:"13px",fontWeight:"700",color:"var(--ink)",marginBottom:"16px"}}>Budget approval cycle</div>
+    <div className="morr-bar-row"><span className="morr-bar-tag">Before</span><div className="morr-bar-track"><div className="morr-bar-fill before" style={{width:"100%"}}></div></div><span className="morr-bar-value before">14 days</span></div>
+    <div className="morr-bar-row"><span className="morr-bar-tag">With Morr</span><div className="morr-bar-track"><div className="morr-bar-fill after" style={{width:"21%"}}></div></div><span className="morr-bar-value after">3 days</span></div>
+    <p className="morr-stat-desc">Digital approval routing eliminates email chains and manual follow-ups.</p>
     </div>
-    <p style={{fontSize:"12px",color:"var(--muted)",marginTop:"20px",lineHeight:"1.5"}}>Digital approval routing eliminates email chains and manual follow-ups.</p>
+
+    <div className="gcard shine grid-pop tilt morr-stat-card morr-c2" style={{borderRadius:"14px",padding:"26px"}}>
+    <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",marginBottom:"4px"}}>
+    <div className="morr-stat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--r)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12h6M9 16h6M9 8h6M5 3h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path></svg></div>
+    <div style={{textAlign:"right"}}><div className="grad-text-warm" style={{fontFamily:"var(--fd)",fontSize:"30px",fontWeight:"800",letterSpacing:"-1px",lineHeight:"1"}}>−99%</div><div style={{fontSize:"11px",color:"var(--muted)",fontWeight:"600"}}>faster</div></div>
     </div>
-    <div className="gcard shine grid-pop tilt" style={{borderRadius:"14px",padding:"24px"}}>
-    <div style={{fontSize:"13px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"16px"}}>HR document processing</div>
-    <div style={{display:"flex",alignItems:"center",gap:"16px",marginBottom:"8px"}}>
-    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>Before Morr</div><div style={{height:"10px",background:"var(--rl)",borderRadius:"5px",position:"relative"}}><div style={{position:"absolute",right:"0",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--r)"}}>2 days</div></div></div>
+    <div style={{fontSize:"13px",fontWeight:"700",color:"var(--ink)",marginBottom:"16px"}}>HR document processing</div>
+    <div className="morr-bar-row"><span className="morr-bar-tag">Before</span><div className="morr-bar-track"><div className="morr-bar-fill before" style={{width:"100%"}}></div></div><span className="morr-bar-value before">2 days</span></div>
+    <div className="morr-bar-row"><span className="morr-bar-tag">With Morr</span><div className="morr-bar-track"><div className="morr-bar-fill after" style={{width:"8%"}}></div></div><span className="morr-bar-value after">20 min</span></div>
+    <p className="morr-stat-desc">Digital signatures and automated workflow routing replace physical paper processes.</p>
     </div>
-    <div style={{display:"flex",alignItems:"center",gap:"16px"}}>
-    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>With Morr</div><div style={{height:"10px",background:"var(--gl)",borderRadius:"5px",width:"12%",position:"relative"}}><div style={{position:"absolute",right:"-42px",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--g)"}}>20 min</div></div></div>
+
+    <div className="gcard shine grid-pop tilt morr-stat-card morr-c3" style={{borderRadius:"14px",padding:"26px"}}>
+    <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",marginBottom:"4px"}}>
+    <div className="morr-stat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--g)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"></path><path d="M18.7 8l-5.3 5.3-3-3L4 16.5"></path></svg></div>
+    <div style={{textAlign:"right"}}><div className="grad-text-cool" style={{fontFamily:"var(--fd)",fontSize:"30px",fontWeight:"800",letterSpacing:"-1px",lineHeight:"1"}}>−80%</div><div style={{fontSize:"11px",color:"var(--muted)",fontWeight:"600"}}>faster</div></div>
     </div>
-    <p style={{fontSize:"12px",color:"var(--muted)",marginTop:"20px",lineHeight:"1.5"}}>Digital signatures and automated workflow routing replace physical paper processes.</p>
+    <div style={{fontSize:"13px",fontWeight:"700",color:"var(--ink)",marginBottom:"16px"}}>Month-end financial close</div>
+    <div className="morr-bar-row"><span className="morr-bar-tag">Before</span><div className="morr-bar-track"><div className="morr-bar-fill before" style={{width:"100%"}}></div></div><span className="morr-bar-value before">5 days</span></div>
+    <div className="morr-bar-row"><span className="morr-bar-tag">With Morr</span><div className="morr-bar-track"><div className="morr-bar-fill after" style={{width:"16%"}}></div></div><span className="morr-bar-value after">&lt;1 day</span></div>
+    <p className="morr-stat-desc">Automated budget reconciliation and actuals reporting from a single data source.</p>
     </div>
-    <div className="gcard shine grid-pop tilt" style={{borderRadius:"14px",padding:"24px"}}>
-    <div style={{fontSize:"13px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"16px"}}>Month-end financial close</div>
-    <div style={{display:"flex",alignItems:"center",gap:"16px",marginBottom:"8px"}}>
-    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>Before Morr</div><div style={{height:"10px",background:"var(--rl)",borderRadius:"5px",position:"relative"}}><div style={{position:"absolute",right:"0",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--r)"}}>5 days</div></div></div>
-    </div>
-    <div style={{display:"flex",alignItems:"center",gap:"16px"}}>
-    <div style={{flex:"1"}}><div style={{fontSize:"11px",color:"var(--muted)",marginBottom:"4px"}}>With Morr</div><div style={{height:"10px",background:"var(--gl)",borderRadius:"5px",width:"16%",position:"relative"}}><div style={{position:"absolute",right:"-38px",top:"-18px",fontSize:"11px",fontWeight:"700",color:"var(--g)"}}>&lt;1 day</div></div></div>
-    </div>
-    <p style={{fontSize:"12px",color:"var(--muted)",marginTop:"20px",lineHeight:"1.5"}}>Automated budget reconciliation and actuals reporting from a single data source.</p>
-    </div>
+
     </div></div></section>
 
-    <section className="section"><div className="inner-n"><div className="quote-block">
+    <section className="section"><div className="inner-n"><div className="quote-block-wrap"><div className="quote-block">
     <p style={{fontSize:"20px",fontWeight:"600",color:"#fff",lineHeight:"1.5",marginBottom:"24px",position:"relative",zIndex:"1"}}>"Morr replaced our ERP, HR system, and document management tool. Budget approvals that used to take two weeks now happen in 3 days. Our AG audit was the cleanest in 6 years."</p>
     <div style={{display:"flex",alignItems:"center",gap:"14px",position:"relative",zIndex:"1"}}>
-    <div style={{width:"44px",height:"44px",borderRadius:"50%",background:"var(--p)",display:"flex",alignItems:"center",justifyContent:"center",fontWeight:"700",color:"#fff",flexShrink:"0"}}>AM</div>
+    <div style={{width:"44px",height:"44px",borderRadius:"50%",background:"linear-gradient(135deg,var(--p),#7B5FFF)",boxShadow:"0 6px 16px rgba(85,51,255,0.35)",display:"flex",alignItems:"center",justifyContent:"center",fontWeight:"700",color:"#fff",flexShrink:"0"}}>AM</div>
     <div><div style={{fontSize:"14px",fontWeight:"600",color:"#fff"}}>Amara Mensah</div>
     <div style={{fontSize:"12px",color:"rgba(255,255,255,0.45)"}}>Group COO, Ndovu Capital</div></div>
-    </div></div></div></section>
+    </div></div></div></div></section>
     <section style={{background:"var(--ink)",padding:"80px 5%",textAlign:"center"}}><div className="inner-n"><h2 style={{fontFamily:"var(--fd)",fontSize:"clamp(26px,3vw,38px)",fontWeight:"800",color:"#fff",letterSpacing:"-.8px",marginBottom:"16px"}}>Retire the spreadsheets. Run on Morr.</h2><p style={{fontSize:"16px",color:"rgba(255,255,255,0.4)",marginBottom:"36px"}}>Talk to us about a tailored enterprise deployment.</p><div style={{display:"flex",gap:"16px",justifyContent:"center",flexWrap:"wrap"}}><Link className="btn btn-w btn-lg" href="/contact">Request demo</Link><Link className="btn btn-ow btn-lg" href="/pricing">See pricing</Link></div></div></section>
     </div>
   );

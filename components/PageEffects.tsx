@@ -54,7 +54,7 @@ export default function PageEffects() {
           const el = e.target as HTMLElement;
           const sibs = Array.from(el.parentElement?.children ?? []).filter((c) => c.classList.contains("grid-pop"));
           const idx = sibs.indexOf(el) % 6;
-          el.classList.add("vis", "g" + (idx + 1));
+          el.classList.add("vis", "pop" + (idx + 1));
           gridObs.unobserve(el);
         });
       },
