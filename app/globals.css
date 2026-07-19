@@ -181,12 +181,17 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.05)}
 .client-logo-text{font-family:'Helvetica Neue',Arial,sans-serif;font-size:26px;font-weight:800;letter-spacing:-1px;color:#fff;position:relative;z-index:1}
 .client-divider{width:2px;height:28px;background:rgba(255,255,255,0.4);border-radius:2px;position:relative;z-index:1}
 .client-bipra{font-family:'Helvetica Neue',Arial,sans-serif;font-size:18px;font-weight:700;color:rgba(255,255,255,0.75);position:relative;z-index:1;letter-spacing:.5px}
-/* ── Z-index layered cards ── */
-.stack-cards{position:relative;height:320px}
-.stack-card{position:absolute;border-radius:16px;transition:all .3s ease;box-shadow:0 8px 32px rgba(0,0,0,0.15)}
+/* ── Z-index layered cards: closed deck, spreads open like a fanned hand on approach ── */
+.stack-cards{position:relative;height:320px;transition:height .6s cubic-bezier(.2,.9,.3,1.1)}
+.stack-card{position:absolute;border-radius:16px;transition:top .6s cubic-bezier(.2,.9,.3,1.1),left .6s cubic-bezier(.2,.9,.3,1.1),right .6s cubic-bezier(.2,.9,.3,1.1),transform .6s cubic-bezier(.2,.9,.3,1.1),opacity .5s ease,box-shadow .3s ease;box-shadow:0 8px 32px rgba(0,0,0,0.15);transform-origin:bottom center}
 .stack-card:nth-child(1){top:0;left:0;right:0;z-index:3}
 .stack-card:nth-child(2){top:16px;left:12px;right:12px;z-index:2;opacity:.9}
 .stack-card:nth-child(3){top:28px;left:22px;right:22px;z-index:1;opacity:.75}
+.stack-cards.spread{height:600px}
+.stack-cards.spread .stack-card:nth-child(1){top:0;left:0;right:0;transform:rotate(0deg)}
+.stack-cards.spread .stack-card:nth-child(2){top:200px;left:0;right:0;opacity:1;transform:rotate(-3deg)}
+.stack-cards.spread .stack-card:nth-child(3){top:400px;left:0;right:0;opacity:1;transform:rotate(3deg)}
+@media(prefers-reduced-motion:reduce){.stack-cards,.stack-card{transition:none}}
 /* ── Glassmorphism ── */
 .glass{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12)}
 .glass-dark{background:rgba(13,11,30,0.75);border:1px solid rgba(255,255,255,0.08)}

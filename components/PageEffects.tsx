@@ -97,6 +97,20 @@ export default function PageEffects() {
     });
     observers.push(countObs);
 
+    const stackObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("spread");
+            stackObs.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    document.querySelectorAll(".stack-cards:not(.spread)").forEach((el) => stackObs.observe(el));
+    observers.push(stackObs);
+
     return () => observers.forEach((o) => o.disconnect());
   }, [pathname]);
 
