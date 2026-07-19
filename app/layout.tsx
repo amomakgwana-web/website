@@ -7,9 +7,6 @@ import ScrollChrome from "@/components/ScrollChrome";
 import ChatWidget from "@/components/ChatWidget";
 import PageEffects from "@/components/PageEffects";
 
-const FAVICON =
-  "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'><rect width='36' height='36' rx='9' fill='%235533FF'/><text x='18' y='25' text-anchor='middle' font-family='Helvetica Neue,Arial,sans-serif' font-weight='800' font-size='18' fill='white'>B</text><circle cx='27' cy='9' r='5' fill='%23E8152A'/></svg>";
-
 export const metadata: Metadata = {
   title: {
     default: "BIPRA — Unified Business Platform",
@@ -17,7 +14,6 @@ export const metadata: Metadata = {
   },
   description:
     "BIPRA — Payments, billing, and enterprise workflow automation for modern African businesses. BipraPay, VeriBills, Morr ERP.",
-  icons: { icon: [{ url: FAVICON, type: "image/svg+xml" }] },
   openGraph: {
     title: "BIPRA — Unified Business Platform",
     description:
