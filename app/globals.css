@@ -21,7 +21,7 @@ button{font-family:var(--fb);cursor:pointer}
 .logomark{width:36px;height:36px;background:var(--p);border-radius:10px;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0}
 .logomark::after{content:'';position:absolute;top:5px;right:5px;width:9px;height:9px;background:var(--r);border-radius:50%}
 .logomark span{font-family:var(--fd);font-weight:800;font-size:14px;color:#fff}
-.logotext{font-family:var(--fd);font-weight:700;font-size:22px;color:var(--p);letter-spacing:-.5px}
+.logotext{font-family:var(--font-logo,var(--fd));font-weight:700;font-size:24px;color:var(--p);letter-spacing:-.3px}
 .navlinks{display:flex;align-items:center;gap:28px;list-style:none}
 .navlinks a,.navlinks button{font-size:14px;font-weight:500;color:rgba(255,255,255,0.85);background:none;border:none;cursor:pointer;transition:color .2s;padding:0}
 .navlinks a:hover,.navlinks button:hover{color:#fff}
@@ -472,6 +472,19 @@ footer ul li a:hover::before{opacity:1;left:-14px}
 .morr-c2{--morr-accent:linear-gradient(90deg,#FF6B35,var(--r));--morr-accent-l:var(--rl)}
 .morr-c3{--morr-accent:linear-gradient(90deg,var(--g),#00C87A);--morr-accent-l:var(--gl)}
 @media(prefers-reduced-motion:reduce){.morr-bar-fill{transition:none}.morr-stat-card{transition:none}}
+
+/* ── BipraPay infrastructure diagram ── */
+.pay-diagram{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;max-width:960px;margin:0 auto}
+.pay-diagram-col{display:flex;flex-direction:column;gap:14px;justify-content:center}
+.pay-diagram-fan{gap:16px}
+.pay-diagram-arrow{color:rgba(255,255,255,0.25);font-size:22px;flex-shrink:0}
+.pay-node{border-radius:14px;padding:16px 20px;font-size:13.5px;font-weight:700;color:#fff;display:flex;align-items:center;gap:10px;white-space:nowrap}
+.pay-node-icon{display:inline-flex;flex-shrink:0}
+.pay-node-in{background:linear-gradient(135deg,#FF6B35,#E8152A);box-shadow:0 10px 24px rgba(232,21,42,0.25)}
+.pay-engine{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.pay-node-core{background:linear-gradient(135deg,#5533FF,#3D8BFF);box-shadow:0 10px 24px rgba(85,51,255,0.25)}
+.pay-node-out{background:linear-gradient(135deg,#7B5FFF,#5533FF);box-shadow:0 10px 24px rgba(123,95,255,0.25);justify-content:center}
+@media(max-width:900px){.pay-diagram{flex-direction:column}.pay-diagram-arrow{transform:rotate(90deg)}.pay-node{white-space:normal}}
 
 /* ── Quote block: subtle animated gradient-border wrap ── */
 .quote-block-wrap{border-radius:21px;padding:1.5px;background:linear-gradient(135deg,rgba(85,51,255,0.6),rgba(232,21,42,0.35),rgba(123,95,255,0.6));background-size:200% 200%;animation:gradShift 6s ease infinite}
