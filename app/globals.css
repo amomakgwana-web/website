@@ -52,11 +52,13 @@ button{font-family:var(--fb);cursor:pointer}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .g2>*,.g3>*,.g4>*{min-width:0}
-/* ── Case-study proof grid: grid on desktop, swipeable slideshow on phone/tablet ── */
+/* ── Grids that become a swipeable slideshow on phone/tablet ── */
 .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .case-grid>.lift-card{min-width:0}
-.case-slides-wrap{position:relative}
-.case-hint{display:none}
+.step-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step-grid>*{min-width:0}
+.slides-wrap{position:relative}
+.swipe-hint{display:none}
 .card{background:#fff;border-radius:16px;border:1px solid var(--border);padding:28px;transition:transform .2s,box-shadow .2s}
 .card:hover{transform:translateY(-4px);box-shadow:var(--sh)}
 .badge{display:inline-flex;align-items:center;font-size:11px;font-weight:500;padding:4px 12px;border-radius:100px}
@@ -97,13 +99,14 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.05)}
 .signin-arrow{margin-left:auto;font-size:14px;color:var(--muted)}
 .stat-cell{padding:36px 28px;text-align:center}
 @media(max-width:900px){.navlinks,.navcta .ghost,.navcta .btn-md{display:none}.signin-wrap{display:none}#mob-btn{display:flex!important}.g2,.g3,.g4{grid-template-columns:1fr}.two-col{display:block!important}.two-col>*+*{margin-top:40px}.ft-grid{grid-template-columns:1fr 1fr;gap:32px}.stat-bar{grid-template-columns:repeat(2,1fr)}.docs-layout{grid-template-columns:1fr!important}.integrations-grid{grid-template-columns:repeat(3,1fr)!important}
-.case-grid{display:flex!important;grid-template-columns:none!important;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -5%;padding:6px 5% 10px}
-.case-grid::-webkit-scrollbar{display:none}
+.case-grid,.step-grid{display:flex!important;grid-template-columns:none!important;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -5%;padding:6px 5% 10px}
+.case-grid::-webkit-scrollbar,.step-grid::-webkit-scrollbar{display:none}
 .case-grid>.lift-card{flex:0 0 84%;scroll-snap-align:center;background:#fff;border:1px solid var(--border);box-shadow:0 10px 32px rgba(13,11,30,0.08)}
-.case-slides-wrap::after{content:'';position:absolute;top:0;right:0;bottom:10px;width:40px;background:linear-gradient(90deg,transparent,var(--off));pointer-events:none}
-.case-hint{display:flex;align-items:center;justify-content:center;gap:6px;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.4px;margin-bottom:20px}
+.step-grid>*{flex:0 0 78%;scroll-snap-align:center}
+.slides-wrap::after{content:'';position:absolute;top:0;right:0;bottom:10px;width:40px;background:linear-gradient(90deg,transparent,var(--off));pointer-events:none}
+.swipe-hint{display:flex;align-items:center;justify-content:center;gap:6px;font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.4px;margin-bottom:20px}
 }
-@media(max-width:480px){.case-grid>.lift-card{flex-basis:88%}}
+@media(max-width:480px){.case-grid>.lift-card{flex-basis:88%}.step-grid>*{flex-basis:82%}}
 @media(max-width:600px){.section{padding:56px 5%}.ft-grid{grid-template-columns:1fr}.stat-bar{grid-template-columns:1fr}}
 /* Process flow steps */
 .process-step{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative}
