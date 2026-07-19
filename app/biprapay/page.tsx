@@ -110,13 +110,13 @@ export default function Page() {
       </div>
     </div></section>
 
-    <section className="section"><div className="inner-n"><div className="quote-block">
+    <section className="section"><div className="inner-n"><div className="quote-block-wrap"><div className="quote-block">
       <p style={{fontSize:"20px",fontWeight:"600",color:"#fff",lineHeight:"1.5",marginBottom:"24px",position:"relative",zIndex:"1"}}>"BipraPay processes our entire payroll — 800 staff across 6 provinces — in under 90 seconds. Every Friday. Without fail. The old system took 4 hours and still had errors."</p>
       <div style={{display:"flex",alignItems:"center",gap:"14px",position:"relative",zIndex:"1"}}>
-        <div style={{width:"44px",height:"44px",borderRadius:"50%",background:"var(--r)",display:"flex",alignItems:"center",justifyContent:"center",fontWeight:"700",color:"#fff",flexShrink:"0"}}>ZK</div>
+        <div style={{width:"44px",height:"44px",borderRadius:"50%",background:"linear-gradient(135deg,#FF6B35,var(--r))",boxShadow:"0 6px 16px rgba(232,21,42,0.35)",display:"flex",alignItems:"center",justifyContent:"center",fontWeight:"700",color:"#fff",flexShrink:"0"}}>ZK</div>
         <div><div style={{fontSize:"14px",fontWeight:"600",color:"#fff"}}>Zola Khumalo</div><div style={{fontSize:"12px",color:"rgba(255,255,255,0.45)"}}>Head of Finance, Ubuntu Logistics</div></div>
       </div>
-    </div></div></section>
+    </div></div></div></section>
     <section style={{background:"var(--r)",padding:"80px 5%",textAlign:"center"}}><div className="inner-n"><h2 style={{fontFamily:"var(--fd)",fontSize:"clamp(26px,3vw,38px)",fontWeight:"800",color:"#fff",letterSpacing:"-.8px",marginBottom:"16px"}}>Ready to move at the speed of now?</h2><p style={{fontSize:"16px",color:"rgba(255,255,255,0.6)",marginBottom:"36px"}}>Set up BipraPay in your environment today.</p><div style={{display:"flex",gap:"16px",justifyContent:"center",flexWrap:"wrap"}}><Link className="btn btn-w btn-lg" href="/contact">Book a demo</Link><Link className="btn btn-ow btn-lg" href="/pricing">See pricing</Link></div></div></section>
     </div>
   );
