@@ -142,13 +142,18 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.05)}
 .icon-feature:last-child{border-bottom:none}
 .icon-feature-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 /* Comparison callout */
-.vs-card{background:#fff;border-radius:16px;border:1px solid var(--border);padding:28px;position:relative}
+.vs-card{background:#fff;border-radius:16px;border:1px solid var(--border);padding:28px;position:relative;overflow:hidden}
+.vs-card::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--r),#FF6B35)}
+.vs-card.winner::after{background:linear-gradient(90deg,var(--p),var(--g))}
 .vs-card.winner{border-color:var(--p);box-shadow:0 0 0 3px rgba(85,51,255,0.08)}
-.vs-card.winner::before{content:'BIPRA';position:absolute;top:-12px;left:24px;background:var(--p);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:100px;letter-spacing:.5px}
+.vs-card.winner::before{content:'BIPRA';position:absolute;top:-12px;left:24px;background:var(--p);color:#fff;font-size:10px;font-weight:700;padding:3px 10px;border-radius:100px;letter-spacing:.5px;z-index:1}
+.vs-row-icon{width:28px;height:28px;border-radius:7px;background:rgba(232,21,42,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 /* ── Gradient text ── */
 .grad-text{background:linear-gradient(135deg,#5533FF 0%,#7B5FFF 40%,#E8152A 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .grad-text-warm{background:linear-gradient(135deg,#FF6B35 0%,#E8152A 60%,#FF3366 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .grad-text-cool{background:linear-gradient(135deg,#5533FF 0%,#00C6FF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.grad-text-green{background:linear-gradient(135deg,#0A7B3E 0%,#00C87A 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.grad-text-mint{background:linear-gradient(135deg,#ffffff 0%,#B9FBC0 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 /* ── Gradient backgrounds ── */
 .grad-hero{background:linear-gradient(135deg,#0D0B1E 0%,#1a1040 50%,#0D0B1E 100%)}
 .grad-card-p{background:linear-gradient(135deg,var(--p) 0%,#7B5FFF 100%)}
