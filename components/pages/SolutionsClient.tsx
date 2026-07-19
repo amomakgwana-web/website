@@ -82,7 +82,6 @@ export default function SolutionsClient() {
             const p = PRODUCTS[key];
             return (
               <button key={key} className={`solutions-tab${active === key ? " active" : ""}`} onClick={() => setActive(key)} style={active === key ? { borderColor: p.accent } as React.CSSProperties : undefined}>
-                <span className="solutions-tab-dot" style={{background: p.accent}}></span>
                 <span>
                   <span className="solutions-tab-name">{p.name}</span>
                   <span className="solutions-tab-tag">{p.tag}</span>
