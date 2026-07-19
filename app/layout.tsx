@@ -9,6 +9,7 @@ import CookieBanner from "@/components/CookieBanner";
 import ScrollChrome from "@/components/ScrollChrome";
 import ChatWidget from "@/components/ChatWidget";
 import PageEffects from "@/components/PageEffects";
+import ReloadRedirect from "@/components/ReloadRedirect";
 
 export const metadata: Metadata = {
   title: {
@@ -41,6 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={logoFont.variable}>
       <body>
+        <ReloadRedirect />
         <ScrollChrome />
         <CookieBanner />
         <SiteHeader />
