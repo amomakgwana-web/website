@@ -119,7 +119,7 @@ export default function SiteHeader() {
           <div className="navcta">
             <Link className="btn btn-w btn-md" href="/contact">Contact</Link>
           </div>
-          <button id="mob-btn" style={{display:"none",background:"none",border:"none",cursor:"pointer",padding:"6px",flexDirection:"column",gap:"5px",alignItems:"center",justifyContent:"center"}} aria-label="Menu" onClick={() => setMobileOpen((o) => !o)}>
+          <button id="mob-btn" style={{display:"none",background:"none",border:"none",cursor:"pointer",padding:"14px 12px",flexDirection:"column",gap:"5px",alignItems:"center",justifyContent:"center"}} aria-label="Menu" onClick={() => setMobileOpen((o) => !o)}>
             <span id="mob-line1" style={line(mobileOpen ? "translateY(7px) rotate(45deg)" : "")}></span>
             <span id="mob-line2" style={line("", mobileOpen ? "0" : "1")}></span>
             <span id="mob-line3" style={line(mobileOpen ? "translateY(-7px) rotate(-45deg)" : "")}></span>
