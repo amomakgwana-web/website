@@ -19,7 +19,7 @@ export default function Page() {
     </div>
     <div style={{background:"var(--ink)",borderRadius:"20px",padding:"32px",textAlign:"center",boxShadow:"var(--sh)"}}>
       <div style={{fontSize:"12px",color:"rgba(255,255,255,0.4)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"24px"}}>Average processing time</div>
-      <div style={{fontFamily:"var(--fd)",fontSize:"80px",fontWeight:"800",color:"var(--r)",letterSpacing:"-3px",lineHeight:"1"}}>&lt;800<span style={{fontSize:"28px",color:"rgba(255,255,255,0.5)",letterSpacing:"0"}}>ms</span></div>
+      <div style={{fontFamily:"var(--fd)",fontSize:"80px",fontWeight:"800",letterSpacing:"-3px",lineHeight:"1"}}><span className="grad-text-warm">&lt;800</span><span style={{fontSize:"28px",color:"rgba(255,255,255,0.5)",letterSpacing:"0"}}>ms</span></div>
       <div style={{height:"2px",background:"rgba(255,255,255,0.06)",borderRadius:"2px",margin:"28px 0",position:"relative"}}><div style={{position:"absolute",left:"0",top:"-6px",width:"68%",height:"14px",borderRadius:"7px",background:"var(--r)",opacity:".9"}}></div></div>
       <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:"16px"}}>
         <div><div style={{fontFamily:"var(--fd)",fontSize:"20px",fontWeight:"700",color:"#fff",lineHeight:"1",marginBottom:"4px"}}>R12.4M</div><div style={{fontSize:"11px",color:"rgba(255,255,255,0.4)"}}>Processed today</div></div>
