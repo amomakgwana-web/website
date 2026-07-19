@@ -198,7 +198,7 @@ export default function Page() {
       <div className="inner" style={{position:"relative",zIndex:"1"}}>
         <div style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:"2px",borderRadius:"20px",overflow:"hidden",border:"1px solid rgba(255,255,255,0.06)"}}>
           <div className="gcard-dark" style={{padding:"44px 32px",textAlign:"center",borderRight:"1px solid rgba(255,255,255,0.06)"}}>
-            <div style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"52px",fontWeight:"800",lineHeight:"1",letterSpacing:"-2px",marginBottom:"8px"}} className="grad-text count-up" data-target="500" data-suffix="+">0+</div>
+            <div style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"52px",fontWeight:"800",lineHeight:"1",letterSpacing:"-2px",marginBottom:"8px"}} className="grad-text count-up" data-target="7" data-suffix="+">0+</div>
             <div style={{fontSize:"14px",color:"rgba(255,255,255,0.5)"}}>Businesses powered</div>
             <div style={{fontSize:"11px",color:"rgba(255,255,255,0.25)",marginTop:"4px"}}>across 8 African countries</div>
           </div>
