@@ -32,6 +32,7 @@ button{font-family:var(--fb);cursor:pointer}
 .btn-p{background:var(--p);color:#fff}.btn-p:hover{background:var(--pd);transform:translateY(-1px)}
 .btn-r{background:var(--r);color:#fff}.btn-r:hover{background:#b50f20;transform:translateY(-1px)}
 .btn-g{background:var(--g);color:#fff}.btn-g:hover{background:#085030;transform:translateY(-1px)}
+.btn-vb{background:#1800AD;color:#fff}.btn-vb:hover{background:#12007D;transform:translateY(-1px)}
 .btn-o{background:#fff;color:var(--ink2);border:1.5px solid var(--border2);box-shadow:0 2px 12px rgba(13,11,30,0.05)}.btn-o:hover{border-color:var(--p);color:var(--p)}
 .btn-ow{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,0.4)}.btn-ow:hover{border-color:#fff;background:rgba(255,255,255,0.1)}
 .btn-w{background:#fff;color:var(--ink)}.btn-w:hover{background:var(--off);transform:translateY(-1px)}
@@ -173,6 +174,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.05)}
 .grad-text-cool{background:linear-gradient(135deg,#5533FF 0%,#00C6FF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .grad-text-green{background:linear-gradient(135deg,#0A7B3E 0%,#00C87A 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .grad-text-mint{background:linear-gradient(135deg,#ffffff 0%,#B9FBC0 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.grad-text-lavender{background:linear-gradient(135deg,#ffffff 0%,#C9BFFF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 /* ── Gradient backgrounds ── */
 .grad-hero{background:linear-gradient(135deg,#0D0B1E 0%,#1a1040 50%,#0D0B1E 100%)}
 .grad-card-p{background:linear-gradient(135deg,var(--p) 0%,#7B5FFF 100%)}
@@ -377,6 +379,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.05)}
 .btn-p{position:relative;box-shadow:0 6px 20px rgba(85,51,255,0.3),inset 0 1px 0 rgba(255,255,255,0.25)}
 .btn-r{box-shadow:0 6px 20px rgba(232,21,42,0.28),inset 0 1px 0 rgba(255,255,255,0.25)}
 .btn-g{box-shadow:0 6px 20px rgba(10,123,62,0.28),inset 0 1px 0 rgba(255,255,255,0.22)}
+.btn-vb{box-shadow:0 6px 20px rgba(24,0,173,0.28),inset 0 1px 0 rgba(255,255,255,0.22)}
 .btn-w{box-shadow:0 6px 24px rgba(0,0,0,0.18),inset 0 1px 0 rgba(255,255,255,0.9)}
 .drop-item:hover{background:rgba(85,51,255,0.08)!important}
 .signin-item:hover{background:rgba(85,51,255,0.08)!important}
@@ -399,6 +402,7 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.05)}
 .btn-p:hover{box-shadow:0 10px 28px rgba(85,51,255,0.4)}
 .btn-r:hover{box-shadow:0 10px 28px rgba(232,21,42,0.36)}
 .btn-g:hover{box-shadow:0 10px 28px rgba(10,123,62,0.36)}
+.btn-vb:hover{box-shadow:0 10px 28px rgba(24,0,173,0.36)}
 /* Dropdown item legibility */
 .drop-item,.signin-item{position:relative}
 .drop-item:hover,.signin-item:hover{background:var(--px)!important}
