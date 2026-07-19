@@ -22,10 +22,10 @@ button{font-family:var(--fb);cursor:pointer}
 .logomark::after{content:'';position:absolute;top:5px;right:5px;width:9px;height:9px;background:var(--r);border-radius:50%}
 .logomark span{font-family:var(--fd);font-weight:800;font-size:14px;color:#fff}
 .logotext{font-family:var(--font-logo,var(--fd));font-weight:800;font-size:32px;letter-spacing:-.5px;display:inline-block;background:linear-gradient(90deg,#5533FF,#E8152A,#FF6B35,#0AC77E,#7B5FFF,#5533FF);background-size:300% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradShift 6s ease infinite}
-.navlinks{display:flex;align-items:center;gap:28px;list-style:none}
-.navlinks a,.navlinks button{font-size:14px;font-weight:500;color:rgba(255,255,255,0.85);background:none;border:none;cursor:pointer;transition:color .2s;padding:0}
-.navlinks a:hover,.navlinks button:hover{color:#fff}
-.navlinks a.active{color:#fff}
+.navlinks{display:flex;align-items:center;gap:10px;list-style:none}
+.navlinks a,.navlinks button{font-size:14px;font-weight:500;color:rgba(255,255,255,0.85);background:none;border:none;cursor:pointer;transition:background .2s,color .2s;padding:8px 16px;border-radius:100px}
+.navlinks a:hover,.navlinks button:hover{color:#fff;background:rgba(255,255,255,0.14)}
+.navlinks a.active,.navlinks>li.drop-wrap.active>button{background:#fff;color:var(--ink)!important}
 .navcta{display:flex;align-items:center;gap:10px}
 .btn{display:inline-flex;align-items:center;gap:7px;font-family:var(--fb);font-weight:500;border:none;border-radius:8px;cursor:pointer;transition:all .2s;white-space:nowrap}
 .btn-md{font-size:14px;padding:9px 20px}.btn-lg{font-size:15px;padding:13px 28px;border-radius:10px}
@@ -385,10 +385,6 @@ footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.05)}
 .drop-item:hover,.signin-item:hover{background:var(--px)!important}
 .drop-item:hover .drop-icon{transform:scale(1.12) rotate(-4deg)}
 .drop-icon{transition:transform .25s cubic-bezier(.2,.9,.3,1.4)}
-/* Nav link underline slide */
-.navlinks>li>a,.navlinks>li>button{position:relative}
-.navlinks>li>a::after,.navlinks>li>button::after{content:'';position:absolute;left:12px;right:12px;bottom:2px;height:2px;border-radius:2px;background:#fff;transform:scaleX(0);transform-origin:left;transition:transform .28s cubic-bezier(.2,.9,.3,1)}
-.navlinks>li>a:hover::after,.navlinks>li>a.active::after,.navlinks>li>button:hover::after,.navlinks>li.drop-wrap.active>button::after{transform:scaleX(1)}
 /* Hero gradient text shimmer */
 .grad-text{background-size:200% 200%;animation:gradShift 5s ease infinite}
 .grad-text-warm{background-size:200% 200%;animation:gradShift 6s ease infinite}
