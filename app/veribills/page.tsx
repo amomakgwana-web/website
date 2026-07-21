@@ -67,6 +67,39 @@ export default function Page() {
       </div>
     </div></section>
 
+    <section className="section" style={{background:"var(--off)"}}><div className="inner">
+      <p className="slabel">Debt collection &amp; recurring billing</p>
+      <h2 className="stitle">DebiCheck, built for every billing cycle</h2>
+      <p className="ssub">From pay-as-you-go top-ups to structured repayment plans — VeriBills&rsquo; DebiCheck engine handles recurring and debt-recovery billing end to end.</p>
+      <div className="g3" style={{gap:"20px"}}>
+        <div className="gcard shine grid-pop tilt" style={{borderRadius:"14px",padding:"24px"}}>
+          <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"#EEEAFF",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1800AD" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+          <div style={{fontSize:"15px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Flexible billing cycles</div>
+          <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.65"}}>Pay-as-you-use, hourly, daily, weekly, monthly, or annual charge cycles — configured per account, per tariff.</p>
+        </div>
+        <div className="gcard shine grid-pop tilt" style={{borderRadius:"14px",padding:"24px"}}>
+          <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"#EEEAFF",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1800AD" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></div>
+          <div style={{fontSize:"15px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Multi-account management</div>
+          <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.65"}}>Customers view, pay, and add multiple accounts from a single login — built for landlords and multi-property owners.</p>
+        </div>
+        <div className="gcard shine grid-pop tilt" style={{borderRadius:"14px",padding:"24px"}}>
+          <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"#EEEAFF",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1800AD" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+          <div style={{fontSize:"15px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Payment plans</div>
+          <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.65"}}>Structured instalment plans for large or overdue balances, with automatically adjusted DebiCheck mandates.</p>
+        </div>
+        <div className="gcard shine grid-pop tilt" style={{borderRadius:"14px",padding:"24px"}}>
+          <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"#EEEAFF",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1800AD" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg></div>
+          <div style={{fontSize:"15px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>DebiCheck debit orders</div>
+          <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.65"}}>Bank-authenticated mandates for compliant, low-failure recurring debit order collection.</p>
+        </div>
+        <div className="gcard shine grid-pop tilt" style={{borderRadius:"14px",padding:"24px"}}>
+          <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"#EEEAFF",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1800AD" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path></svg></div>
+          <div style={{fontSize:"15px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Tenant self-service portal</div>
+          <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.65"}}>Tenants log in to pay and manage debt, fees, and utility charges — no calls, no paperwork.</p>
+        </div>
+      </div>
+    </div></section>
+
     <section style={{background:"linear-gradient(150deg,#0d0a24 0%,#0D0B1E 55%,#140a2e 100%)",padding:"110px 5%",position:"relative",overflow:"hidden"}}>
       <div className="blob-drift" style={{position:"absolute",top:"-100px",left:"-90px",width:"460px",height:"460px",borderRadius:"50%",background:"radial-gradient(circle,rgba(75,46,255,0.14) 0%,transparent 70%)",pointerEvents:"none"}}></div>
       <div className="blob-drift" style={{position:"absolute",bottom:"-120px",right:"-80px",width:"500px",height:"500px",borderRadius:"50%",background:"radial-gradient(circle,rgba(24,0,173,0.16) 0%,transparent 70%)",pointerEvents:"none",animationDelay:"5s"}}></div>
