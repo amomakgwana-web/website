@@ -29,6 +29,24 @@ export default function Page() {
     </div>
     </div></section>
 
+    <section className="section"><div className="inner">
+      <div style={{textAlign:"center",marginBottom:"64px"}}>
+        <p className="slabel" style={{textAlign:"center"}}>Enterprise payments channel</p>
+        <h2 className="stitle" style={{textAlign:"center"}}>One channel, every payment scenario</h2>
+        <p style={{fontSize:"16px",color:"var(--muted)",maxWidth:"560px",margin:"16px auto 0",lineHeight:"1.75"}}>From the first API call to funds landing in the recipient&rsquo;s account, BipraPay owns the full path &mdash; nothing gets handed off between disconnected systems.</p>
+      </div>
+      <div className="channel-diagram grid-pop">
+        <div className="channel-frame"><span className="channel-frame-label">BipraPay infrastructure</span></div>
+        <div className="channel-row">
+          <div className="channel-node"><div className="channel-node-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ink2)" strokeWidth="1.8"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div><div className="channel-node-title">Corporate client</div><div className="channel-node-desc">Sends a payment instruction via API or dashboard</div></div>
+          <div className="channel-node"><div className="channel-node-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--r)" strokeWidth="1.8"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div><div className="channel-node-title">Enterprise channel</div><div className="channel-node-desc">Authenticates the request and routes it in</div></div>
+          <div className="channel-node"><div className="channel-node-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--r)" strokeWidth="1.8"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"></path></svg></div><div className="channel-node-title">Payments engine</div><div className="channel-node-desc">Screens, prices, and queues for settlement</div></div>
+          <div className="channel-node"><div className="channel-node-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--r)" strokeWidth="1.8"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div><div className="channel-node-title">Industry gateway</div><div className="channel-node-desc">Selects the fastest compliant rail</div></div>
+          <div className="channel-node"><div className="channel-node-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--r)" strokeWidth="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div><div className="channel-node-title">BipraPay core</div><div className="channel-node-desc">Executes and confirms in real time</div></div>
+          <div className="channel-node"><div className="channel-node-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ink2)" strokeWidth="1.8"><line x1="3" y1="22" x2="21" y2="22"></line><line x1="6" y1="18" x2="6" y2="11"></line><line x1="10" y1="18" x2="10" y2="11"></line><line x1="14" y1="18" x2="14" y2="11"></line><line x1="18" y1="18" x2="18" y2="11"></line><polygon points="12 2 21 7 3 7"></polygon></svg></div><div className="channel-node-title">Payee bank</div><div className="channel-node-desc">Funds land in the recipient&rsquo;s account</div></div>
+        </div>
+      </div>
+    </div></section>
 
     <section style={{background:"linear-gradient(135deg,#13091e 0%,#0D0B1E 45%,#1f0a14 100%)",padding:"110px 5%",position:"relative",overflow:"hidden"}}>
       <div className="blob-drift" style={{position:"absolute",top:"-120px",right:"-80px",width:"480px",height:"480px",borderRadius:"50%",background:"radial-gradient(circle,rgba(232,21,42,0.18) 0%,transparent 70%)",pointerEvents:"none"}}></div>

@@ -577,6 +577,20 @@ footer ul li a:hover::before{opacity:1;left:-14px}
 .pay-node-out{background:linear-gradient(135deg,#7B5FFF,#5533FF);box-shadow:0 10px 24px rgba(123,95,255,0.25);justify-content:center}
 @media(max-width:900px){.pay-diagram{flex-direction:column}.pay-diagram-arrow{transform:rotate(90deg)}.pay-node{white-space:normal}}
 
+/* ── Enterprise payments channel diagram ── */
+.channel-diagram{position:relative;max-width:1040px;margin:0 auto;padding-top:20px}
+.channel-frame{position:absolute;top:6px;bottom:-26px;left:16.6%;right:16.6%;border:2px dashed rgba(232,21,42,0.3);border-radius:24px;background:rgba(232,21,42,0.03);z-index:0}
+.channel-frame-label{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--off);padding:0 14px;font-size:11px;font-weight:700;color:var(--r);text-transform:uppercase;letter-spacing:.8px;white-space:nowrap}
+.channel-row{position:relative;z-index:1;display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.channel-node{text-align:center;padding:0 2px}
+.channel-node-icon{position:relative;width:56px;height:56px;border-radius:16px;background:#fff;border:1px solid var(--border);box-shadow:var(--sh);display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
+.channel-node-icon::after{content:"";position:absolute;top:50%;right:-16px;transform:translateY(-50%);width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:7px solid var(--border2)}
+.channel-node:last-child .channel-node-icon::after{display:none}
+.channel-node-title{font-size:12.5px;font-weight:700;color:var(--ink);margin-bottom:3px;line-height:1.3}
+.channel-node-desc{font-size:10.5px;color:var(--muted);line-height:1.45}
+@media(max-width:900px){.channel-frame{display:none}.channel-row{grid-template-columns:repeat(2,1fr);gap:24px 16px}.channel-node-icon::after{display:none}}
+@media(max-width:520px){.channel-row{grid-template-columns:1fr}}
+
 /* ── Quote block: subtle animated gradient-border wrap ── */
 .quote-block-wrap{border-radius:21px;padding:1.5px;background:linear-gradient(135deg,rgba(85,51,255,0.6),rgba(232,21,42,0.35),rgba(123,95,255,0.6));background-size:200% 200%;animation:gradShift 6s ease infinite}
 .quote-block-wrap>.quote-block{border-radius:19.5px}
