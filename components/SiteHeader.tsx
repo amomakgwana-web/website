@@ -39,7 +39,7 @@ const INDUSTRIES: Record<IndustryKey, { name: string; accent: string; gradient: 
     features: [
       { title: "Instant checkout", desc: "Sub-second settlement via BipraPay" },
       { title: "Automated supplier pay", desc: "Accounts payable end to end" },
-      { title: "Commission payouts", desc: "Affiliates and resellers, on schedule" },
+      { title: "Subscription payments", desc: "Recurring billing on any cycle" },
       { title: "Real-time reconciliation", desc: "Revenue matched automatically" },
     ],
   },
