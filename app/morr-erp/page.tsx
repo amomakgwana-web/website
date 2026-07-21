@@ -59,7 +59,7 @@ export default function Page() {
 
     <section className="section" style={{background:"var(--off)"}}><div className="inner">
     <p className="slabel">Typical time savings</p>
-    <h2 className="stitle">What <span className="grad-text">Morr replaces</span> in your organisation</h2>
+    <h2 className="stitle">What <span className="grad-text-orange">Morr replaces</span> in your organisation</h2>
     <div className="g3" style={{gap:"20px"}}>
 
     <div className="gcard shine grid-pop tilt morr-stat-card morr-c1" style={{borderRadius:"14px",padding:"26px"}}>
@@ -75,8 +75,8 @@ export default function Page() {
 
     <div className="gcard shine grid-pop tilt morr-stat-card morr-c2" style={{borderRadius:"14px",padding:"26px"}}>
     <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",marginBottom:"4px"}}>
-    <div className="morr-stat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--r)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12h6M9 16h6M9 8h6M5 3h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path></svg></div>
-    <div style={{textAlign:"right"}}><div className="grad-text-warm" style={{fontFamily:"var(--fd)",fontSize:"30px",fontWeight:"800",letterSpacing:"-1px",lineHeight:"1"}}>−99%</div><div style={{fontSize:"11px",color:"var(--muted)",fontWeight:"600"}}>faster</div></div>
+    <div className="morr-stat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--mo)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12h6M9 16h6M9 8h6M5 3h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path></svg></div>
+    <div style={{textAlign:"right"}}><div className="grad-text-orange" style={{fontFamily:"var(--fd)",fontSize:"30px",fontWeight:"800",letterSpacing:"-1px",lineHeight:"1"}}>−99%</div><div style={{fontSize:"11px",color:"var(--muted)",fontWeight:"600"}}>faster</div></div>
     </div>
     <div style={{fontSize:"13px",fontWeight:"700",color:"var(--ink)",marginBottom:"16px"}}>HR document processing</div>
     <div className="morr-bar-row"><span className="morr-bar-tag">Before</span><div className="morr-bar-track"><div className="morr-bar-fill before" style={{width:"100%"}}></div></div><span className="morr-bar-value before">2 days</span></div>
@@ -86,8 +86,8 @@ export default function Page() {
 
     <div className="gcard shine grid-pop tilt morr-stat-card morr-c3" style={{borderRadius:"14px",padding:"26px"}}>
     <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",marginBottom:"4px"}}>
-    <div className="morr-stat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--g)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"></path><path d="M18.7 8l-5.3 5.3-3-3L4 16.5"></path></svg></div>
-    <div style={{textAlign:"right"}}><div className="grad-text-cool" style={{fontFamily:"var(--fd)",fontSize:"30px",fontWeight:"800",letterSpacing:"-1px",lineHeight:"1"}}>−80%</div><div style={{fontSize:"11px",color:"var(--muted)",fontWeight:"600"}}>faster</div></div>
+    <div className="morr-stat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--mo)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"></path><path d="M18.7 8l-5.3 5.3-3-3L4 16.5"></path></svg></div>
+    <div style={{textAlign:"right"}}><div className="grad-text-orange" style={{fontFamily:"var(--fd)",fontSize:"30px",fontWeight:"800",letterSpacing:"-1px",lineHeight:"1"}}>−80%</div><div style={{fontSize:"11px",color:"var(--muted)",fontWeight:"600"}}>faster</div></div>
     </div>
     <div style={{fontSize:"13px",fontWeight:"700",color:"var(--ink)",marginBottom:"16px"}}>Month-end financial close</div>
     <div className="morr-bar-row"><span className="morr-bar-tag">Before</span><div className="morr-bar-track"><div className="morr-bar-fill before" style={{width:"100%"}}></div></div><span className="morr-bar-value before">5 days</span></div>
