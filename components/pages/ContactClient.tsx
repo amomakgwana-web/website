@@ -5,8 +5,8 @@ import { useState } from "react";
 
 const PRODUCT_CHIPS: { label: string; color: string; bg: string }[] = [
   { label: "BipraPay", color: "#E8152A", bg: "var(--rl)" },
-  { label: "VeriBills", color: "#0A7B3E", bg: "var(--gl)" },
-  { label: "Morr ERP", color: "#5533FF", bg: "var(--pl)" },
+  { label: "VeriBills", color: "#1800AD", bg: "var(--vbl)" },
+  { label: "Morr ERP", color: "#FF6B35", bg: "var(--mol)" },
 ];
 
 const INTENT_CHIPS = ["Book a demo", "Get pricing", "Technical question", "Enterprise inquiry"];

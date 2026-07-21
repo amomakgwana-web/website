@@ -73,9 +73,9 @@ export default function Page() {
           <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.65"}}>One named contact who knows your setup, your volumes, and your history — not a rotating support queue.</p>
         </div>
       </div>
-      <div style={{marginTop:"24px",padding:"20px 24px",background:"var(--gl)",borderRadius:"14px",display:"flex",alignItems:"center",gap:"14px",flexWrap:"wrap"}}>
-        <span style={{width:"36px",height:"36px",borderRadius:"10px",background:"var(--g)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12,6 12,12 16,14"></polyline></svg></span>
-        <span style={{fontSize:"14px",color:"var(--g)",fontWeight:"600"}}>VeriBills customers get a 24-hour call centre and support line, so meter and billing queries never wait for business hours.</span>
+      <div style={{marginTop:"24px",padding:"20px 24px",background:"var(--vbl)",borderRadius:"14px",display:"flex",alignItems:"center",gap:"14px",flexWrap:"wrap"}}>
+        <span style={{width:"36px",height:"36px",borderRadius:"10px",background:"var(--vb)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12,6 12,12 16,14"></polyline></svg></span>
+        <span style={{fontSize:"14px",color:"var(--vb)",fontWeight:"600"}}>VeriBills customers get a 24-hour call centre and support line, so meter and billing queries never wait for business hours.</span>
       </div>
     </div></section>
 
