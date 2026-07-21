@@ -158,7 +158,7 @@ export default function Page() {
     <section style={{background:"linear-gradient(135deg,#0D0B1E 0%,#150a2e 100%)",padding:"110px 5%",position:"relative",overflow:"hidden"}}>
       <div className="inner">
         <div style={{textAlign:"center",marginBottom:"56px"}}>
-          <span className="band-eyebrow cine-reveal" style={{color:"#7B5FFF"}}>Multi-rail routing</span>
+          <span className="band-eyebrow cine-reveal" style={{color:"#FF6B6B"}}>Multi-rail routing</span>
           <h2 className="cine-reveal s1" style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"clamp(28px,3.5vw,44px)",fontWeight:"800",letterSpacing:"-1px",color:"#fff",margin:"18px 0 14px"}}>One hub, every direction</h2>
           <p className="cine-reveal s2" style={{fontSize:"15px",color:"rgba(255,255,255,0.5)",maxWidth:"540px",margin:"0 auto",lineHeight:"1.75"}}>BipraPay sits at the centre of every rail your business needs — domestic and cross-border — so adding a new payment method never means a new integration.</p>
         </div>

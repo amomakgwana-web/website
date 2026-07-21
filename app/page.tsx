@@ -19,11 +19,11 @@ export default function Page() {
       <div style={{position:"absolute",bottom:"32px",right:"0",width:"196px",background:"#fff",borderRadius:"12px",border:"1px solid var(--border)",padding:"16px",boxShadow:"0 24px 56px rgba(85,51,255,0.28),0 4px 12px rgba(13,11,30,0.08)",zIndex:"2",transform:"scale(1.06)"}}>
         <div style={{width:"32px",height:"32px",borderRadius:"9px",background:"#E6FFEF",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"10px"}}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0A7B3E" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
         <div style={{fontFamily:"var(--fd)",fontSize:"13px",fontWeight:"600",marginBottom:"3px"}}>BipraPay processed</div>
-        <div style={{fontFamily:"var(--fd)",fontSize:"18px",fontWeight:"700",color:"var(--p)",marginBottom:"2px"}}>R48,200</div>
+        <div style={{fontFamily:"var(--fd)",fontSize:"18px",fontWeight:"700",color:"var(--r)",marginBottom:"2px"}}>R48,200</div>
         <div style={{fontSize:"11px",color:"var(--muted)"}}>in the last 5 min</div>
       </div>
       <div style={{position:"absolute",top:"8%",left:"0",width:"172px",background:"#fff",borderRadius:"12px",border:"1px solid var(--border)",padding:"16px",boxShadow:"var(--sh)",zIndex:"2"}}>
-        <div style={{width:"32px",height:"32px",borderRadius:"9px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"10px"}}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5533FF" strokeWidth="2"><path d="M9 12h6M9 16h6M9 8h6M5 3h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path></svg></div>
+        <div style={{width:"32px",height:"32px",borderRadius:"9px",background:"var(--vbl)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"10px"}}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1800AD" strokeWidth="2"><path d="M9 12h6M9 16h6M9 8h6M5 3h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path></svg></div>
         <div style={{fontFamily:"var(--fd)",fontSize:"13px",fontWeight:"600",marginBottom:"3px"}}>Audit Report</div>
         <div style={{fontSize:"11px",color:"var(--muted)"}}>VeriBills generated 14,280 bills</div>
       </div>
@@ -214,7 +214,7 @@ export default function Page() {
           </div>
 
           
-          <div style={{position:"absolute",top:"20px",left:"20px",right:"20px",bottom:"20px",background:"linear-gradient(135deg,#1e1550,#0D0B1E)",borderRadius:"22px",border:"1px solid rgba(85,51,255,0.2)",zIndex:"2",boxShadow:"0 20px 56px rgba(0,0,0,0.25)"}}>
+          <div style={{position:"absolute",top:"20px",left:"20px",right:"20px",bottom:"20px",background:"linear-gradient(135deg,#1e1550,#0D0B1E)",borderRadius:"22px",border:"1px solid rgba(232,21,42,0.2)",zIndex:"2",boxShadow:"0 20px 56px rgba(0,0,0,0.25)"}}>
             <div style={{padding:"20px 24px",borderBottom:"1px solid rgba(255,255,255,0.05)",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
               <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
                 <div style={{width:"8px",height:"8px",borderRadius:"50%",background:"#22C55E",animation:"pulse 2s infinite"}}></div>
@@ -226,14 +226,14 @@ export default function Page() {
             </div>
             <div style={{padding:"16px 24px",display:"flex",gap:"12px",alignItems:"flex-end",height:"120px"}}>
               <div style={{flex:"1",display:"flex",alignItems:"flex-end",gap:"3px",height:"80px"}}>
-                <div style={{flex:"1",height:"35%",background:"rgba(85,51,255,0.4)",borderRadius:"3px 3px 0 0"}}></div>
-                <div style={{flex:"1",height:"55%",background:"rgba(85,51,255,0.5)",borderRadius:"3px 3px 0 0"}}></div>
-                <div style={{flex:"1",height:"45%",background:"rgba(85,51,255,0.4)",borderRadius:"3px 3px 0 0"}}></div>
-                <div style={{flex:"1",height:"80%",background:"rgba(85,51,255,0.7)",borderRadius:"3px 3px 0 0"}}></div>
-                <div style={{flex:"1",height:"65%",background:"rgba(85,51,255,0.5)",borderRadius:"3px 3px 0 0"}}></div>
-                <div style={{flex:"1",height:"95%",background:"var(--p)",borderRadius:"3px 3px 0 0"}}></div>
-                <div style={{flex:"1",height:"75%",background:"rgba(85,51,255,0.6)",borderRadius:"3px 3px 0 0"}}></div>
-                <div style={{flex:"1",height:"100%",background:"var(--p)",borderRadius:"3px 3px 0 0"}}></div>
+                <div style={{flex:"1",height:"35%",background:"rgba(232,21,42,0.4)",borderRadius:"3px 3px 0 0"}}></div>
+                <div style={{flex:"1",height:"55%",background:"rgba(232,21,42,0.5)",borderRadius:"3px 3px 0 0"}}></div>
+                <div style={{flex:"1",height:"45%",background:"rgba(232,21,42,0.4)",borderRadius:"3px 3px 0 0"}}></div>
+                <div style={{flex:"1",height:"80%",background:"rgba(232,21,42,0.7)",borderRadius:"3px 3px 0 0"}}></div>
+                <div style={{flex:"1",height:"65%",background:"rgba(232,21,42,0.5)",borderRadius:"3px 3px 0 0"}}></div>
+                <div style={{flex:"1",height:"95%",background:"var(--r)",borderRadius:"3px 3px 0 0"}}></div>
+                <div style={{flex:"1",height:"75%",background:"rgba(232,21,42,0.6)",borderRadius:"3px 3px 0 0"}}></div>
+                <div style={{flex:"1",height:"100%",background:"var(--r)",borderRadius:"3px 3px 0 0"}}></div>
               </div>
             </div>
           </div>
@@ -364,16 +364,16 @@ export default function Page() {
           <div className="vs-card winner grid-pop pop2">
             <div style={{fontSize:"13px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"20px"}}>With BIPRA</div>
             <div style={{display:"flex",flexDirection:"column",gap:"10px"}}>
-              <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 14px",background:"var(--pl)",borderRadius:"10px"}}>
-                <div style={{width:"28px",height:"28px",borderRadius:"7px",background:"var(--p)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="12" height="12" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="white" strokeWidth="2"></polyline></svg></div>
+              <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 14px",background:"var(--rl)",borderRadius:"10px"}}>
+                <div style={{width:"28px",height:"28px",borderRadius:"7px",background:"var(--r)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="12" height="12" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="white" strokeWidth="2"></polyline></svg></div>
                 <div><div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>BipraPay handles all rails + audit</div><div style={{fontSize:"11px",color:"var(--muted)"}}>One API, automatic reconciliation</div></div>
               </div>
-              <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 14px",background:"var(--pl)",borderRadius:"10px"}}>
-                <div style={{width:"28px",height:"28px",borderRadius:"7px",background:"var(--p)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="12" height="12" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="white" strokeWidth="2"></polyline></svg></div>
+              <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 14px",background:"var(--vbl)",borderRadius:"10px"}}>
+                <div style={{width:"28px",height:"28px",borderRadius:"7px",background:"var(--vb)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="12" height="12" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="white" strokeWidth="2"></polyline></svg></div>
                 <div><div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>VeriBills auto-generates from meter data</div><div style={{fontSize:"11px",color:"var(--muted)"}}>Smart meter to bill in 5 minutes</div></div>
               </div>
-              <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 14px",background:"var(--pl)",borderRadius:"10px"}}>
-                <div style={{width:"28px",height:"28px",borderRadius:"7px",background:"var(--p)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="12" height="12" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="white" strokeWidth="2"></polyline></svg></div>
+              <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 14px",background:"var(--mol)",borderRadius:"10px"}}>
+                <div style={{width:"28px",height:"28px",borderRadius:"7px",background:"var(--mo)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="12" height="12" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="white" strokeWidth="2"></polyline></svg></div>
                 <div><div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>Morr ERP — HR, budget, documents</div><div style={{fontSize:"11px",color:"var(--muted)"}}>All workflows in one system</div></div>
               </div>
               <div style={{display:"flex",alignItems:"center",gap:"12px",padding:"12px 14px",background:"var(--pl)",borderRadius:"10px"}}>

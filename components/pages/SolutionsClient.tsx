@@ -27,9 +27,9 @@ const PRODUCTS: Record<ProductKey, { name: string; tag: string; accent: string; 
   veribills: {
     name: "VeriBills",
     tag: "Billing",
-    accent: "#0A7B3E",
-    accentSoft: "var(--gl)",
-    gradient: "linear-gradient(135deg,#0A7B3E,#00C87A)",
+    accent: "#1800AD",
+    accentSoft: "var(--vbl)",
+    gradient: "linear-gradient(135deg,#1800AD,#4B2EFF)",
     features: [
       { icon: <path d="M9 12h6M9 16h6M9 8h6M5 3h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" />, title: "Smart meter billing", desc: "AMI/AMR reads to bill in five minutes" },
       { icon: <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6" />, title: "Bill presentment & rating", desc: "One engine for every tariff structure" },
