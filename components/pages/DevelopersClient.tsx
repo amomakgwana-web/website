@@ -366,7 +366,7 @@ export default function DevelopersClient() {
 
           <div style={{borderRadius:"12px",border:"1px solid var(--border)",overflow:"hidden"}}>
             <div style={{background:"var(--off)",padding:"14px 20px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
-              <div style={{display:"flex",alignItems:"center",gap:"12px"}}><span className="badge b-g">VeriBills</span><span style={{fontWeight:"600",color:"var(--ink)"}}>Metering &amp; Bill Presentment</span></div>
+              <div style={{display:"flex",alignItems:"center",gap:"12px"}}><span className="badge b-vb">VeriBills</span><span style={{fontWeight:"600",color:"var(--ink)"}}>Metering &amp; Bill Presentment</span></div>
               <span style={{fontSize:"12px",color:"var(--muted)"}}>7 endpoints</span>
             </div>
             <div style={{display:"flex",flexDirection:"column"}}>
