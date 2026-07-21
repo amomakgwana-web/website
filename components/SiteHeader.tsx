@@ -4,8 +4,50 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
+type IndustryKey = "financial" | "government" | "retail";
+
+const INDUSTRIES: Record<IndustryKey, { name: string; accent: string; gradient: string; icon: React.ReactNode; features: { title: string; desc: string }[] }> = {
+  financial: {
+    name: "Financial Services",
+    accent: "#5533FF",
+    gradient: "linear-gradient(135deg,#5533FF,#7B5FFF)",
+    icon: <path d="M3 21h18M5 21V10M9 21V10M15 21V10M19 21V10M2 10l10-6 10 6"></path>,
+    features: [
+      { title: "SARB-compliant rails", desc: "Payment rails built for South African regulation" },
+      { title: "Real-time AML screening", desc: "Transaction monitoring as payments happen" },
+      { title: "IFRS 9 provisioning", desc: "Automated financial reporting" },
+      { title: "Multi-currency nostro", desc: "Manage accounts across currencies" },
+    ],
+  },
+  government: {
+    name: "Government & Public Sector",
+    accent: "#0A7B3E",
+    gradient: "linear-gradient(135deg,#0A7B3E,#00C87A)",
+    icon: <path d="M12 2 3 7l9 5 9-5-9-5zM3 7v10l9 5 9-5V7"></path>,
+    features: [
+      { title: "PFMA / MFMA compliance", desc: "Budget rules built in" },
+      { title: "Auditor-General exports", desc: "Reporting formats ready to submit" },
+      { title: "Grant disbursement", desc: "Pay beneficiaries with ID verification" },
+      { title: "Digital document mgmt", desc: "Paperless departmental workflows" },
+    ],
+  },
+  retail: {
+    name: "Retail & E-commerce",
+    accent: "#E8152A",
+    gradient: "linear-gradient(135deg,#E8152A,#FF6B35)",
+    icon: <path d="M6 8h12l1 12H5zM9 8V6a3 3 0 0 1 6 0v2"></path>,
+    features: [
+      { title: "Instant checkout", desc: "Sub-second settlement via BipraPay" },
+      { title: "Automated supplier pay", desc: "Accounts payable end to end" },
+      { title: "Commission payouts", desc: "Affiliates and resellers, on schedule" },
+      { title: "Real-time reconciliation", desc: "Revenue matched automatically" },
+    ],
+  },
+};
+
 export default function SiteHeader() {
-  const [drop, setDrop] = useState<"products" | null>(null);
+  const [drop, setDrop] = useState<"products" | "solutions" | null>(null);
+  const [industryTab, setIndustryTab] = useState<IndustryKey>("financial");
   const [mobileOpen, setMobileOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
@@ -43,7 +85,7 @@ export default function SiteHeader() {
     };
   }, []);
 
-  const toggle = (which: "products") => setDrop((d) => (d === which ? null : which));
+  const toggle = (which: "products" | "solutions") => setDrop((d) => (d === which ? null : which));
 
   const line = (transform: string, opacity = "1"): React.CSSProperties => ({
     display: "block",
@@ -104,7 +146,33 @@ export default function SiteHeader() {
         </div>
         <div className="navbar-orange">
           <ul className="navlinks">
-            <li><Link href="/solutions" className={pathname === "/solutions" ? "active" : undefined}>Solutions</Link></li>
+            <li className={`drop-wrap${drop === "solutions" ? " open" : ""}${pathname === "/solutions" ? " active" : ""}`} id="nav-solutions-wrap">
+              <button aria-haspopup="true" aria-expanded={drop === "solutions"} onClick={(e) => { e.stopPropagation(); toggle("solutions"); }}>Solutions ▼</button>
+              <div className="dropdown-mega">
+                <div className="mega-grid">
+                  <div className="mega-tabs">
+                    {(Object.keys(INDUSTRIES) as IndustryKey[]).map((key) => {
+                      const ind = INDUSTRIES[key];
+                      return (
+                        <button key={key} className={`mega-tab${industryTab === key ? " active" : ""}`} onMouseEnter={() => setIndustryTab(key)} onClick={() => setIndustryTab(key)}>
+                          <span className="mega-tab-icon" style={{background: ind.gradient}}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">{ind.icon}</svg></span>
+                          {ind.name}
+                        </button>
+                      );
+                    })}
+                  </div>
+                  <div className="mega-panel">
+                    {INDUSTRIES[industryTab].features.map((f, i) => (
+                      <div key={i} className="mega-item">
+                        <span className="mega-item-icon" style={{background: `${INDUSTRIES[industryTab].accent}14`, color: INDUSTRIES[industryTab].accent}}><svg width="14" height="14" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="currentColor" strokeWidth="1.8"></polyline></svg></span>
+                        <div><div className="mega-item-title">{f.title}</div><div className="mega-item-desc">{f.desc}</div></div>
+                      </div>
+                    ))}
+                    <div className="mega-footer"><Link href="/solutions" style={{fontSize:"12.5px",fontWeight:"600",color:"var(--p)"}}>View all solutions →</Link></div>
+                  </div>
+                </div>
+              </div>
+            </li>
             <li className={`drop-wrap${drop === "products" ? " open" : ""}${isProductRoute ? " active" : ""}`} id="nav-products-wrap">
               <button aria-haspopup="true" aria-expanded={drop === "products"} onClick={(e) => { e.stopPropagation(); toggle("products"); }}>Products ▼</button>
               <div className="dropdown">

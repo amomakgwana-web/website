@@ -172,7 +172,7 @@ export default function SolutionsClient() {
           </div>
         ))}
       </div>
-      <p style={{textAlign:"center",fontSize:"13px",color:"var(--muted)",marginTop:"20px"}}>+ REST API for custom integrations with any system</p>
+      <p style={{textAlign:"center",fontSize:"13px",color:"var(--muted)",marginTop:"20px"}}>+ REST API for custom integrations with any system &middot; <Link href="/integrations" style={{color:"var(--p)",fontWeight:"600"}}>Browse all integrations →</Link></p>
     </div></section>
     <section className="solutions-cta" style={{background:"var(--ink)",padding:"80px 5%",textAlign:"center"}}>
       <div className="solutions-cta-glow blob-drift" style={{width:"420px",height:"420px",top:"-160px",left:"-100px",background:"radial-gradient(circle,rgba(85,51,255,0.35),transparent 70%)"}}></div>
