@@ -150,19 +150,10 @@ export default function SolutionsClient() {
               <Link className="btn btn-lg" style={{marginTop:"24px",background:ind.accent,color:"#fff"}} href="/contact">Talk to us</Link>
             </div>
           );
-          const productsPanel = (
-            <div style={{background:"rgba(255,255,255,0.6)",borderRadius:"14px",padding:"28px"}}>
-              <div style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"16px"}}>Products used</div>
-              <div style={{display:"flex",flexWrap:"wrap",gap:"8px"}}>{ind.products.map((p) => <span key={p.label} className={`badge ${p.badgeClass}`}>{p.label}</span>)}</div>
-              <div style={{height:"1px",background:"var(--border)",margin:"20px 0"}}></div>
-              <div style={{fontSize:"13px",color:"var(--muted)",marginBottom:"12px"}}>Typical deployment</div>
-              <div style={{fontSize:"24px",fontWeight:"800",color:"var(--ink)"}}>{ind.deployment}</div>
-            </div>
-          );
           return (
-            <div key={ind.key} style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"56px",alignItems:"center",borderRadius:"20px",border:"1px solid var(--border)",padding:"48px"}} className={`two-col solutions-ind-card ${ind.mesh} cine-reveal s${(i % 3) + 1} tilt shine`}>
+            <div key={ind.key} style={{borderRadius:"20px",border:"1px solid var(--border)",padding:"48px"}} className={`solutions-ind-card ${ind.mesh} cine-reveal s${(i % 3) + 1} tilt shine`}>
               <svg className="solutions-ind-watermark" width="200" height="200" viewBox="0 0 24 24" fill="none" stroke={ind.accent} strokeWidth="1.5">{ind.icon}</svg>
-              {i % 2 === 0 ? (<>{iconBlock}{productsPanel}</>) : (<>{productsPanel}{iconBlock}</>)}
+              <div style={{maxWidth:"640px"}}>{iconBlock}</div>
             </div>
           );
         })}
