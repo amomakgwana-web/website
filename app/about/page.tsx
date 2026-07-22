@@ -61,6 +61,28 @@ export default function Page() {
       <div style={{display:"flex",alignItems:"center",gap:"16px",padding:"20px 24px",background:"var(--off)",borderRadius:"16px"}}><div style={{width:"52px",height:"52px",borderRadius:"50%",background:"#B45309",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><span style={{fontFamily:"var(--fd)",fontWeight:"800",fontSize:"16px",color:"#fff"}}>LO</span></div><div><div style={{fontFamily:"var(--fd)",fontSize:"15px",fontWeight:"700",marginBottom:"2px"}}>Lebo Osei</div><div style={{fontSize:"12px",color:"var(--muted)"}}>VP Engineering</div></div></div>
       <div style={{display:"flex",alignItems:"center",gap:"16px",padding:"20px 24px",background:"var(--off)",borderRadius:"16px"}}><div style={{width:"52px",height:"52px",borderRadius:"50%",background:"#3D22CC",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><span style={{fontFamily:"var(--fd)",fontWeight:"800",fontSize:"16px",color:"#fff"}}>SM</span></div><div><div style={{fontFamily:"var(--fd)",fontSize:"15px",fontWeight:"700",marginBottom:"2px"}}>Sipho Mahlangu</div><div style={{fontSize:"12px",color:"var(--muted)"}}>VP Sales</div></div></div>
     </div></div></section>
+    <section className="section" style={{background:"var(--off)"}}><div className="inner">
+    <p className="slabel">Where we operate</p><h2 className="stitle" style={{marginBottom:"48px"}}>Built in Africa, for Africa</h2>
+    <div className="g3" style={{gap:"20px"}}>
+      <div className="gcard shine grid-pop tilt" style={{borderRadius:"16px",padding:"28px"}}>
+        <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--p)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+        <div style={{fontFamily:"var(--fd)",fontSize:"17px",fontWeight:"700",marginBottom:"4px"}}>Johannesburg, South Africa</div>
+        <div style={{fontSize:"12px",fontWeight:"600",color:"var(--p)",textTransform:"uppercase",letterSpacing:".6px",marginBottom:"12px"}}>Headquarters</div>
+        <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.7"}}>Engineering, product, and support are based here, close to our largest customer base.</p>
+      </div>
+      <div className="gcard shine grid-pop tilt" style={{borderRadius:"16px",padding:"28px"}}>
+        <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--p)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+        <div style={{fontFamily:"var(--fd)",fontSize:"17px",fontWeight:"700",marginBottom:"4px"}}>Nairobi, Kenya</div>
+        <div style={{fontSize:"12px",fontWeight:"600",color:"var(--p)",textTransform:"uppercase",letterSpacing:".6px",marginBottom:"12px"}}>Regional hub</div>
+        <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.7"}}>Sales and partnerships covering East Africa, integrated with local banking and mobile-money rails.</p>
+      </div>
+      <div className="gcard shine grid-pop tilt" style={{borderRadius:"16px",padding:"28px"}}>
+        <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--p)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+        <div style={{fontFamily:"var(--fd)",fontSize:"17px",fontWeight:"700",marginBottom:"4px"}}>Port Louis, Mauritius</div>
+        <div style={{fontSize:"12px",fontWeight:"600",color:"var(--p)",textTransform:"uppercase",letterSpacing:".6px",marginBottom:"12px"}}>Regional hub</div>
+        <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.7"}}>Sales and partnerships for the Indian Ocean market, supporting cross-border and multi-currency clients.</p>
+      </div>
+    </div></div></section>
     <section style={{background:"var(--ink)",padding:"80px 5%"}}><div className="inner two-col" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"64px",alignItems:"center"}}>
     <div><p style={{fontSize:"11px",fontWeight:"600",letterSpacing:"1.2px",textTransform:"uppercase",color:"rgba(255,255,255,0.35)",marginBottom:"16px"}}>Careers</p><h2 style={{fontFamily:"var(--fd)",fontSize:"clamp(28px,3vw,38px)",fontWeight:"800",color:"#fff",letterSpacing:"-.8px",marginBottom:"16px",lineHeight:"1.1"}}>Help us build the financial backbone of Africa</h2><p style={{fontSize:"16px",color:"rgba(255,255,255,0.4)",lineHeight:"1.75",marginBottom:"32px"}}>We're growing fast and always looking for exceptional people who care about the problem as much as the craft.</p><Link className="btn btn-w btn-lg" href="/contact">View open roles</Link></div>
     <div style={{display:"flex",flexDirection:"column",gap:"12px"}}>
