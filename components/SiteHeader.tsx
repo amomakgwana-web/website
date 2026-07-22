@@ -54,6 +54,11 @@ export default function SiteHeader() {
 
   const toggle = (which: "products" | "solutions" | "signin") => setDrop((d) => (d === which ? null : which));
 
+  // If another dropdown is already open (clicked) and the pointer moves onto
+  // a sibling trigger, switch straight to that one instead of leaving both
+  // open at once.
+  const hoverSwitch = (which: "products" | "solutions" | "signin") => setDrop((d) => (d !== null && d !== which ? which : d));
+
   const line = (transform: string, opacity = "1"): React.CSSProperties => ({
     display: "block",
     width: "22px",
@@ -108,7 +113,7 @@ export default function SiteHeader() {
         <div className="navbar-orange">
           <ul className="navlinks">
             <li className={`drop-wrap${drop === "solutions" ? " open" : ""}${pathname === "/solutions" ? " active" : ""}`} id="nav-solutions-wrap">
-              <button aria-haspopup="true" aria-expanded={drop === "solutions"} onClick={(e) => { e.stopPropagation(); toggle("solutions"); }}>Solutions ▼</button>
+              <button aria-haspopup="true" aria-expanded={drop === "solutions"} onMouseEnter={() => hoverSwitch("solutions")} onClick={(e) => { e.stopPropagation(); toggle("solutions"); }}>Solutions ▼</button>
               <div className="dropdown-mega">
                 <div className="mega-grid">
                   <div className="mega-tabs">
@@ -132,7 +137,7 @@ export default function SiteHeader() {
               </div>
             </li>
             <li className={`drop-wrap${drop === "products" ? " open" : ""}${isProductRoute ? " active" : ""}`} id="nav-products-wrap">
-              <button aria-haspopup="true" aria-expanded={drop === "products"} onClick={(e) => { e.stopPropagation(); toggle("products"); }}>Products ▼</button>
+              <button aria-haspopup="true" aria-expanded={drop === "products"} onMouseEnter={() => hoverSwitch("products")} onClick={(e) => { e.stopPropagation(); toggle("products"); }}>Products ▼</button>
               <div className="dropdown">
                 <Link className="drop-item" href="/biprapay"><div className="drop-icon" style={{background:"none",padding:"0",overflow:"hidden"}}><img src="/biprapay-logo.png" alt="" style={{width:"32px",height:"32px",borderRadius:"8px",objectFit:"cover"}} /></div><div><div className="drop-name">BipraPay</div><div className="drop-desc">Payments, audit &amp; instant gateway</div></div></Link>
                 <Link className="drop-item" href="/veribills"><div className="drop-icon" style={{background:"none",padding:"0",overflow:"hidden"}}><img src="/veribills-logo.png" alt="" style={{width:"32px",height:"32px",borderRadius:"8px",objectFit:"cover"}} /></div><div><div className="drop-name">VeriBills</div><div className="drop-desc">Bill presentment &amp; smart metering</div></div></Link>
@@ -146,7 +151,7 @@ export default function SiteHeader() {
           </ul>
           <div className="navcta">
             <div className={`signin-wrap${drop === "signin" ? " open" : ""}`} id="nav-signin-wrap">
-              <button aria-haspopup="true" aria-expanded={drop === "signin"} className="ghost" onClick={(e) => { e.stopPropagation(); toggle("signin"); }}>Sign in ▾</button>
+              <button aria-haspopup="true" aria-expanded={drop === "signin"} className="ghost" onMouseEnter={() => hoverSwitch("signin")} onClick={(e) => { e.stopPropagation(); toggle("signin"); }}>Sign in ▾</button>
               <div className="signin-drop">
                 <div style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".6px",padding:"6px 12px 8px"}}>Sign in to a portal</div>
                 {PORTALS.map((p) => (
