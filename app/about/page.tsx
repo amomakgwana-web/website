@@ -65,19 +65,19 @@ export default function Page() {
     <p className="slabel">Where we operate</p><h2 className="stitle" style={{marginBottom:"48px"}}>Built in Africa, for Africa</h2>
     <div className="g3" style={{gap:"20px"}}>
       <div className="gcard shine grid-pop tilt" style={{borderRadius:"16px",padding:"28px"}}>
-        <div style={{fontSize:"32px",marginBottom:"16px"}}>🇿🇦</div>
+        <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--p)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
         <div style={{fontFamily:"var(--fd)",fontSize:"17px",fontWeight:"700",marginBottom:"4px"}}>Johannesburg, South Africa</div>
         <div style={{fontSize:"12px",fontWeight:"600",color:"var(--p)",textTransform:"uppercase",letterSpacing:".6px",marginBottom:"12px"}}>Headquarters</div>
         <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.7"}}>Engineering, product, and support are based here, close to our largest customer base.</p>
       </div>
       <div className="gcard shine grid-pop tilt" style={{borderRadius:"16px",padding:"28px"}}>
-        <div style={{fontSize:"32px",marginBottom:"16px"}}>🇰🇪</div>
+        <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--p)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
         <div style={{fontFamily:"var(--fd)",fontSize:"17px",fontWeight:"700",marginBottom:"4px"}}>Nairobi, Kenya</div>
         <div style={{fontSize:"12px",fontWeight:"600",color:"var(--p)",textTransform:"uppercase",letterSpacing:".6px",marginBottom:"12px"}}>Regional hub</div>
         <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.7"}}>Sales and partnerships covering East Africa, integrated with local banking and mobile-money rails.</p>
       </div>
       <div className="gcard shine grid-pop tilt" style={{borderRadius:"16px",padding:"28px"}}>
-        <div style={{fontSize:"32px",marginBottom:"16px"}}>🇲🇺</div>
+        <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"var(--pl)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--p)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
         <div style={{fontFamily:"var(--fd)",fontSize:"17px",fontWeight:"700",marginBottom:"4px"}}>Port Louis, Mauritius</div>
         <div style={{fontSize:"12px",fontWeight:"600",color:"var(--p)",textTransform:"uppercase",letterSpacing:".6px",marginBottom:"12px"}}>Regional hub</div>
         <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.7"}}>Sales and partnerships for the Indian Ocean market, supporting cross-border and multi-currency clients.</p>

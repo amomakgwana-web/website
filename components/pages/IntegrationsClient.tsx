@@ -7,10 +7,10 @@ type Category = "All" | "Accounting" | "CRM" | "Enterprise" | "Communication" | 
 type Country = "South Africa" | "Kenya" | "Mauritius";
 
 const CATEGORIES: Category[] = ["All", "Accounting", "CRM", "Enterprise", "Communication", "Automation", "Analytics", "Cloud Storage"];
-const COUNTRIES: { code: Country; flag: string }[] = [
-  { code: "South Africa", flag: "🇿🇦" },
-  { code: "Kenya", flag: "🇰🇪" },
-  { code: "Mauritius", flag: "🇲🇺" },
+const COUNTRIES: { code: Country; abbr: string }[] = [
+  { code: "South Africa", abbr: "ZA" },
+  { code: "Kenya", abbr: "KE" },
+  { code: "Mauritius", abbr: "MU" },
 ];
 
 const INTEGRATIONS: { name: string; category: Exclude<Category, "All">; countries: Country[]; letter: string; gradient: string; desc: string }[] = [
@@ -69,7 +69,7 @@ export default function IntegrationsClient() {
               </button>
               {COUNTRIES.map((c) => (
                 <button key={c.code} className={`integrations-filter-btn${activeCountry === c.code ? " active" : ""}`} onClick={() => setActiveCountry(c.code)}>
-                  <span style={{ marginRight: "6px" }}>{c.flag}</span>{c.code}
+                  <span style={{ marginRight: "6px", display: "inline-block", width: "22px", padding: "1px 0", fontSize: "9px", fontWeight: "700", textAlign: "center", borderRadius: "3px", background: "var(--pl)", color: "var(--p)" }}>{c.abbr}</span>{c.code}
                   <span className="integrations-filter-count">{INTEGRATIONS.filter((i) => i.countries.includes(c.code)).length}</span>
                 </button>
               ))}
@@ -83,8 +83,8 @@ export default function IntegrationsClient() {
                   <div className="solutions-int-badge" style={{ background: i.gradient, fontSize: i.letter.length > 2 ? "11px" : "15px", margin: "0 0 14px" }}>{i.letter}</div>
                   <div style={{ fontSize: "15px", fontWeight: "700", color: "var(--ink)", marginBottom: "4px" }}>{i.name}</div>
                   <div className="badge b-p" style={{ marginBottom: "8px", fontSize: "10px" }}>{i.category}</div>
-                  <div style={{ marginBottom: "10px", fontSize: "14px", display: "flex", gap: "4px", justifyContent: "center" }} title={i.countries.join(", ")}>
-                    {i.countries.map((c) => <span key={c}>{COUNTRIES.find((x) => x.code === c)?.flag}</span>)}
+                  <div style={{ marginBottom: "10px", display: "flex", gap: "4px", justifyContent: "center" }} title={i.countries.join(", ")}>
+                    {i.countries.map((c) => <span key={c} style={{ fontSize: "9px", fontWeight: "700", padding: "2px 6px", borderRadius: "4px", background: "var(--off)", color: "var(--muted)" }}>{COUNTRIES.find((x) => x.code === c)?.abbr}</span>)}
                   </div>
                   <p style={{ fontSize: "13px", color: "var(--muted)", lineHeight: "1.6" }}>{i.desc}</p>
                 </div>
