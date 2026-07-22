@@ -45,8 +45,14 @@ const INDUSTRIES: Record<IndustryKey, { name: string; accent: string; gradient: 
   },
 };
 
+const PORTALS: { name: string; logo: string; bg?: string }[] = [
+  { name: "BipraPay Portal", logo: "/biprapay-logo.png" },
+  { name: "VeriBills Portal", logo: "/veribills-logo.png" },
+  { name: "Morr ERP Portal", logo: "/morr-icon.png", bg: "var(--mol)" },
+];
+
 export default function SiteHeader() {
-  const [drop, setDrop] = useState<"products" | "solutions" | null>(null);
+  const [drop, setDrop] = useState<"products" | "solutions" | "signin" | null>(null);
   const [industryTab, setIndustryTab] = useState<IndustryKey>("financial");
   const [mobileOpen, setMobileOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
@@ -85,7 +91,7 @@ export default function SiteHeader() {
     };
   }, []);
 
-  const toggle = (which: "products" | "solutions") => setDrop((d) => (d === which ? null : which));
+  const toggle = (which: "products" | "solutions" | "signin") => setDrop((d) => (d === which ? null : which));
 
   const line = (transform: string, opacity = "1"): React.CSSProperties => ({
     display: "block",
@@ -122,18 +128,12 @@ export default function SiteHeader() {
             <div style={{background:"var(--off)",borderRadius:"14px",padding:"12px",marginBottom:"4px"}}>
               <p style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".8px",marginBottom:"10px",padding:"0 4px"}}>Sign in to a portal</p>
               <div style={{display:"flex",flexDirection:"column",gap:"4px"}}>
-                <a href="#" style={{display:"flex",alignItems:"center",gap:"12px",padding:"10px 12px",borderRadius:"9px",background:"#fff",cursor:"pointer"}} onClick={(e) => { e.preventDefault(); setMobileOpen(false); }}>
-                  <div style={{width:"32px",height:"32px",borderRadius:"8px",overflow:"hidden",flexShrink:"0"}}><img src="/biprapay-logo.png" alt="" style={{width:"32px",height:"32px",objectFit:"cover"}} /></div>
-                  <div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>BipraPay Portal</div>
-                </a>
-                <a href="#" style={{display:"flex",alignItems:"center",gap:"12px",padding:"10px 12px",borderRadius:"9px",background:"#fff",cursor:"pointer"}} onClick={(e) => { e.preventDefault(); setMobileOpen(false); }}>
-                  <div style={{width:"32px",height:"32px",borderRadius:"8px",overflow:"hidden",flexShrink:"0"}}><img src="/veribills-logo.png" alt="" style={{width:"32px",height:"32px",objectFit:"cover"}} /></div>
-                  <div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>VeriBills Portal</div>
-                </a>
-                <a href="#" style={{display:"flex",alignItems:"center",gap:"12px",padding:"10px 12px",borderRadius:"9px",background:"#fff",cursor:"pointer"}} onClick={(e) => { e.preventDefault(); setMobileOpen(false); }}>
-                  <div style={{width:"32px",height:"32px",borderRadius:"8px",background:"var(--mol)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><img src="/morr-icon.png" alt="" style={{width:"20px",height:"20px",objectFit:"contain"}} /></div>
-                  <div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>Morr ERP</div>
-                </a>
+                {PORTALS.map((p) => (
+                  <a key={p.name} href="#" style={{display:"flex",alignItems:"center",gap:"12px",padding:"10px 12px",borderRadius:"9px",background:"#fff",cursor:"pointer"}} onClick={(e) => { e.preventDefault(); setMobileOpen(false); }}>
+                    <div style={{width:"32px",height:"32px",borderRadius:"8px",overflow:p.bg ? "visible" : "hidden",background:p.bg,display:p.bg ? "flex" : undefined,alignItems:p.bg ? "center" : undefined,justifyContent:p.bg ? "center" : undefined,flexShrink:"0"}}><img src={p.logo} alt="" style={p.bg ? {width:"20px",height:"20px",objectFit:"contain"} : {width:"32px",height:"32px",objectFit:"cover"}} /></div>
+                    <div style={{fontSize:"13px",fontWeight:"600",color:"var(--ink)"}}>{p.name}</div>
+                  </a>
+                ))}
               </div>
             </div>
             <Link className="btn btn-p btn-lg" style={{width:"100%",justifyContent:"center"}} href="/contact">Get started</Link>
@@ -187,6 +187,18 @@ export default function SiteHeader() {
             <li><Link href="/about" className={pathname === "/about" ? "active" : undefined}>Bipra</Link></li>
           </ul>
           <div className="navcta">
+            <div className={`signin-wrap${drop === "signin" ? " open" : ""}`} id="nav-signin-wrap">
+              <button aria-haspopup="true" aria-expanded={drop === "signin"} className="ghost" onClick={(e) => { e.stopPropagation(); toggle("signin"); }}>Sign in ▾</button>
+              <div className="signin-drop">
+                <div style={{fontSize:"11px",fontWeight:"600",color:"var(--muted)",textTransform:"uppercase",letterSpacing:".6px",padding:"6px 12px 8px"}}>Sign in to a portal</div>
+                {PORTALS.map((p) => (
+                  <a key={p.name} href="#" className="signin-item drop-item" onClick={(e) => { e.preventDefault(); setDrop(null); }}>
+                    <div className="drop-icon" style={p.bg ? {background:p.bg} : {background:"none",padding:"0",overflow:"hidden"}}><img src={p.logo} alt="" style={p.bg ? {width:"20px",height:"20px",objectFit:"contain"} : {width:"32px",height:"32px",borderRadius:"8px",objectFit:"cover"}} /></div>
+                    <div className="drop-name">{p.name}</div>
+                  </a>
+                ))}
+              </div>
+            </div>
             <Link className="btn btn-w btn-md" href="/contact">Contact</Link>
           </div>
           <button id="mob-btn" style={{display:"none",background:"none",border:"none",cursor:"pointer",padding:"14px 12px",flexDirection:"column",gap:"5px",alignItems:"center",justifyContent:"center"}} aria-label="Menu" onClick={() => setMobileOpen((o) => !o)}>
