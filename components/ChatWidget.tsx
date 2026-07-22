@@ -222,7 +222,7 @@ export default function ChatWidget() {
       setBadge(false);
       if (messages.length === 0) {
         setTimeout(() => {
-          appendMsg("Hi there! I'm the BIPRA assistant. I can help with:", "bot");
+          appendMsg("Hi! I'm BIPRA's automated FAQ assistant &mdash; I match your question against a set of common topics, I'm not a live agent or an AI model. I can answer questions about:", "bot");
           setQuickReplies(["Pricing", "Products overview", "Book a demo", "API help", "Support"]);
         }, 300);
       }
@@ -289,8 +289,8 @@ export default function ChatWidget() {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
             </div>
             <div>
-              <div style={{fontSize:"14px",fontWeight:"700",color:"#fff"}}>BIPRA Support</div>
-              <div className="chat-status"><span className="chat-status-dot"></span>Online · Avg reply &lt;2 min</div>
+              <div style={{fontSize:"14px",fontWeight:"700",color:"#fff"}}>BIPRA FAQ Assistant</div>
+              <div className="chat-status"><span className="chat-status-dot"></span>Automated · answers common questions</div>
             </div>
           </div>
           <div style={{display:"flex",alignItems:"center",gap:"8px"}}>
@@ -334,7 +334,7 @@ export default function ChatWidget() {
             id="chat-input"
             className="chat-input"
             ref={inputRef}
-            placeholder="Type a message..."
+            placeholder="Ask a question..."
             rows={1}
             value={input}
             onChange={(e) => {
