@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 const PRICES = {
-  starter: { monthly: 2499, annual: 1999 },
-  business: { monthly: 7999, annual: 6399 },
+  starter: { monthly: 2499, annual: 259 },
+  business: { monthly: 7999, annual: 469 },
 };
 
 export default function PricingClient() {
