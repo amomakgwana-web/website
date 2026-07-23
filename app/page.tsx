@@ -167,13 +167,13 @@ export default function Page() {
       <div className="inner" style={{position:"relative",zIndex:"1"}}>
         <div className="stat-bar" style={{border:"1px solid rgba(255,255,255,0.06)"}}>
           <div className="gcard-dark" style={{padding:"44px 32px",textAlign:"center"}}>
-            <div style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"52px",fontWeight:"800",lineHeight:"1",letterSpacing:"-2px",marginBottom:"8px"}} className="grad-text count-up" data-target="7" data-suffix="+">0+</div>
-            <div style={{fontSize:"14px",color:"rgba(255,255,255,0.5)"}}>Businesses powered</div>
+            <div style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"52px",fontWeight:"800",lineHeight:"1",letterSpacing:"-2px",marginBottom:"8px"}} className="grad-text count-up" data-target="10" data-suffix="+">0+</div>
+            <div style={{fontSize:"14px",color:"rgba(255,255,255,0.5)"}}>Companies empowered</div>
             <div style={{fontSize:"11px",color:"rgba(255,255,255,0.25)",marginTop:"4px"}}>across 8 African countries</div>
           </div>
           <div className="gcard-dark" style={{padding:"44px 32px",textAlign:"center"}}>
-            <div style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"52px",fontWeight:"800",lineHeight:"1",letterSpacing:"-2px",marginBottom:"8px"}} className="grad-text-warm count-up" data-target="2" data-prefix="R" data-suffix="B+">R0B+</div>
-            <div style={{fontSize:"14px",color:"rgba(255,255,255,0.5)"}}>Processed annually</div>
+            <div style={{fontFamily:"'Helvetica Neue',Arial,sans-serif",fontSize:"52px",fontWeight:"800",lineHeight:"1",letterSpacing:"-2px",marginBottom:"8px"}} className="grad-text-warm count-up" data-target="369" data-prefix="R" data-suffix="M+">R0M+</div>
+            <div style={{fontSize:"14px",color:"rgba(255,255,255,0.5)"}}>Processed across the platform</div>
             <div style={{fontSize:"11px",color:"rgba(255,255,255,0.25)",marginTop:"4px"}}>growing 40% year on year</div>
           </div>
           <div className="gcard-dark" style={{padding:"44px 32px",textAlign:"center"}}>
