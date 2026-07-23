@@ -97,6 +97,11 @@ export default function Page() {
           <div style={{fontSize:"15px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Tenant self-service portal</div>
           <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.65"}}>Tenants log in to pay and manage debt, fees, and utility charges — no calls, no paperwork.</p>
         </div>
+        <div className="gcard shine grid-pop tilt" style={{borderRadius:"14px",padding:"24px"}}>
+          <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"#EEEAFF",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"16px"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1800AD" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg></div>
+          <div style={{fontSize:"15px",fontWeight:"700",color:"var(--ink)",marginBottom:"8px"}}>Downloadable payment history</div>
+          <p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.65"}}>Download past payments, invoices, and statements anytime — for tenants, customers, or audit records.</p>
+        </div>
       </div>
     </div></section>
 
