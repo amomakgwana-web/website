@@ -6,7 +6,7 @@
   --vb:#1800AD;--vbl:#E5DFFF;
   --ink:#0D0B1E;--ink2:#2E2B4A;--muted:#7B7899;
   --off:#F7F6FF;--border:rgba(85,51,255,0.12);--border2:rgba(85,51,255,0.22);
-  --sh:0 8px 40px rgba(85,51,255,0.10);--fd:'Helvetica Neue','Helvetica',Arial,sans-serif;--fb:'Helvetica Neue','Helvetica',Arial,sans-serif;--nav:104px;--masthead:56px;--navbar:48px;
+  --sh:0 8px 40px rgba(85,51,255,0.10);--fd:'Helvetica Neue','Helvetica',Arial,sans-serif;--fb:'Helvetica Neue','Helvetica',Arial,sans-serif;--nav:80px;
 }
 html{scroll-behavior:smooth;overflow-x:hidden;width:100%;overscroll-behavior-x:none}
 body{font-family:var(--fb);background:#fff;color:var(--ink);line-height:1.6;overflow-x:hidden;width:100%;max-width:100%;overscroll-behavior-x:none;-webkit-font-smoothing:antialiased}
@@ -16,15 +16,14 @@ button{font-family:var(--fb);cursor:pointer}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 .fu{animation:fadeUp 0.5s ease both}.d2{animation-delay:.2s}
-#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;flex-direction:column;height:var(--nav)}
-.masthead{height:var(--masthead);flex-shrink:0;display:flex;align-items:center;padding:0 5%;background:#fff;border-bottom:1px solid var(--border)}
-.navbar-orange{height:var(--navbar);flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:var(--r);box-shadow:0 6px 20px rgba(232,21,42,0.18)}
+#nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;height:var(--nav);padding:0 5%;background:#fff;border-bottom:1px solid var(--border)}
+.nav-right{display:flex;align-items:center;gap:28px}
 .logo{display:flex;align-items:center;gap:10px;cursor:pointer}
 .logomark{width:36px;height:36px;background:var(--p);border-radius:10px;display:flex;align-items:center;justify-content:center;position:relative;flex-shrink:0}
 .logomark::after{content:'';position:absolute;top:5px;right:5px;width:9px;height:9px;background:var(--r);border-radius:50%}
 .logomark span{font-family:var(--fd);font-weight:800;font-size:14px;color:#fff}
 .logotext{font-family:var(--font-logo,var(--fd));font-weight:800;font-size:32px;letter-spacing:-.5px;display:inline-block;background:linear-gradient(90deg,#5533FF,#E8152A,#FF6B35,#0AC77E,#7B5FFF,#5533FF);background-size:300% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradShift 6s ease infinite}
-.navlinks{display:flex;align-items:center;gap:10px;list-style:none}
+.navlinks{display:flex;align-items:center;gap:2px;list-style:none;background:var(--r);border-radius:100px;padding:6px;box-shadow:0 6px 20px rgba(232,21,42,0.18)}
 .navlinks a,.navlinks button{font-size:14px;font-weight:500;color:rgba(255,255,255,0.85);background:none;border:none;cursor:pointer;transition:background .2s,color .2s;padding:8px 16px;border-radius:100px;text-decoration:none}
 .navlinks a:hover,.navlinks button:hover,.navlinks a:focus,.navlinks a:active{color:#fff;background:rgba(255,255,255,0.14);text-decoration:none}
 .navlinks a.active,.navlinks>li.drop-wrap.active>button{background:#fff;color:var(--ink)!important}
