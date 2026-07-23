@@ -63,7 +63,7 @@ export default function SiteHeader() {
     display: "block",
     width: "22px",
     height: "2px",
-    background: "#fff",
+    background: "var(--ink)",
     borderRadius: "2px",
     transition: "all .25s",
     transform,
@@ -107,10 +107,8 @@ export default function SiteHeader() {
         </div>
       )}
       <nav id="nav" ref={navRef}>
-        <div className="masthead">
-          <Link className="logo" href="/"><span className="logotext">bipra</span></Link>
-        </div>
-        <div className="navbar-orange">
+        <Link className="logo" href="/"><span className="logotext">bipra</span></Link>
+        <div className="nav-right">
           <ul className="navlinks">
             <li className={`drop-wrap${drop === "solutions" ? " open" : ""}${pathname === "/solutions" ? " active" : ""}`} id="nav-solutions-wrap">
               <button aria-haspopup="true" aria-expanded={drop === "solutions"} onMouseEnter={() => hoverSwitch("solutions")} onClick={(e) => { e.stopPropagation(); toggle("solutions"); }}>Solutions ▼</button>
@@ -162,7 +160,7 @@ export default function SiteHeader() {
                 ))}
               </div>
             </div>
-            <Link className="btn btn-w btn-md" style={{padding:"8px 16px",borderRadius:"9px"}} href="/contact">Contact</Link>
+            <Link className="btn btn-p btn-md" style={{padding:"8px 16px",borderRadius:"9px"}} href="/contact">Contact</Link>
           </div>
           <button id="mob-btn" style={{display:"none",background:"none",border:"none",cursor:"pointer",padding:"14px 12px",flexDirection:"column",gap:"5px",alignItems:"center",justifyContent:"center"}} aria-label="Menu" onClick={() => setMobileOpen((o) => !o)}>
             <span id="mob-line1" style={line(mobileOpen ? "translateY(7px) rotate(45deg)" : "")}></span>
