@@ -16,7 +16,7 @@ const KB: KBEntry[] = [
   {
     keys: ["pricing", "price", "cost", "how much", "plans", "subscription", "tariff"],
     reply:
-      "BIPRA has three plans:\n\n• <strong>Starter</strong> — R1,999/mo (BipraPay, 2 seats)\n• <strong>Business</strong> — R6,399/mo (+ VeriBills, 10 seats, priority support)\n• <strong>Enterprise</strong> — Custom (all 3 products, unlimited seats, dedicated SLA)\n\nAll plans include a 14-day free trial. Annual billing saves 20%.",
+      "BIPRA has three plans:\n\n• <strong>Starter</strong> — R259/mo (BipraPay, 2 seats)\n• <strong>Business</strong> — R469/mo (+ VeriBills, 10 seats, priority support)\n• <strong>Enterprise</strong> — Custom (all 3 products, unlimited seats, dedicated SLA)\n\nAll plans include a 14-day free trial. Annual billing saves 20%.",
     qr: ["Start free trial", "Book a demo", "Compare plans"],
   },
   {
