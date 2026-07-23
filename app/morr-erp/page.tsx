@@ -1,10 +1,49 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Morr ERP",
   description: "Budgeting, HR, and document management unified on one data model.",
 };
+
+type ModuleItem = { title: string; desc: string; icon: ReactNode; bar: string };
+type ModuleGroup = { label: string; items: ModuleItem[] };
+
+const MODULE_GROUPS: ModuleGroup[] = [
+  {
+    label: "Financials",
+    items: [
+      { title: "General Ledger", desc: "Chart of accounts, journals, and multi-entity consolidation in real time.", bar: "var(--mo)", icon: <path d="M3 21h18M5 21V10M9 21V10M15 21V10M19 21V10M2 10l10-6 10 6"></path> },
+      { title: "Accounts Payable & Receivable", desc: "Automated invoice matching, approvals, and collections.", bar: "var(--mod)", icon: <><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path></> },
+      { title: "Budgeting & Forecasting", desc: "Multi-level approvals, variance tracking, and scenario planning.", bar: "var(--mo)", icon: <path d="M18 20V10M12 20V4M6 20v-6"></path> },
+    ],
+  },
+  {
+    label: "Operations",
+    items: [
+      { title: "Procurement & Purchase Orders", desc: "Requisitions, supplier orders, and three-way matching.", bar: "var(--mod)", icon: <><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><path d="M3 6h18M16 10a4 4 0 0 1-8 0"></path></> },
+      { title: "Fleet Management", desc: "Vehicle tracking, maintenance schedules, and trip logging across sites.", bar: "var(--mo)", icon: <><path d="M3 17h13l3-6H6z"></path><circle cx="7.5" cy="19.5" r="1.8"></circle><circle cx="16.5" cy="19.5" r="1.8"></circle></> },
+      { title: "Fuel Management", desc: "Fuel card reconciliation, consumption reporting, and theft detection.", bar: "var(--mod)", icon: <><path d="M4 22V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"></path><path d="M4 11h10M14 9l3 3v6a1.5 1.5 0 0 0 3 0v-6l-3-3"></path></> },
+    ],
+  },
+  {
+    label: "People & Workforce",
+    items: [
+      { title: "People Management & HR", desc: "Employee records, onboarding, org charts, and performance cycles.", bar: "var(--mo)", icon: <><circle cx="9" cy="8" r="3.5"></circle><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1"></path><path d="M17 8.5a3 3 0 1 0 0-5.9M22 21v-1a5.5 5.5 0 0 0-4-5.3"></path></> },
+      { title: "Time & Attendance", desc: "Clock in/out via mobile or biometric, shift rosters, and automatic payroll feeds.", bar: "var(--mod)", icon: <><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14"></polyline></> },
+      { title: "Health & Safety", desc: "Incident logging, compliance checklists, and site safety audits.", bar: "var(--mo)", icon: <path d="M12 2 3 6v6c0 5 3.8 8.7 9 10 5.2-1.3 9-5 9-10V6z"></path> },
+    ],
+  },
+  {
+    label: "Insights & Compliance",
+    items: [
+      { title: "Real-Time Report Writer", desc: "Drag-and-drop dashboards and custom financial reports.", bar: "var(--mod)", icon: <><rect x="3" y="12" width="4" height="8"></rect><rect x="10" y="7" width="4" height="13"></rect><rect x="17" y="3" width="4" height="17"></rect></> },
+      { title: "Digital Document Management", desc: "Paperless approvals, e-signatures, and version control.", bar: "var(--mo)", icon: <><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></> },
+      { title: "Audit Trail & Compliance", desc: "Full audit logging, PFMA/MFMA rules, and Auditor-General export formats.", bar: "var(--mod)", icon: <><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></> },
+    ],
+  },
+];
 
 export default function Page() {
   return (
@@ -33,6 +72,30 @@ export default function Page() {
       <div className="gcard-deep shine grid-pop tilt" style={{borderRadius:"20px",padding:"40px"}}><span className="badge b-morr" style={{marginBottom:"14px"}}>Human Resources</span><div style={{fontFamily:"var(--fd)",fontSize:"24px",fontWeight:"700",marginBottom:"12px",letterSpacing:"-.5px",lineHeight:"1.2"}}>Complete HR lifecycle management</div><p style={{fontSize:"15px",color:"var(--muted)",lineHeight:"1.75",marginBottom:"20px"}}>From onboarding to offboarding — manage your entire workforce in one place with compliance built in.</p><ul className="flist"><li className="fitem"><span className="fcheck" style={{background:"var(--mol)"}}><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="#FF6B35" strokeWidth="1.8"></polyline></svg></span>Employee records &amp; org chart</li><li className="fitem"><span className="fcheck" style={{background:"var(--mol)"}}><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="#FF6B35" strokeWidth="1.8"></polyline></svg></span>Leave management &amp; approvals</li><li className="fitem"><span className="fcheck" style={{background:"var(--mol)"}}><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="#FF6B35" strokeWidth="1.8"></polyline></svg></span>Payroll integration &amp; tax compliance</li></ul></div>
       <div className="gcard-deep shine grid-pop tilt" style={{borderRadius:"20px",padding:"40px"}}><span className="badge b-morr" style={{marginBottom:"14px"}}>Digital Documents</span><div style={{fontFamily:"var(--fd)",fontSize:"24px",fontWeight:"700",marginBottom:"12px",letterSpacing:"-.5px",lineHeight:"1.2"}}>Paperless document management</div><p style={{fontSize:"15px",color:"var(--muted)",lineHeight:"1.75",marginBottom:"20px"}}>Replace paper-based processes with intelligent digital workflows — approvals, signatures, and archiving all automated.</p><ul className="flist"><li className="fitem"><span className="fcheck" style={{background:"var(--mol)"}}><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="#FF6B35" strokeWidth="1.8"></polyline></svg></span>Digital signatures &amp; approvals</li><li className="fitem"><span className="fcheck" style={{background:"var(--mol)"}}><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="#FF6B35" strokeWidth="1.8"></polyline></svg></span>Document version control</li><li className="fitem"><span className="fcheck" style={{background:"var(--mol)"}}><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><polyline points="2,5 4,7 8,3" stroke="#FF6B35" strokeWidth="1.8"></polyline></svg></span>Automated retention policies</li></ul></div>
     </div></div></section>
+
+    <section className="section"><div className="inner">
+    <p className="slabel">Full module suite</p><h2 className="stitle">Every operational workflow, <span className="grad-text-orange">in one platform</span></h2><p className="ssub">Twelve modules across finance, operations, and people — all sharing the same underlying data model.</p>
+    {MODULE_GROUPS.map((group, gi) => (
+      <div key={group.label} style={{marginTop: gi === 0 ? "44px" : "40px"}}>
+        <div className="cine-reveal" style={{display:"flex",alignItems:"center",gap:"10px",marginBottom:"18px"}}>
+          <span style={{width:"22px",height:"3px",borderRadius:"2px",background:"var(--mo)",display:"inline-block"}}></span>
+          <span style={{fontFamily:"var(--fd)",fontSize:"12px",fontWeight:"700",letterSpacing:"1.2px",textTransform:"uppercase",color:"var(--mod)"}}>{group.label}</span>
+        </div>
+        <div className="g3" style={{gap:"20px"}}>
+          {group.items.map((m) => (
+            <div key={m.title} className="gcard shine grid-pop tilt" style={{borderRadius:"16px",padding:"28px",borderTop:`3px solid ${m.bar}`}}>
+              <div style={{width:"44px",height:"44px",borderRadius:"12px",background:"var(--mol)",display:"flex",alignItems:"center",justifyContent:"center",marginBottom:"18px"}}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--mo)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">{m.icon}</svg>
+              </div>
+              <div style={{fontFamily:"var(--fd)",fontSize:"16px",fontWeight:"700",marginBottom:"10px",letterSpacing:"-.2px",lineHeight:"1.3"}}>{m.title}</div>
+              <p style={{fontSize:"13.5px",color:"var(--muted)",lineHeight:"1.65",marginBottom:"18px"}}>{m.desc}</p>
+              <Link href="/contact" style={{fontSize:"13px",fontWeight:"700",color:"var(--mod)"}}>Talk to us <span>&#8594;</span></Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+    </div></section>
 
     <section className="section"><div className="inner">
     <p className="slabel">Module deep-dive</p>
