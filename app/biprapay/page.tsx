@@ -15,7 +15,7 @@ export default function Page() {
       <div style={{display:"flex",alignItems:"center",gap:"10px",marginBottom:"20px"}}><div style={{width:"48px",height:"48px",borderRadius:"13px",overflow:"hidden"}}><img src="/biprapay-logo.png" alt="" style={{width:"48px",height:"48px",objectFit:"cover"}} /></div><span style={{fontFamily:"var(--fd)",fontWeight:"700",fontSize:"15px",color:"var(--r)"}}>BipraPay</span></div>
       <h1 style={{fontFamily:"var(--fd)",fontSize:"clamp(36px,4.5vw,54px)",fontWeight:"800",lineHeight:"1.07",letterSpacing:"-1.5px",marginBottom:"20px"}}>Payments at the<br /><span className="grad-text-warm">speed of now</span></h1>
       <p style={{fontSize:"17px",color:"var(--muted)",lineHeight:"1.75",maxWidth:"460px",marginBottom:"36px",fontWeight:"300"}}>Instant payment processing for businesses where every millisecond counts — e-commerce, payroll, mass disbursements.</p>
-      <div style={{display:"flex",gap:"16px",flexWrap:"wrap"}}><Link className="btn btn-r btn-lg" href="/contact">Get started</Link><Link className="btn btn-o btn-lg" href="/pricing">View pricing</Link></div>
+      <div style={{display:"flex",gap:"16px",flexWrap:"wrap"}}><Link className="btn btn-r btn-lg" href="/contact">Get started</Link></div>
     </div>
     <div style={{background:"var(--ink)",borderRadius:"20px",padding:"32px",textAlign:"center",boxShadow:"var(--sh)"}}>
       <div style={{fontSize:"12px",color:"rgba(255,255,255,0.4)",textTransform:"uppercase",letterSpacing:"1px",marginBottom:"24px"}}>Average processing time</div>
