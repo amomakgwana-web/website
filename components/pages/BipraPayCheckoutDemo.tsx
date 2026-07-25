@@ -128,13 +128,45 @@ export default function BipraPayCheckoutDemo() {
       <h2 className="stitle">See the checkout your customers experience</h2>
       <p className="ssub">A live preview of BipraPay&rsquo;s hosted checkout, embedded exactly like it would be on your storefront. This is a demo &mdash; no real payment is processed and nothing you enter is stored or transmitted.</p>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1.3fr", gap: "40px", alignItems: "start", marginTop: "24px" }} className="two-col">
+      <div className="gcard shine" style={{ borderRadius: "20px", overflow: "hidden", border: "1px solid var(--border)", boxShadow: "var(--sh)", marginTop: "24px" }}>
 
-        <div className="gcard shine grid-pop tilt" style={{ borderRadius: "16px", padding: "28px" }}>
+        <div style={{ background: "var(--off)", padding: "12px 18px", display: "flex", alignItems: "center", gap: "8px", borderBottom: "1px solid var(--border)" }}>
+          <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#FF5F57" }}></span>
+          <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#FEBC2E" }}></span>
+          <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#28C840" }}></span>
+          <div style={{ flex: "1", display: "flex", justifyContent: "center" }}>
+            <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: "100px", padding: "5px 16px", fontSize: "11px", color: "var(--muted)", display: "flex", alignItems: "center", gap: "6px", maxWidth: "260px" }}>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--g)" strokeWidth="2.5"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              bipra.shop/checkout
+            </div>
+          </div>
+        </div>
+
+        <div style={{ background: "#fff", padding: "16px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", borderBottom: "1px solid var(--border)" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "9px" }}>
+            <div style={{ width: "28px", height: "28px", borderRadius: "8px", background: "linear-gradient(135deg,var(--r),#FF6B35)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: "0" }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.4"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            </div>
+            <span style={{ fontFamily: "var(--fd)", fontWeight: "800", fontSize: "16px", letterSpacing: "-.3px", color: "var(--ink)" }}>Bipra <span style={{ color: "var(--r)" }}>Shop</span></span>
+          </div>
+          <div style={{ position: "relative" }}>
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--ink2)" strokeWidth="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <span style={{ position: "absolute", top: "-7px", right: "-7px", width: "15px", height: "15px", borderRadius: "50%", background: "var(--r)", color: "#fff", fontSize: "9px", fontWeight: "700", display: "flex", alignItems: "center", justifyContent: "center" }}>1</span>
+          </div>
+        </div>
+
+        <div style={{ padding: "clamp(20px,3vw,32px)", display: "grid", gridTemplateColumns: "1fr 1.3fr", gap: "clamp(24px,3vw,36px)", alignItems: "start" }} className="two-col">
+
+        <div>
+          <div style={{ fontSize: "11px", color: "var(--muted)", marginBottom: "12px" }}>Bipra Shop / Audio / Wireless headphones</div>
           <div style={{ width: "100%", aspectRatio: "1.4", borderRadius: "12px", background: "#fff", border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "18px", overflow: "hidden" }}>
             <img src="/headphones.png" alt="Wireless headphones" style={{ width: "62%", height: "62%", objectFit: "contain" }} />
           </div>
-          <div style={{ fontSize: "11px", fontWeight: "600", color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".6px", marginBottom: "4px" }}>Demo storefront</div>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "6px" }}>
+            <div style={{ display: "flex", gap: "1px", color: "#FBBC05" }}>{"★★★★★".split("").map((s, i) => <span key={i} style={{ fontSize: "11px" }}>{s}</span>)}</div>
+            <span style={{ fontSize: "11px", color: "var(--muted)" }}>(214)</span>
+            <span style={{ fontSize: "10px", fontWeight: "700", color: "var(--g)", background: "var(--gl)", padding: "2px 8px", borderRadius: "100px" }}>In stock</span>
+          </div>
           <div style={{ fontFamily: "var(--fd)", fontSize: "17px", fontWeight: "700", marginBottom: "6px" }}>Wireless headphones</div>
           <div style={{ fontSize: "13px", color: "var(--muted)", marginBottom: "18px" }}>Qty: 1</div>
           <div style={{ borderTop: "1px solid var(--border)", paddingTop: "14px", display: "flex", flexDirection: "column", gap: "8px" }}>
@@ -144,7 +176,7 @@ export default function BipraPayCheckoutDemo() {
           </div>
         </div>
 
-        <div style={{ background: "#fff", borderRadius: "16px", border: "1px solid var(--border)", padding: "28px", boxShadow: "var(--sh)" }}>
+        <div style={{ background: "var(--off)", borderRadius: "16px", border: "1px solid var(--border)", padding: "28px" }}>
           {status === "success" ? (
             <div style={{ textAlign: "center", padding: "24px 0" }}>
               <div style={{ width: "56px", height: "56px", borderRadius: "50%", background: "var(--gl)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 18px" }}>
@@ -205,6 +237,7 @@ export default function BipraPayCheckoutDemo() {
           )}
         </div>
 
+        </div>
       </div>
     </div></section>
   );
