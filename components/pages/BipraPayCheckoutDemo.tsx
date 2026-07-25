@@ -17,12 +17,7 @@ const METHODS: { key: Method; label: string; icon: React.ReactNode }[] = [
   {
     key: "card",
     label: "Card",
-    icon: (
-      <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-        <span style={{ fontFamily: "Georgia,serif", fontWeight: "800", fontStyle: "italic", fontSize: "14px", color: "#1A1F71", letterSpacing: "-.3px" }}>VISA</span>
-        <span style={{ fontFamily: "var(--fb)", fontWeight: "800", fontSize: "12px", color: "var(--r)" }}>Mastercard</span>
-      </div>
-    ),
+    icon: <span style={{ fontFamily: "var(--fb)", fontWeight: "800", fontSize: "13px", color: "var(--r)" }}>Mastercard</span>,
   },
   {
     key: "applepay",
@@ -197,7 +192,7 @@ export default function BipraPayCheckoutDemo() {
               <label style={labelStyle}>Choose a payment method</label>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "8px", marginBottom: "22px", marginTop: "6px" }}>
                 {METHODS.map((m) => (
-                  <button key={m.key} onClick={() => selectMethod(m.key)} style={{ padding: "12px 8px", borderRadius: "10px", border: method === m.key ? "1.5px solid var(--r)" : "1.5px solid var(--border2)", background: method === m.key ? "var(--rl)" : "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <button key={m.key} onClick={() => selectMethod(m.key)} style={{ padding: "12px 8px", borderRadius: "10px", border: method === m.key ? "1.5px solid var(--r)" : "1.5px solid var(--border2)", background: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     {m.icon}
                   </button>
                 ))}
@@ -228,7 +223,7 @@ export default function BipraPayCheckoutDemo() {
                 </div>
               )}
 
-              <button className="btn btn-r btn-lg" style={{ width: "100%", justifyContent: "center", marginTop: "22px", opacity: canPay ? "1" : ".5", cursor: canPay ? "pointer" : "not-allowed" }} onClick={pay} disabled={!canPay}>Pay R{PRICE.toLocaleString()}.00</button>
+              <button className="btn btn-r btn-lg" style={{ width: "100%", justifyContent: "center", marginTop: "22px", background: "var(--r)", cursor: canPay ? "pointer" : "not-allowed" }} onClick={pay} disabled={!canPay}>Pay R{PRICE.toLocaleString()}.00</button>
               <p style={{ fontSize: "11px", color: "var(--muted)", textAlign: "center", marginTop: "14px", display: "flex", alignItems: "center", justifyContent: "center", gap: "6px" }}>
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                 Secured by BipraPay &mdash; demo only, no data leaves your browser
