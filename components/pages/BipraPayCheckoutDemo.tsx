@@ -138,8 +138,8 @@ export default function BipraPayCheckoutDemo() {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1.3fr", gap: "40px", alignItems: "start", marginTop: "24px" }} className="two-col">
 
         <div className="gcard shine grid-pop tilt" style={{ borderRadius: "16px", padding: "28px" }}>
-          <div style={{ width: "100%", aspectRatio: "1.4", borderRadius: "12px", background: "linear-gradient(135deg,var(--rl),#FFF0EE)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "18px" }}>
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--r)" strokeWidth="1.6"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+          <div style={{ width: "100%", aspectRatio: "1.4", borderRadius: "12px", background: "linear-gradient(135deg,var(--rl),#FFF0EE)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "18px", overflow: "hidden" }}>
+            <img src="/headphones.png" alt="Wireless headphones" style={{ width: "62%", height: "62%", objectFit: "contain" }} />
           </div>
           <div style={{ fontSize: "11px", fontWeight: "600", color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".6px", marginBottom: "4px" }}>Demo storefront</div>
           <div style={{ fontFamily: "var(--fd)", fontSize: "17px", fontWeight: "700", marginBottom: "6px" }}>Wireless headphones</div>
