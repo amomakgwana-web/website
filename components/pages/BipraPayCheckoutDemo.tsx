@@ -5,11 +5,10 @@ import { useState } from "react";
 type Method = "card" | "applepay" | "googlepay" | "capitecpay" | "paylink" | "eft";
 type Status = "idle" | "processing" | "success";
 
-const BANKS: { name: string; logo?: string }[] = [
+const BANKS: { name: string; logo: string }[] = [
   { name: "Standard Bank", logo: "/standard-bank-logo.png" },
   { name: "FNB", logo: "/fnb-logo.png" },
   { name: "ABSA", logo: "/absa-logo.png" },
-  { name: "Nedbank" },
   { name: "Capitec", logo: "/capitec-logo.png" },
 ];
 const PRICE = 1499;
@@ -20,8 +19,8 @@ const METHODS: { key: Method; label: string; icon: React.ReactNode }[] = [
     label: "Card",
     icon: (
       <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-        <img src="/visa-logo.png" alt="Visa" style={{ height: "20px", width: "20px", borderRadius: "5px", objectFit: "cover" }} />
-        <img src="/mastercard-logo.png" alt="Mastercard" style={{ height: "16px", width: "auto" }} />
+        <span style={{ fontFamily: "Georgia,serif", fontWeight: "800", fontStyle: "italic", fontSize: "14px", color: "#1A1F71", letterSpacing: "-.3px" }}>VISA</span>
+        <span style={{ fontFamily: "var(--fb)", fontWeight: "800", fontSize: "12px", color: "var(--r)" }}>Mastercard</span>
       </div>
     ),
   },
@@ -217,9 +216,8 @@ export default function BipraPayCheckoutDemo() {
                 <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                   <label style={labelStyle}>Select your bank</label>
                   {BANKS.map((b) => (
-                    <button key={b.name} onClick={() => setBank(b.name)} style={{ display: "flex", alignItems: "center", gap: "10px", textAlign: "left", padding: "10px 14px", borderRadius: "10px", border: bank === b.name ? "1.5px solid var(--r)" : "1.5px solid var(--border2)", background: bank === b.name ? "var(--rl)" : "#fff", color: bank === b.name ? "var(--r)" : "var(--ink2)", fontSize: "13.5px", fontWeight: "600", cursor: "pointer" }}>
-                      {b.logo && <img src={b.logo} alt="" style={{ height: "18px", width: "auto" }} />}
-                      {b.name}
+                    <button key={b.name} onClick={() => setBank(b.name)} aria-label={b.name} style={{ display: "flex", alignItems: "center", padding: "12px 14px", borderRadius: "10px", border: bank === b.name ? "1.5px solid var(--r)" : "1.5px solid var(--border2)", background: bank === b.name ? "var(--rl)" : "#fff", cursor: "pointer" }}>
+                      <img src={b.logo} alt={b.name} style={{ height: "24px", width: "auto" }} />
                     </button>
                   ))}
                 </div>
