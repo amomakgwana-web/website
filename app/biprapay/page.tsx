@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import BipraPayCheckoutDemo from "@/components/pages/BipraPayCheckoutDemo";
 
 export const metadata: Metadata = {
   title: "BipraPay",
@@ -123,6 +124,8 @@ export default function Page() {
         <div className="gcard shine grid-pop tilt" style={{borderRadius:"14px",padding:"24px"}}><div style={{fontSize:"15px",fontWeight:"700",color:"var(--ink)",marginBottom:"6px",display:"flex",alignItems:"center",gap:"8px"}}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>E-commerce</div><p style={{fontSize:"13px",color:"var(--muted)",lineHeight:"1.65",marginBottom:"12px"}}>Accept payments and split to sellers in a single API call. Instant settlement available.</p><div style={{fontSize:"12px",fontWeight:"600",color:"var(--r)"}}>Split payments supported</div></div>
       </div>
     </div></section>
+
+    <BipraPayCheckoutDemo />
 
     <section style={{background:"linear-gradient(135deg,#0a1230 0%,#0D0B1E 55%,#150a2e 100%)",padding:"110px 5%",position:"relative",overflow:"hidden"}}>
       <div className="inner">
