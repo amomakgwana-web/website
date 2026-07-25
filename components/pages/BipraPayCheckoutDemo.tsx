@@ -17,12 +17,7 @@ const METHODS: { key: Method; label: string; icon: React.ReactNode }[] = [
   {
     key: "card",
     label: "Card",
-    icon: (
-      <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-        <span style={{ fontFamily: "Georgia,serif", fontWeight: "800", fontStyle: "italic", fontSize: "14px", color: "#1A1F71", letterSpacing: "-.3px" }}>VISA</span>
-        <span style={{ fontFamily: "var(--fb)", fontWeight: "800", fontSize: "12px", color: "var(--r)" }}>Mastercard</span>
-      </div>
-    ),
+    icon: <span style={{ fontFamily: "var(--fb)", fontWeight: "800", fontSize: "13px", color: "var(--r)" }}>Mastercard</span>,
   },
   {
     key: "applepay",
