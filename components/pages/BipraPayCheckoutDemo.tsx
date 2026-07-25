@@ -4,6 +4,16 @@ import { useState } from "react";
 
 type Method = "card" | "applepay" | "googlepay" | "capitecpay" | "paylink" | "eft";
 type Status = "idle" | "processing" | "success";
+type SuccessView = "confirmed" | "receipt" | "tracking";
+
+type Order = {
+  ref: string;
+  number: string;
+  tracking: string;
+  paidAt: string;
+  eta: string;
+  paidWith: string;
+};
 
 const BANKS: { name: string; logo: string }[] = [
   { name: "Standard Bank", logo: "/standard-bank-logo.png" },
@@ -77,6 +87,24 @@ const ONE_CLICK_LABEL: Partial<Record<Method, string>> = {
   paylink: "PayLink",
 };
 
+const DELIVERY_STEPS: { label: string; meta: string }[] = [
+  { label: "Order placed", meta: "" },
+  { label: "Payment confirmed", meta: "" },
+  { label: "Packing at warehouse", meta: "Johannesburg fulfilment centre" },
+  { label: "Out for delivery", meta: "Pending" },
+  { label: "Delivered", meta: "Pending" },
+];
+
+const VAT = Math.round((PRICE - PRICE / 1.15) * 100) / 100;
+
+function rand(len: number) {
+  return Math.floor(Math.random() * Math.pow(10, len)).toString().padStart(len, "0");
+}
+
+function money(n: number) {
+  return "R" + n.toLocaleString("en-ZA", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
 export default function BipraPayCheckoutDemo() {
   const [method, setMethod] = useState<Method>("card");
   const [status, setStatus] = useState<Status>("idle");
@@ -86,7 +114,9 @@ export default function BipraPayCheckoutDemo() {
   const [cvv, setCvv] = useState("");
   const [bank, setBank] = useState<string | null>(null);
   const [confirmed, setConfirmed] = useState(false);
-  const [ref] = useState(() => "pay_" + Math.random().toString(36).slice(2, 10));
+  const [order, setOrder] = useState<Order | null>(null);
+  const [view, setView] = useState<SuccessView>("confirmed");
+  const [emailed, setEmailed] = useState(false);
 
   const cardValid = name.trim().length > 1 && number.replace(/\s/g, "").length >= 12 && expiry.length === 5 && cvv.length >= 3;
   const oneClick = ONE_CLICK_LABEL[method];
@@ -95,6 +125,20 @@ export default function BipraPayCheckoutDemo() {
   const pay = () => {
     if (!canPay || status !== "idle") return;
     setStatus("processing");
+
+    const now = new Date();
+    const delivery = new Date(now.getTime() + 3 * 86400000);
+    const last4 = number.replace(/\s/g, "").slice(-4);
+    setOrder({
+      ref: "pay_" + Math.random().toString(36).slice(2, 10),
+      number: "BS-" + rand(6),
+      tracking: "BE" + rand(8) + "ZA",
+      paidAt: now.toLocaleString("en-ZA", { day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" }),
+      eta: delivery.toLocaleDateString("en-ZA", { weekday: "long", day: "numeric", month: "long" }),
+      paidWith: method === "card" ? `Mastercard •••• ${last4}` : method === "eft" ? `EFT · ${bank}` : (oneClick as string),
+    });
+    setView("confirmed");
+    setEmailed(false);
     setTimeout(() => setStatus("success"), 1400);
   };
 
@@ -106,6 +150,9 @@ export default function BipraPayCheckoutDemo() {
     setCvv("");
     setBank(null);
     setConfirmed(false);
+    setOrder(null);
+    setView("confirmed");
+    setEmailed(false);
   };
 
   const selectMethod = (m: Method) => {
@@ -172,16 +219,132 @@ export default function BipraPayCheckoutDemo() {
           </div>
         </div>
 
-        <div style={{ background: "linear-gradient(160deg,#FFF3F0,#FFEDE7)", borderRadius: "16px", border: "1px solid var(--border)", padding: "28px" }}>
-          {status === "success" ? (
-            <div style={{ textAlign: "center", padding: "24px 0" }}>
-              <div style={{ width: "56px", height: "56px", borderRadius: "50%", background: "var(--gl)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 18px" }}>
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--g)" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <div style={{ background: "linear-gradient(160deg,#FFF3F0,#FFEDE7)", borderRadius: "16px", border: "1px solid var(--border)", padding: "clamp(18px,3vw,28px)" }}>
+          {status === "success" && order ? (
+            view === "confirmed" ? (
+              <div>
+                <div style={{ textAlign: "center", marginBottom: "20px" }}>
+                  <div style={{ width: "56px", height: "56px", borderRadius: "50%", background: "var(--gl)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 16px" }}>
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--g)" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <div style={{ fontFamily: "var(--fd)", fontSize: "19px", fontWeight: "700", marginBottom: "5px" }}>Payment successful</div>
+                  <p style={{ fontSize: "13px", color: "var(--muted)" }}>{money(PRICE)} paid with {order.paidWith}</p>
+                </div>
+
+                <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: "12px", padding: "16px 18px", display: "flex", flexDirection: "column", gap: "11px" }}>
+                  {([["Order number", order.number], ["Payment reference", order.ref], ["Estimated delivery", order.eta]] as [string, string][]).map(([k, v]) => (
+                    <div key={k} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "10px", fontSize: "12.5px" }}>
+                      <span style={{ color: "var(--muted)", flexShrink: "0" }}>{k}</span>
+                      <span style={{ fontWeight: "700", color: "var(--ink)", textAlign: "right", minWidth: "0" }}>{v}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <p style={{ fontSize: "11.5px", color: "var(--muted)", textAlign: "center", marginTop: "14px", display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", gap: "6px" }}>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--g)" strokeWidth="2" style={{ flexShrink: 0 }}><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg>
+                  Receipt sent to your email
+                </p>
+
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginTop: "18px" }}>
+                  <button className="btn btn-o btn-md" style={{ justifyContent: "center" }} onClick={() => setView("receipt")}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M8 13h8M8 17h5"></path></svg>
+                    View receipt
+                  </button>
+                  <button className="btn btn-r btn-md" style={{ justifyContent: "center" }} onClick={() => setView("tracking")}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 3h-3v11h8v-6z"></path><path d="M13 14V5a2 2 0 0 0-2-2H3v11"></path><circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle><path d="M9 18h6"></path></svg>
+                    Track order
+                  </button>
+                </div>
+
+                <button onClick={reset} style={{ display: "block", margin: "16px auto 0", background: "none", border: "none", fontSize: "12px", color: "var(--muted)", cursor: "pointer", textDecoration: "underline", fontFamily: "var(--fb)" }}>Run the demo again</button>
               </div>
-              <div style={{ fontFamily: "var(--fd)", fontSize: "18px", fontWeight: "700", marginBottom: "6px" }}>Payment successful</div>
-              <p style={{ fontSize: "13px", color: "var(--muted)", marginBottom: "18px" }}>R{PRICE.toLocaleString()}.00 &middot; ref {ref}</p>
-              <button className="btn btn-o btn-md" onClick={reset}>Try again</button>
-            </div>
+            ) : view === "receipt" ? (
+              <div>
+                <button onClick={() => setView("confirmed")} style={{ display: "flex", alignItems: "center", gap: "6px", background: "none", border: "none", padding: "0", marginBottom: "16px", fontSize: "12.5px", fontWeight: "600", color: "var(--muted)", cursor: "pointer", fontFamily: "var(--fb)" }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="m15 18-6-6 6-6"></path></svg>
+                  Back
+                </button>
+
+                <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: "12px", padding: "20px" }}>
+                  <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "12px", paddingBottom: "14px", borderBottom: "1px dashed var(--border2)" }}>
+                    <div>
+                      <div style={{ fontFamily: "var(--fd)", fontWeight: "800", fontSize: "15px", letterSpacing: "-.3px" }}>Bipra <span style={{ color: "var(--r)" }}>Shop</span></div>
+                      <div style={{ fontSize: "11px", color: "var(--muted)", marginTop: "2px" }}>Tax invoice &middot; VAT 4123456789</div>
+                    </div>
+                    <span style={{ fontSize: "10px", fontWeight: "800", letterSpacing: ".5px", color: "var(--g)", background: "var(--gl)", border: "1.5px solid var(--g)", borderRadius: "6px", padding: "3px 9px", flexShrink: "0" }}>PAID</span>
+                  </div>
+
+                  <div style={{ padding: "14px 0", borderBottom: "1px dashed var(--border2)", display: "flex", flexDirection: "column", gap: "8px" }}>
+                    {([["Receipt no.", order.number], ["Date", order.paidAt], ["Paid with", order.paidWith], ["Reference", order.ref]] as [string, string][]).map(([k, v]) => (
+                      <div key={k} style={{ display: "flex", justifyContent: "space-between", gap: "10px", fontSize: "12px" }}>
+                        <span style={{ color: "var(--muted)", flexShrink: "0" }}>{k}</span>
+                        <span style={{ color: "var(--ink)", fontWeight: "600", textAlign: "right", minWidth: "0" }}>{v}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div style={{ padding: "14px 0", borderBottom: "1px dashed var(--border2)", display: "flex", flexDirection: "column", gap: "9px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", gap: "10px", fontSize: "12.5px" }}>
+                      <span style={{ color: "var(--ink)", minWidth: "0" }}>Wireless headphones&nbsp;<span style={{ color: "var(--muted)", whiteSpace: "nowrap" }}>&times; 1</span></span>
+                      <span style={{ fontWeight: "600", flexShrink: "0" }}>{money(PRICE)}</span>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", fontSize: "12.5px", color: "var(--muted)" }}><span>Delivery</span><span>Free</span></div>
+                    <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", fontSize: "12.5px", color: "var(--muted)" }}><span>VAT @ 15% (included)</span><span>{money(VAT)}</span></div>
+                  </div>
+
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: "10px", paddingTop: "14px" }}>
+                    <span style={{ fontFamily: "var(--fd)", fontSize: "14px", fontWeight: "700", flexShrink: "0" }}>Total paid</span>
+                    <span style={{ fontFamily: "var(--fd)", fontSize: "17px", fontWeight: "800", color: "var(--r)", whiteSpace: "nowrap" }}>{money(PRICE)}</span>
+                  </div>
+                </div>
+
+                <button className="btn btn-o btn-md" style={{ width: "100%", justifyContent: "center", marginTop: "14px", borderColor: emailed ? "var(--g)" : undefined, color: emailed ? "var(--g)" : undefined }} onClick={() => setEmailed(true)}>
+                  {emailed ? "✓ Receipt sent to your inbox" : "Email me a copy"}
+                </button>
+                <p style={{ fontSize: "11px", color: "var(--muted)", textAlign: "center", marginTop: "12px" }}>Demo receipt &mdash; no email is actually sent.</p>
+              </div>
+            ) : (
+              <div>
+                <button onClick={() => setView("confirmed")} style={{ display: "flex", alignItems: "center", gap: "6px", background: "none", border: "none", padding: "0", marginBottom: "16px", fontSize: "12.5px", fontWeight: "600", color: "var(--muted)", cursor: "pointer", fontFamily: "var(--fb)" }}>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"><path d="m15 18-6-6 6-6"></path></svg>
+                  Back
+                </button>
+
+                <div style={{ background: "#fff", border: "1px solid var(--border)", borderRadius: "12px", padding: "16px 18px", marginBottom: "18px" }}>
+                  <div style={{ fontSize: "11px", color: "var(--muted)", marginBottom: "4px" }}>Estimated delivery</div>
+                  <div style={{ fontFamily: "var(--fd)", fontSize: "16px", fontWeight: "700", marginBottom: "12px" }}>{order.eta}</div>
+                  <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", fontSize: "12px", paddingTop: "12px", borderTop: "1px solid var(--border)" }}>
+                    <span style={{ color: "var(--muted)" }}>Bipra Express</span>
+                    <span style={{ fontWeight: "700", color: "var(--ink)" }}>{order.tracking}</span>
+                  </div>
+                </div>
+
+                <div>
+                  {DELIVERY_STEPS.map((s, i) => {
+                    const done = i < 2;
+                    const active = i === 2;
+                    const last = i === DELIVERY_STEPS.length - 1;
+                    return (
+                      <div key={s.label} style={{ display: "flex", gap: "13px" }}>
+                        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+                          <div style={{ width: "22px", height: "22px", borderRadius: "50%", flexShrink: "0", display: "flex", alignItems: "center", justifyContent: "center", background: done ? "var(--g)" : active ? "var(--r)" : "#fff", border: done || active ? "none" : "2px solid var(--border2)" }}>
+                            {done ? <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3.2"><polyline points="20 6 9 17 4 12"></polyline></svg> : active ? <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#fff" }}></span> : null}
+                          </div>
+                          {!last && <div style={{ width: "2px", flex: "1", minHeight: "22px", background: done ? "var(--g)" : "var(--border2)" }}></div>}
+                        </div>
+                        <div style={{ paddingBottom: last ? "0" : "18px" }}>
+                          <div style={{ fontSize: "13.5px", fontWeight: "700", color: done || active ? "var(--ink)" : "var(--muted)" }}>
+                            {s.label}
+                            {active && <span style={{ marginLeft: "8px", fontSize: "10px", fontWeight: "700", color: "var(--r)", background: "var(--rl)", padding: "2px 8px", borderRadius: "100px" }}>In progress</span>}
+                          </div>
+                          <div style={{ fontSize: "11.5px", color: "var(--muted)", marginTop: "2px" }}>{i < 2 ? order.paidAt : s.meta}</div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )
           ) : status === "processing" ? (
             <div style={{ textAlign: "center", padding: "44px 0" }}>
               <div style={{ width: "36px", height: "36px", borderRadius: "50%", border: "3px solid var(--rl)", borderTopColor: "var(--r)", margin: "0 auto 18px", animation: "spin .8s linear infinite" }}></div>
