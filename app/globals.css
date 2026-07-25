@@ -74,6 +74,8 @@ button{font-family:var(--fb);cursor:pointer}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .g2>*,.g3>*,.g4>*{min-width:0}
+.pay-methods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+@media(max-width:560px){.pay-methods{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* ── Grids that become a swipeable slideshow on phone/tablet ── */
 .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .case-grid>.lift-card{min-width:0}
