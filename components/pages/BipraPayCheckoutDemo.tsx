@@ -223,7 +223,7 @@ export default function BipraPayCheckoutDemo() {
                 </div>
               )}
 
-              <button className="btn btn-r btn-lg" style={{ width: "100%", justifyContent: "center", marginTop: "22px", opacity: canPay ? "1" : ".5", cursor: canPay ? "pointer" : "not-allowed" }} onClick={pay} disabled={!canPay}>Pay R{PRICE.toLocaleString()}.00</button>
+              <button className="btn btn-r btn-lg" style={{ width: "100%", justifyContent: "center", marginTop: "22px", background: "var(--r)", cursor: canPay ? "pointer" : "not-allowed" }} onClick={pay} disabled={!canPay}>Pay R{PRICE.toLocaleString()}.00</button>
               <p style={{ fontSize: "11px", color: "var(--muted)", textAlign: "center", marginTop: "14px", display: "flex", alignItems: "center", justifyContent: "center", gap: "6px" }}>
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                 Secured by BipraPay &mdash; demo only, no data leaves your browser
