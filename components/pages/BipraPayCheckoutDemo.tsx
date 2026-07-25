@@ -130,7 +130,9 @@ export default function BipraPayCheckoutDemo() {
 
       <div className="gcard shine" style={{ borderRadius: "20px", overflow: "hidden", border: "1px solid var(--border)", boxShadow: "var(--sh)", marginTop: "24px" }}>
 
-        <div style={{ background: "var(--off)", padding: "12px 18px", display: "flex", alignItems: "center", gap: "8px", borderBottom: "1px solid var(--border)" }}>
+        <div style={{ height: "4px", background: "linear-gradient(90deg,var(--r),#FF6B35,var(--r))" }}></div>
+
+        <div style={{ background: "linear-gradient(135deg,var(--rl),#FFF0EC)", padding: "12px 18px", display: "flex", alignItems: "center", gap: "8px", borderBottom: "1px solid var(--border)" }}>
           <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#FF5F57" }}></span>
           <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#FEBC2E" }}></span>
           <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#28C840" }}></span>
@@ -155,7 +157,7 @@ export default function BipraPayCheckoutDemo() {
           </div>
         </div>
 
-        <div style={{ padding: "clamp(20px,3vw,32px)", display: "grid", gridTemplateColumns: "1fr 1.3fr", gap: "clamp(24px,3vw,36px)", alignItems: "start" }} className="two-col">
+        <div style={{ background: "linear-gradient(160deg,#FFF8F6 0%,#fff 45%)", padding: "clamp(20px,3vw,32px)", display: "grid", gridTemplateColumns: "1fr 1.3fr", gap: "clamp(24px,3vw,36px)", alignItems: "start" }} className="two-col">
 
         <div>
           <div style={{ fontSize: "11px", color: "var(--muted)", marginBottom: "12px" }}>Bipra Shop / Audio / Wireless headphones</div>
@@ -172,11 +174,11 @@ export default function BipraPayCheckoutDemo() {
           <div style={{ borderTop: "1px solid var(--border)", paddingTop: "14px", display: "flex", flexDirection: "column", gap: "8px" }}>
             <div style={{ display: "flex", justifyContent: "space-between", fontSize: "13px", color: "var(--muted)" }}><span>Subtotal</span><span>R{PRICE.toLocaleString()}.00</span></div>
             <div style={{ display: "flex", justifyContent: "space-between", fontSize: "13px", color: "var(--muted)" }}><span>Delivery</span><span>Free</span></div>
-            <div style={{ display: "flex", justifyContent: "space-between", fontSize: "15px", fontWeight: "700", color: "var(--ink)", paddingTop: "8px", borderTop: "1px solid var(--border)" }}><span>Total</span><span>R{PRICE.toLocaleString()}.00</span></div>
+            <div style={{ display: "flex", justifyContent: "space-between", fontSize: "15px", fontWeight: "700", color: "var(--r)", paddingTop: "8px", borderTop: "1px solid var(--border)" }}><span style={{ color: "var(--ink)" }}>Total</span><span>R{PRICE.toLocaleString()}.00</span></div>
           </div>
         </div>
 
-        <div style={{ background: "var(--off)", borderRadius: "16px", border: "1px solid var(--border)", padding: "28px" }}>
+        <div style={{ background: "linear-gradient(160deg,#FFF3F0,#FFEDE7)", borderRadius: "16px", border: "1px solid var(--border)", padding: "28px" }}>
           {status === "success" ? (
             <div style={{ textAlign: "center", padding: "24px 0" }}>
               <div style={{ width: "56px", height: "56px", borderRadius: "50%", background: "var(--gl)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 18px" }}>
