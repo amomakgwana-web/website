@@ -197,7 +197,7 @@ export default function BipraPayCheckoutDemo() {
               <label style={labelStyle}>Choose a payment method</label>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "8px", marginBottom: "22px", marginTop: "6px" }}>
                 {METHODS.map((m) => (
-                  <button key={m.key} onClick={() => selectMethod(m.key)} style={{ padding: "12px 8px", borderRadius: "10px", border: method === m.key ? "1.5px solid var(--r)" : "1.5px solid var(--border2)", background: method === m.key ? "var(--rl)" : "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <button key={m.key} onClick={() => selectMethod(m.key)} style={{ padding: "12px 8px", borderRadius: "10px", border: method === m.key ? "1.5px solid var(--r)" : "1.5px solid var(--border2)", background: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     {m.icon}
                   </button>
                 ))}
