@@ -27,7 +27,12 @@ const METHODS: { key: Method; label: string; icon: React.ReactNode }[] = [
   {
     key: "card",
     label: "Card",
-    icon: <span style={{ fontFamily: "var(--fb)", fontWeight: "800", fontSize: "13px", color: "var(--r)" }}>Mastercard</span>,
+    icon: (
+      <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+        <img src="/mastercard-logo.png" alt="" style={{ height: "18px", width: "auto" }} />
+        <span style={{ fontFamily: "var(--fb)", fontWeight: "800", fontSize: "13px", color: "var(--r)" }}>Mastercard</span>
+      </div>
+    ),
   },
   {
     key: "applepay",
@@ -353,7 +358,7 @@ export default function BipraPayCheckoutDemo() {
           ) : (
             <>
               <label style={labelStyle}>Choose a payment method</label>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: "8px", marginBottom: "22px", marginTop: "6px" }}>
+              <div className="pay-methods" style={{ marginBottom: "22px", marginTop: "6px" }}>
                 {METHODS.map((m) => (
                   <button key={m.key} onClick={() => selectMethod(m.key)} style={{ padding: "12px 8px", borderRadius: "10px", border: method === m.key ? "1.5px solid var(--r)" : "1.5px solid var(--border2)", background: "#fff", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     {m.icon}
