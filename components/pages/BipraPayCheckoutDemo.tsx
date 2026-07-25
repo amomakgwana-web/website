@@ -5,7 +5,13 @@ import { useState } from "react";
 type Method = "card" | "applepay" | "googlepay" | "capitecpay" | "paylink" | "eft";
 type Status = "idle" | "processing" | "success";
 
-const BANKS = ["Standard Bank", "FNB", "ABSA", "Nedbank", "Capitec"];
+const BANKS: { name: string; logo?: string }[] = [
+  { name: "Standard Bank", logo: "/standard-bank-logo.png" },
+  { name: "FNB", logo: "/fnb-logo.png" },
+  { name: "ABSA", logo: "/absa-logo.png" },
+  { name: "Nedbank" },
+  { name: "Capitec", logo: "/capitec-logo.png" },
+];
 const PRICE = 1499;
 
 const METHODS: { key: Method; label: string; icon: React.ReactNode }[] = [
@@ -13,42 +19,29 @@ const METHODS: { key: Method; label: string; icon: React.ReactNode }[] = [
     key: "card",
     label: "Card",
     icon: (
-      <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-        <span style={{ fontFamily: "Georgia,serif", fontWeight: "800", fontStyle: "italic", fontSize: "15px", color: "#1A1F71", letterSpacing: "-.5px" }}>VISA</span>
-        <span style={{ display: "inline-flex", width: "22px", height: "14px", position: "relative" }}>
-          <span style={{ position: "absolute", left: "0", width: "14px", height: "14px", borderRadius: "50%", background: "#EB001B" }}></span>
-          <span style={{ position: "absolute", left: "8px", width: "14px", height: "14px", borderRadius: "50%", background: "#F79E1B", mixBlendMode: "multiply" }}></span>
-        </span>
+      <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+        <img src="/visa-logo.png" alt="Visa" style={{ height: "20px", width: "20px", borderRadius: "5px", objectFit: "cover" }} />
+        <img src="/mastercard-logo.png" alt="Mastercard" style={{ height: "16px", width: "auto" }} />
       </div>
     ),
   },
   {
     key: "applepay",
     label: "Apple Pay",
-    icon: (
-      <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-        <svg width="14" height="16" viewBox="0 0 14 16" fill="#000"><path d="M9.5 2.5c.6-.7 1-1.7.9-2.5-.8 0-1.7.5-2.3 1.2-.5.6-1 1.6-.9 2.5.9.1 1.8-.5 2.3-1.2zM12 5.6c-1.3-.1-2.3.7-2.9.7-.6 0-1.5-.7-2.5-.7-1.3 0-2.4.7-3.1 1.9-1.3 2.3-.3 5.6.9 7.5.6.9 1.3 1.9 2.3 1.9.9 0 1.3-.6 2.4-.6s1.4.6 2.4.6c1 0 1.6-.9 2.2-1.8.7-1 1-2 1-2-.1 0-1.9-.7-1.9-2.9 0-1.8 1.5-2.7 1.6-2.7-.9-1.3-2.2-1.5-2.7-1.9z"></path></svg>
-        <span style={{ fontFamily: "var(--fb)", fontWeight: "600", fontSize: "13px", color: "#000" }}>Pay</span>
-      </div>
-    ),
+    icon: <img src="/applepay-logo.png" alt="Apple Pay" style={{ height: "15px", width: "auto" }} />,
   },
   {
     key: "googlepay",
     label: "Google Pay",
-    icon: (
-      <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-        <svg width="15" height="15" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"></path><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"></path><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"></path><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"></path></svg>
-        <span style={{ fontFamily: "var(--fb)", fontWeight: "600", fontSize: "13px", color: "#5F6368" }}>Pay</span>
-      </div>
-    ),
+    icon: <img src="/googlepay-logo.png" alt="Google Pay" style={{ height: "15px", width: "auto" }} />,
   },
   {
     key: "capitecpay",
     label: "CapitecPay",
     icon: (
-      <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-        <span style={{ width: "16px", height: "16px", borderRadius: "50%", background: "#00857A", display: "inline-flex", alignItems: "center", justifyContent: "center" }}><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg></span>
-        <span style={{ fontFamily: "var(--fb)", fontWeight: "700", fontSize: "12.5px", color: "#00857A" }}>CapitecPay</span>
+      <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+        <img src="/capitec-logo.png" alt="" style={{ height: "16px", width: "auto" }} />
+        <span style={{ fontFamily: "var(--fb)", fontWeight: "700", fontSize: "12.5px", color: "var(--ink2)" }}>CapitecPay</span>
       </div>
     ),
   },
@@ -190,7 +183,10 @@ export default function BipraPayCheckoutDemo() {
                 <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                   <label style={labelStyle}>Select your bank</label>
                   {BANKS.map((b) => (
-                    <button key={b} onClick={() => setBank(b)} style={{ textAlign: "left", padding: "12px 14px", borderRadius: "10px", border: bank === b ? "1.5px solid var(--r)" : "1.5px solid var(--border2)", background: bank === b ? "var(--rl)" : "#fff", color: bank === b ? "var(--r)" : "var(--ink2)", fontSize: "13.5px", fontWeight: "600", cursor: "pointer" }}>{b}</button>
+                    <button key={b.name} onClick={() => setBank(b.name)} style={{ display: "flex", alignItems: "center", gap: "10px", textAlign: "left", padding: "10px 14px", borderRadius: "10px", border: bank === b.name ? "1.5px solid var(--r)" : "1.5px solid var(--border2)", background: bank === b.name ? "var(--rl)" : "#fff", color: bank === b.name ? "var(--r)" : "var(--ink2)", fontSize: "13.5px", fontWeight: "600", cursor: "pointer" }}>
+                      {b.logo && <img src={b.logo} alt="" style={{ height: "18px", width: "auto" }} />}
+                      {b.name}
+                    </button>
                   ))}
                 </div>
               ) : (
