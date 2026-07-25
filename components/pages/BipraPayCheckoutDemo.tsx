@@ -138,7 +138,7 @@ export default function BipraPayCheckoutDemo() {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1.3fr", gap: "40px", alignItems: "start", marginTop: "24px" }} className="two-col">
 
         <div className="gcard shine grid-pop tilt" style={{ borderRadius: "16px", padding: "28px" }}>
-          <div style={{ width: "100%", aspectRatio: "1.4", borderRadius: "12px", background: "linear-gradient(135deg,var(--rl),#FFF0EE)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "18px", overflow: "hidden" }}>
+          <div style={{ width: "100%", aspectRatio: "1.4", borderRadius: "12px", background: "#fff", border: "1px solid var(--border)", display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "18px", overflow: "hidden" }}>
             <img src="/headphones.png" alt="Wireless headphones" style={{ width: "62%", height: "62%", objectFit: "contain" }} />
           </div>
           <div style={{ fontSize: "11px", fontWeight: "600", color: "var(--muted)", textTransform: "uppercase", letterSpacing: ".6px", marginBottom: "4px" }}>Demo storefront</div>
