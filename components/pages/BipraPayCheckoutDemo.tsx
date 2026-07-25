@@ -211,7 +211,7 @@ export default function BipraPayCheckoutDemo() {
                 <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
                   <label style={labelStyle}>Select your bank</label>
                   {BANKS.map((b) => (
-                    <button key={b.name} onClick={() => setBank(b.name)} aria-label={b.name} style={{ display: "flex", alignItems: "center", padding: "12px 14px", borderRadius: "10px", border: bank === b.name ? "1.5px solid var(--r)" : "1.5px solid var(--border2)", background: bank === b.name ? "var(--rl)" : "#fff", cursor: "pointer" }}>
+                    <button key={b.name} onClick={() => setBank(b.name)} aria-label={b.name} style={{ display: "flex", alignItems: "center", padding: "12px 14px", borderRadius: "10px", border: bank === b.name ? "1.5px solid var(--r)" : "1.5px solid var(--border2)", background: "#fff", cursor: "pointer" }}>
                       <img src={b.logo} alt={b.name} style={{ height: "24px", width: "auto" }} />
                     </button>
                   ))}
