@@ -90,8 +90,8 @@ export default function SolutionsClient() {
             <div className="solutions-orbit-tag">Billing</div>
           </div>
           <div className="solutions-orbit-item float-anim-delay">
-            <div className="solutions-orbit-icon" style={{background: PRODUCTS.morr.gradient, boxShadow: `0 12px 28px ${PRODUCTS.morr.accent}40`}}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12l2 2 4-4M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"></path></svg>
+            <div className="solutions-orbit-icon" style={{overflow: "hidden", boxShadow: `0 12px 28px ${PRODUCTS.morr.accent}40`}}>
+              <img src="/morr-tile.png" alt="" style={{width: "100%", height: "100%", objectFit: "cover"}} />
             </div>
             <div className="solutions-orbit-name">Morr ERP</div>
             <div className="solutions-orbit-tag">Workflow</div>

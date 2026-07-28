@@ -319,7 +319,7 @@ export default function Page() {
             <div><div style={{fontSize:"14px",fontWeight:"700",color:"#fff"}}>VeriBills</div><div style={{fontSize:"12px",color:"rgba(255,255,255,0.4)"}}>Smart meter to delivered bill in 5 minutes</div></div>
           </div>
           <div className="cine-reveal s4" style={{display:"flex",alignItems:"center",gap:"16px",padding:"18px 22px",border:"1px solid rgba(255,107,53,0.3)",borderRadius:"14px"}}>
-            <div style={{width:"42px",height:"42px",borderRadius:"11px",background:"linear-gradient(135deg,#FF6B35,#FFA36B)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8"></rect></svg></div>
+            <div style={{width:"42px",height:"42px",borderRadius:"11px",overflow:"hidden",flexShrink:"0"}}><img src="/morr-tile.png" alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} /></div>
             <div><div style={{fontSize:"14px",fontWeight:"700",color:"#fff"}}>Morr ERP</div><div style={{fontSize:"12px",color:"rgba(255,255,255,0.4)"}}>Budgets, HR &amp; documents on one data model</div></div>
           </div>
         </div>
