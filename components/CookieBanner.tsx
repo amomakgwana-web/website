@@ -36,7 +36,7 @@ export default function CookieBanner() {
 
   return (
     <div id="cookie-banner" style={{position:"fixed",bottom:"24px",left:"50%",transform:"translateX(-50%)",zIndex:"500",background:"rgba(13,11,30,0.78)",backdropFilter:"blur(22px) saturate(1.4)",WebkitBackdropFilter:"blur(22px) saturate(1.4)",border:"1px solid rgba(255,255,255,0.1)",borderRadius:"14px",padding:"18px 24px",display:"flex",alignItems:"center",gap:"20px",boxShadow:"0 8px 40px rgba(0,0,0,0.3)",maxWidth:"680px",width:"calc(100% - 48px)",flexWrap:"wrap"}}>
-      <p style={{fontSize:"13px",color:"rgba(255,255,255,0.6)",flex:"1",minWidth:"200px",lineHeight:"1.5",margin:"0"}}>We use cookies to improve your experience and analyse site usage. <Link href="/privacy" style={{color:"rgba(255,255,255,0.85)",textDecoration:"underline",cursor:"pointer"}}>Privacy Policy</Link></p>
+      <p style={{fontSize:"13px",color:"rgba(255,255,255,0.6)",flex:"1",minWidth:"200px",lineHeight:"1.5",margin:"0"}}>We use cookies to improve your experience and analyse site usage. <Link href="/cookies" style={{color:"rgba(255,255,255,0.85)",textDecoration:"underline",cursor:"pointer"}}>Cookie Notice</Link></p>
       <div style={{display:"flex",gap:"10px",flexShrink:"0"}}>
         <button onClick={() => dismiss(false)} style={{fontSize:"13px",fontWeight:"500",padding:"8px 16px",borderRadius:"8px",border:"1px solid rgba(255,255,255,0.2)",background:"transparent",color:"rgba(255,255,255,0.6)",cursor:"pointer"}}>Decline</button>
         <button onClick={() => dismiss(true)} style={{fontSize:"13px",fontWeight:"500",padding:"8px 16px",borderRadius:"8px",border:"none",background:"var(--p)",color:"#fff",cursor:"pointer"}}>Accept all</button>
