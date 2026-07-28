@@ -76,22 +76,22 @@ export default function SolutionsClient() {
         <p style={{fontSize:"17px",color:"var(--muted)",lineHeight:"1.75",marginBottom:"0",fontWeight:"300"}}>BIPRA adapts to the specific compliance, workflow, and payment needs of your sector.</p>
         <div className="solutions-orbit">
           <div className="solutions-orbit-item float-anim-slow">
-            <div className="solutions-orbit-icon" style={{overflow: "hidden", boxShadow: `0 12px 28px ${PRODUCTS.biprapay.accent}40`}}>
-              <img src="/biprapay-logo.png" alt="" style={{width: "100%", height: "100%", objectFit: "cover"}} />
+            <div className="solutions-orbit-icon" style={{background: PRODUCTS.biprapay.accentSoft}}>
+              <img src="/biprapay-icon-mono.png" alt="" style={{width: "56%", height: "56%", objectFit: "contain"}} />
             </div>
             <div className="solutions-orbit-name">BipraPay</div>
             <div className="solutions-orbit-tag">Payments</div>
           </div>
           <div className="solutions-orbit-item float-anim">
-            <div className="solutions-orbit-icon" style={{overflow: "hidden", boxShadow: `0 12px 28px ${PRODUCTS.veribills.accent}40`}}>
-              <img src="/veribills-logo.png" alt="" style={{width: "100%", height: "100%", objectFit: "cover"}} />
+            <div className="solutions-orbit-icon" style={{background: PRODUCTS.veribills.accentSoft}}>
+              <img src="/veribills-icon-mono.png" alt="" style={{width: "56%", height: "56%", objectFit: "contain"}} />
             </div>
             <div className="solutions-orbit-name">VeriBills</div>
             <div className="solutions-orbit-tag">Billing</div>
           </div>
           <div className="solutions-orbit-item float-anim-delay">
-            <div className="solutions-orbit-icon" style={{overflow: "hidden", boxShadow: `0 12px 28px ${PRODUCTS.morr.accent}40`}}>
-              <img src="/morr-tile.png" alt="" style={{width: "100%", height: "100%", objectFit: "cover"}} />
+            <div className="solutions-orbit-icon" style={{background: PRODUCTS.morr.accentSoft}}>
+              <img src="/morr-icon.png" alt="" style={{width: "56%", height: "56%", objectFit: "contain"}} />
             </div>
             <div className="solutions-orbit-name">Morr ERP</div>
             <div className="solutions-orbit-tag">Workflow</div>
