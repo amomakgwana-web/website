@@ -76,15 +76,15 @@ export default function SolutionsClient() {
         <p style={{fontSize:"17px",color:"var(--muted)",lineHeight:"1.75",marginBottom:"0",fontWeight:"300"}}>BIPRA adapts to the specific compliance, workflow, and payment needs of your sector.</p>
         <div className="solutions-orbit">
           <div className="solutions-orbit-item float-anim-slow">
-            <div className="solutions-orbit-icon" style={{background: PRODUCTS.biprapay.gradient, boxShadow: `0 12px 28px ${PRODUCTS.biprapay.accent}40`}}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <div className="solutions-orbit-icon" style={{overflow: "hidden", boxShadow: `0 12px 28px ${PRODUCTS.biprapay.accent}40`}}>
+              <img src="/biprapay-logo.png" alt="" style={{width: "100%", height: "100%", objectFit: "cover"}} />
             </div>
             <div className="solutions-orbit-name">BipraPay</div>
             <div className="solutions-orbit-tag">Payments</div>
           </div>
           <div className="solutions-orbit-item float-anim">
-            <div className="solutions-orbit-icon" style={{background: PRODUCTS.veribills.gradient, boxShadow: `0 12px 28px ${PRODUCTS.veribills.accent}40`}}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M9 13h6M9 17h6"></path></svg>
+            <div className="solutions-orbit-icon" style={{overflow: "hidden", boxShadow: `0 12px 28px ${PRODUCTS.veribills.accent}40`}}>
+              <img src="/veribills-logo.png" alt="" style={{width: "100%", height: "100%", objectFit: "cover"}} />
             </div>
             <div className="solutions-orbit-name">VeriBills</div>
             <div className="solutions-orbit-tag">Billing</div>
