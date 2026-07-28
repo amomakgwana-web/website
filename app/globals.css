@@ -76,6 +76,10 @@ button{font-family:var(--fb);cursor:pointer}
 .g2>*,.g3>*,.g4>*{min-width:0}
 .pay-methods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
 @media(max-width:560px){.pay-methods{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.vb-platform{display:grid;grid-template-columns:.95fr auto 1.3fr auto 1fr;gap:clamp(10px,1.5vw,20px);align-items:center}
+.vb-doc-card{display:block;border:1px solid rgba(255,255,255,0.09);background:rgba(255,255,255,0.03);border-radius:14px;padding:24px;transition:border-color .2s,background .2s,transform .2s}
+.vb-doc-card:hover{border-color:rgba(91,78,255,0.5);background:rgba(91,78,255,0.06);transform:translateY(-2px)}
+@media(max-width:900px){.vb-platform{grid-template-columns:1fr;gap:22px}.vb-arrow{display:none}}
 /* ── Grids that become a swipeable slideshow on phone/tablet ── */
 .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .case-grid>.lift-card{min-width:0}
