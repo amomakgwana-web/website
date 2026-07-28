@@ -276,7 +276,7 @@ export default function Page() {
           
           <div className="float-anim-delay" style={{position:"absolute",bottom:"-20px",left:"-20px",width:"200px",background:"#fff",borderRadius:"16px",border:"1px solid var(--border)",padding:"18px",boxShadow:"0 16px 40px rgba(85,51,255,0.12)",zIndex:"10"}}>
             <div style={{display:"flex",alignItems:"center",gap:"8px",marginBottom:"10px"}}>
-              <div style={{width:"28px",height:"28px",borderRadius:"8px",background:"var(--vbl)",display:"flex",alignItems:"center",justifyContent:"center"}}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1800AD" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+              <div style={{width:"28px",height:"28px",borderRadius:"8px",overflow:"hidden",flexShrink:"0"}}><img src="/veribills-logo.png" alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} /></div>
               <span style={{fontSize:"12px",fontWeight:"700",color:"var(--ink)"}}>VeriBills</span>
             </div>
             <div style={{fontSize:"22px",fontWeight:"800",color:"var(--vb)",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"-.5px"}}>14,280</div>
@@ -285,7 +285,7 @@ export default function Page() {
 
           <div className="float-anim-slow" style={{position:"absolute",bottom:"-10px",right:"-20px",width:"196px",background:"#fff",borderRadius:"16px",border:"1px solid var(--border)",padding:"18px",boxShadow:"0 16px 40px rgba(232,21,42,0.10)",zIndex:"10"}}>
             <div style={{display:"flex",alignItems:"center",gap:"8px",marginBottom:"10px"}}>
-              <div style={{width:"28px",height:"28px",borderRadius:"8px",background:"var(--rl)",display:"flex",alignItems:"center",justifyContent:"center"}}><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E8152A" strokeWidth="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg></div>
+              <div style={{width:"28px",height:"28px",borderRadius:"8px",overflow:"hidden",flexShrink:"0"}}><img src="/biprapay-logo.png" alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} /></div>
               <span style={{fontSize:"12px",fontWeight:"700",color:"var(--ink)"}}>BipraPay</span>
             </div>
             <div style={{fontSize:"22px",fontWeight:"800",color:"var(--r)",fontFamily:"'Helvetica Neue',Arial,sans-serif",letterSpacing:"-.5px"}}>&lt;800ms</div>
@@ -311,15 +311,15 @@ export default function Page() {
         </div>
         <div className="standard-right" style={{background:"linear-gradient(135deg,#16112e 0%,#1a0a14 100%)",padding:"88px 5% 88px 7%",borderLeft:"1px solid rgba(255,255,255,0.06)",display:"flex",flexDirection:"column",justifyContent:"center",gap:"14px"}}>
           <div className="cine-reveal s1" style={{display:"flex",alignItems:"center",gap:"16px",padding:"18px 22px",border:"1px solid rgba(232,21,42,0.3)",borderRadius:"14px"}}>
-            <div style={{width:"42px",height:"42px",borderRadius:"11px",background:"linear-gradient(135deg,#E8152A,#FF6B35)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><rect x="2" y="5" width="20" height="14" rx="3"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg></div>
+            <div style={{width:"42px",height:"42px",borderRadius:"11px",overflow:"hidden",flexShrink:"0"}}><img src="/biprapay-logo.png" alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} /></div>
             <div><div style={{fontSize:"14px",fontWeight:"700",color:"#fff"}}>BipraPay</div><div style={{fontSize:"12px",color:"rgba(255,255,255,0.4)"}}>Every rand processed, reconciled &amp; audit-trailed</div></div>
           </div>
           <div className="cine-reveal s3" style={{display:"flex",alignItems:"center",gap:"16px",padding:"18px 22px",border:"1px solid rgba(24,0,173,0.35)",borderRadius:"14px"}}>
-            <div style={{width:"42px",height:"42px",borderRadius:"11px",background:"linear-gradient(135deg,#1800AD,#4B39E0)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M9 12h6M9 16h6M9 8h6M5 3h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path></svg></div>
+            <div style={{width:"42px",height:"42px",borderRadius:"11px",overflow:"hidden",flexShrink:"0"}}><img src="/veribills-logo.png" alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} /></div>
             <div><div style={{fontSize:"14px",fontWeight:"700",color:"#fff"}}>VeriBills</div><div style={{fontSize:"12px",color:"rgba(255,255,255,0.4)"}}>Smart meter to delivered bill in 5 minutes</div></div>
           </div>
           <div className="cine-reveal s4" style={{display:"flex",alignItems:"center",gap:"16px",padding:"18px 22px",border:"1px solid rgba(255,107,53,0.3)",borderRadius:"14px"}}>
-            <div style={{width:"42px",height:"42px",borderRadius:"11px",background:"linear-gradient(135deg,#FF6B35,#FFA36B)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:"0"}}><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="8" y="8" width="8" height="8"></rect></svg></div>
+            <div style={{width:"42px",height:"42px",borderRadius:"11px",overflow:"hidden",flexShrink:"0"}}><img src="/morr-tile.png" alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} /></div>
             <div><div style={{fontSize:"14px",fontWeight:"700",color:"#fff"}}>Morr ERP</div><div style={{fontSize:"12px",color:"rgba(255,255,255,0.4)"}}>Budgets, HR &amp; documents on one data model</div></div>
           </div>
         </div>
